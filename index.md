@@ -31,4 +31,4 @@ Biological agents like mice can robustly perform visually guided tasks in comple
 
 ## 📬 Contact
 
-Email us: [robustforaging2025@protonmail.com](mailto:robustforaging2025@protonmail.com)
+Email us: [robustforaging@gmail.com](mailto:robustforaging@gmail.com)
