@@ -10,7 +10,7 @@ Welcome to the official competition page for the **Mouse vs AI: Robust Visual Fo
 Biological agents like mice can robustly perform visually guided tasks in complex environments — even under fog, blur, or visual noise. Can your agent do the same?
 
 
-## oal
+## Goal
 
 The goal of this competition is to benchmark and improve the robustness of artificial agents in biologically inspired visual tasks. Specifically, we aim to:
 
