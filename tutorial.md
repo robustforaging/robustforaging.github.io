@@ -3,15 +3,6 @@ layout: default
 title: Tutorial
 ---
 
-<nav>
-  <a href="/">Home</a> |
-  <a href="/faq">FAQ</a> |
-  <a href="/submission">Submission</a> |
-  <a href="/tutorial">Tutorial</a> |
-  <a href="/organizers">Organizers</a> |
-  <a href="/leaderboard">Leaderboard</a>
-</nav>
-
 # Getting Started
 
 1. Clone the starter kit  
