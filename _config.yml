@@ -1,3 +1,11 @@
 title: "Mouse vs AI"
 description: "NeurIPS 2025 Competition"
 theme: minima
+
+header_pages:
+  - index.md
+  - submission.md
+  - tutorial.md
+  - faq.md
+  - organizers.md
+  - leaderboard.md
