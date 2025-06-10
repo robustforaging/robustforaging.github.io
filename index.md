@@ -30,13 +30,13 @@ This setup enables comparison between biological and artificial agents under ide
 
 ## Competition Tracks
 
-### Track 1: Visual Robustness
-Evaluate how well your trained agent generalizes to unseen visual perturbations.  
-- **Metrics**: Average Success Rate (ASR), Minimum Success Rate (MSR) across all provided and held-out conditons
-
-### Track 2: Neural Alignment (optional)
-Predict mouse visual cortex activity from internal representations of your agent.  
-- **Metrics**: Mean Pearson correlation between predicted and recorded neural responses
+  ### Track 1: Visual Robustness
+    Evaluate how well your trained agent generalizes to unseen visual perturbations.  
+    - **Metrics**: Average Success Rate (ASR), Minimum Success Rate (MSR) across all provided and held-out conditons
+  
+  ### Track 2: Neural Alignment (optional)
+    Predict mouse visual cortex activity from internal representations of your agent.  
+    - **Metrics**: Mean Pearson correlation between predicted and recorded neural responses
 
 
 ## Communication
