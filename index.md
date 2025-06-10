@@ -3,15 +3,6 @@ layout: default
 title: Home
 ---
 
-<nav>
-  <a href="/">Home</a> |
-  <a href="/faq">FAQ</a> |
-  <a href="/submission">Submission</a> |
-  <a href="/tutorial">Tutorial</a> |
-  <a href="/organizers">Organizers</a> |
-  <a href="/leaderboard">Leaderboard</a>
-</nav>
-
 # Mouse vs AI: Robust Visual Foraging Challenge @ NeurIPS 2025
 
 Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
