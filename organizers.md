@@ -14,4 +14,4 @@ The Robust Visual Foraging Challenge is organized by:
 - Spencer LaVere Smith (UCSB)
 - Michael Beyeler (UCSB)
 
-For inquiries, contact us at [robustforaging2025@protonmail.com](mailto:robustforaging2025@protonmail.com)
+For inquiries, contact us at [robustforaging@gmail.com](mailto:robustforaging@gmail.com)
