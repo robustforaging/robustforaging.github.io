@@ -1,6 +1,11 @@
-Training Guide — Windows Beta
+---
+layout: default
+title: Submission
+---
 
-This document summarises exactly the procedure described in the accompanying How to Train.pdf. Follow the numbered sections below to install dependencies, launch training, add your own model, and locate results.
+# Training Guide — Windows Beta
+
+Follow the numbered sections below to install dependencies, launch training, add your own model, and locate results.
 
 1 · Prerequisite
 
