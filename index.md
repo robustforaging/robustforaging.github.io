@@ -5,14 +5,15 @@ title: Home
 
 # Robust Visual Foraging Challenge @ NeurIPS 2025
 
-Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
-
-Biological agents like mice can robustly perform visually guided tasks in complex environments — even under fog, blur, or visual noise. Can your agent do the same?
-
 > **Announcement:**  
 > This is the first public beta. Upcoming v1.0 (July 1, 2025) will add
 > 1. a Python‑only adapter so you can train with any RL library (independent of ml-agents)
 > 2. Headless Linux builds for SLURM/Kubernetes clusters.
+
+
+Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
+
+Biological agents like mice can robustly perform visually guided tasks in complex environments — even under fog, blur, or visual noise. Can your agent do the same?
 
 
 ## Goal
