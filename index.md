@@ -9,6 +9,11 @@ Welcome to the official competition page for the **Mouse vs AI: Robust Visual Fo
 
 Biological agents like mice can robustly perform visually guided tasks in complex environments — even under fog, blur, or visual noise. Can your agent do the same?
 
+> **Announcement:**  
+> This is the first public beta. Upcoming v1.0 (July 1, 2025) will add
+> 1. a Python‑only adapter so you can train with any RL library (independent of ml-agents)
+> 2. Headless Linux builds for SLURM/Kubernetes clusters.
+
 
 ## Goal
 
@@ -21,11 +26,38 @@ The goal of this competition is to benchmark and improve the robustness of artif
 
 
 ## Task Overview
-Participants must train reinforcement learning agents to navigate a **naturalistic Unity environment** and reach a visually cued target within 5s. Initially the target is placed close to the agent with target distance increassing as soon as the agent hits a succesor rate of 70%
-The clean training environment & one perturbation (fog) is provided, but final evaluation will be conducted including **held-out perturbations**.
-The evaluation phase only consist out of trials where the target is placed at the maximum distance.
+Train an agent to navigate a naturalistic environment and reach a visually cued target within trialtime.
+  - Training scene + one perturbation (fog) are provided, distance increases incrementally.
+  - Final evaluation uses held‑out perturbations and starts each episode at max target distance.
+  - 
 The task is adapted from a real neuroscience experiment in which **mice perform the same foraging task**. 
 This setup enables comparison between biological and artificial agents under identical visual conditions.
+
+
+## Quick Start
+
+### 1 · Download the environment&nbsp;(≈ 9 GB)
+
+| Mirror | Link | Size |
+|--------|------|------|
+| ☁️ Google Drive | [MouseVsAI_Windows_v0.9.zip](https://drive.google.com/uc?id=YOUR_ID&export=download) | 9 GB |
+| 📦 Hugging Face (resumable) | [MouseVsAI_Windows_v0.9.zip](https://huggingface.co/datasets/mouse-vs-ai/env/resolve/main/MouseVsAI_Windows_v0.9.zip) | 9 GB |
+
+SHA-256 checksum: `ADD_SHA256_HERE`  
+
+Unzip to obtain `MouseVsAI.exe` and `MouseVsAI_Data/`.
+
+---
+
+### 2 · Train your first agent
+
+Follow the **[Training Guide](/training_instructions)** for a 10-minute PPO baseline using Unity ML-Agents.
+
+---
+
+### 3 · Submit your model
+
+Package your trained weights and follow the **[Submission Guide](/submission_guide)** to upload to the leaderboard.
 
 
 ## Competition Tracks
