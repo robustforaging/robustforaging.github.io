@@ -41,18 +41,13 @@ This setup enables comparison between biological and artificial agents under ide
 
 | Mirror | Link | Size |
 |--------|------|------|
-| ☁️ Google Drive | [MouseVsAI_Windows_v0.9.zip](https://drive.google.com/uc?id=YOUR_ID&export=download) | 9 GB |
-| 📦 Hugging Face (resumable) | [MouseVsAI_Windows_v0.9.zip](https://huggingface.co/datasets/mouse-vs-ai/env/resolve/main/MouseVsAI_Windows_v0.9.zip) | 9 GB |
-
-SHA-256 checksum: `ADD_SHA256_HERE`  
-
-Unzip to obtain `MouseVsAI.exe` and `MouseVsAI_Data/`.
+| ☁️ Google Drive | [MouseVsAI_Windows_v0.9.zip](https://drive.google.com/file/d/1S7KtiVVI5LaxVFGQlHjV0A1DzFGyklYo) | 9 GB |
 
 ---
 
 ### 2 · Train your first agent
 
-Follow the **[Training Guide](/training_instructions)** for a 10-minute PPO baseline using Unity ML-Agents.
+Follow the **[Training Guide](/training_instructions)**
 
 ---
 
