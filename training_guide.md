@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Submission
+title: Training Guide
 ---
 
 # Training Guide — Windows Beta
