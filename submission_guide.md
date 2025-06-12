@@ -3,7 +3,7 @@ layout: default
 title: Submission
 ---
 
-# Submission Instructions
+# Submission Guide
 
 Each submission must include:
 - A trained model file (.pt, .ckpt, or .onnx)
