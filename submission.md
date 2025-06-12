@@ -27,11 +27,10 @@ nav\_order: 3
 
 ## 1 · Submission checklist
 
-| ✓ | Item                 | Notes                                                                       |
+|   | Item                 | Notes                                                                       |
 | - | -------------------- | --------------------------------------------------------------------------- |
 |   | Trained model files  | `.pt` or `.onnx`; see §2 for naming convention                              |
 |   | `config.yaml`        | Snapshot of your training hyper‑parameters                                  |
-|   | `run.json`           | Auto‑generated summary from `mlagents-learn` (optional but helps debugging) |
 |   | `metadata.txt`       | Team name, contact e‑mail, short description                                |
 |   | Zip archive ≤ 500 MB | 7‑zip or standard `zip`; no `.rar`                                          |
 
@@ -45,7 +44,6 @@ Your archive **must** unpack into a single top‑level folder named after your r
 MyAgent_Normal/                 <‑ top‑level folder
 ├── model_head.pt               <‑ weights file (PyTorch example)
 ├── config.yaml
-├── run.json
 └── metadata.txt
 ```
 
@@ -60,6 +58,8 @@ MyTeam_Submission_v2.zip
     └── ...
 ```
 
+
+<!--
 ---
 
 ## 3 · Create the archive
