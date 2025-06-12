@@ -4,13 +4,12 @@ title: "Training Guide"
 description: "Professional walkthrough for training an agent with the current Windows executable. A Linux headless workflow will be published separately."
 nav_order: 2
 ---
-
-# Training Guide — Beta launch
-
-Follow the numbered sections below to install dependencies, launch training, add your own model, and locate results.
-
 > The current training guide targets the **v0.9 Windows executable** that ships with built-in ML-Agents.  
 > A forthcoming v1.0 (July,1 2025) will provide a stand-alone Python API (no ML-Agents) + headless Linux builds for cluster training
+
+
+
+Follow the numbered sections below to install dependencies, launch training, add your own model, and locate results.
 
 ## 1 · Download Environment
 
