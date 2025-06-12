@@ -34,30 +34,14 @@ Train an agent to navigate a naturalistic environment and reach a visually cued 
 
 This setup enables comparison between biological and artificial agents under identical visual conditions.
 
-### Quick Start
-
-1. **Download the environment** — [MouseVsAI_Windows_v0.9.zip](#) (≈ 9 GB)
-2. **Train your first agent**  
-   Follow the **[Training Guide](training_guide.html)**.
-3. **Submit your model**  
-   Package your trained models and follow the **[Submission Guide](submission_guide.html)**.
-
-
 ## Quick Start
 
-  ### 1 · Download the environment [MouseVsAI_Windows_v0.9.zip](https://drive.google.com/file/d/1S7KtiVVI5LaxVFGQlHjV0A1DzFGyklYo) (≈ 9 GB)
-  
-  ---
-  
-  ### 2 · Train your first agent
-  
-  Follow the **[Training Guide](/training_guide)**
-  
-  ---
-  
-  ### 3 · Submit your model
-  
-  Package your trained models and follow the **[Submission Guide](/submission_guide)** to upload to the leaderboard.
+1. **Download the environment** — [MouseVsAI_Windows_v0.9.zip](https://drive.google.com/file/d/1S7KtiVVI5LaxVFGQlHjV0A1DzFGyklYo) (≈ 9 GB)
+2. **Train your first agent**  
+   Follow the **[Training Guide](training_guide)**.
+3. **Submit your model**  
+   Package your trained models and follow the **[Submission Guide](submission_guide)**.
+
 
 
 ## Competition Tracks
