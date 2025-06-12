@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Training Guide (Windows .exe)"
+title: "Training Guide"
 description: "Professional walkthrough for training an agent with the current Windows executable. A Linux headless workflow will be published separately."
 nav_order: 2
 ---
@@ -15,38 +15,65 @@ Follow the numbered sections below to install dependencies, launch training, add
 
 <sup>† Skip this section if you already have Anaconda or Miniconda.</sup>
 
-1. Open **cmd.exe**.  
-2. Download the installer:
+   a) Download the installer:
+   {% highlight cmd %}
+      curl -o Miniconda3-latest-Windows-x86_64.exe ^
+           https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
+   {% endhighlight %}
+   
+   b) Silent install
+   {% highlight cmd %}
+      start /wait "" Miniconda3-latest-Windows-x86_64.exe ^
+     /InstallationType=JustMe /AddToPath=1 /RegisterPython=1 /S ^
+     /D=%USERPROFILE%\Miniconda3
+   {% endhighlight %}
+   
+   c) Activate
+   {% highlight cmd %}
+   %USERPROFILE%\Miniconda3\Scripts\activate
+   {% endhighlight %}
 
-{% highlight cmd %}
-   curl -o Miniconda3-latest-Windows-x86_64.exe ^
-        https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
-{% endhighlight %}
+Check installation:
+   {% highlight cmd %}
+   conda --version
+   {% endhighlight %}
 
-3.Run a silent install:
+   
+## 3· Create and activate the training environment
+   {% highlight cmd %}
+   cd <folder‑with‑exe-and-mouse.yml>
+   conda env create -n mouse2 -f mouse.yml
+   conda activate mouse2
+   {% endhighlight %}
+   
+   One‑time path fix
+   Open train.py and replace the placeholder path to encoders.py with the actual path inside your environment, e.g.
+   C:/<user>/Miniconda3/envs/mouse2/Lib/site-packages/mlagents/trainers/torch/encoders.py
 
-   ```cmd
-  start /wait "" Miniconda3-latest-Windows-x86_64.exe ^
-       /InstallationType=JustMe /AddToPath=1 /RegisterPython=1 /S ^
-       /D=%USERPROFILE%\Miniconda3
+## 4· Run the training script
+   {% highlight cmd %}
+   python start.py
+   {% endhighlight %}
 
-4. Activate Conda:
+The script prints usage:
+   {% highlight cmd %}
+   Usage: python start.py [train|test] [options]
+     --runs-per-network R
+     --run-id ID
+     --networks N1,N2,N3   (fully_connected, nature_cnn, simple, resnet)
+   {% endhighlight %}
 
-    %USERPROFILE%\Miniconda3\Scripts\activate
+The script prints usage:
+   {% highlight cmd %}
+   python -u start.py train ^
+          --runs-per-network 1 ^
+          --run-id Normal ^
+          --network neurips,simple,fully_connected
+   {% endhighlight %}
 
-Verify with conda --version.
-
-## 3 · Create & activate the training environment
-
-cd path\to\exeFolder          :: folder that contains mouse.yml
-conda env create -n mouse2 -f mouse.yml
-conda activate mouse2
-
-    mouse2 is just a suggestion—use any env name you like.
-
-One-time path fix
-Open train.py and replace the placeholder path to encoders.py with the actual path inside your conda env, e.g.:
-
-C:/<username>/Miniconda3/envs/mouse2/Lib/site-packages/mlagents/trainers/torch/encoders.py
+## 5· Customise the model
+   Add your custom encoder to the Encoders/ directory.
+   Optionally tweak hyper‑parameters in nature.yml (keep vis_encode_type: nature_cnn).
+   Re‑run the command from § 4.
 
 
