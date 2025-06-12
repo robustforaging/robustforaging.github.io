@@ -13,12 +13,6 @@ Submissions are evaluated centrally by the organizers on a held-out test set wit
 
 ---
 
-layout: page
-title: "Submission Guide"
-description: "How to package and upload your trained agent for evaluation on the Mouse vs AI leaderboard."
-nav\_order: 3
--------------
-
 # Submission Guide — v0.9 Beta
 
 > **Scope** — These instructions apply to the Windows `.exe` beta. For the upcoming v1.0 Linux release the packaging format will stay identical, but the runner script will change.
