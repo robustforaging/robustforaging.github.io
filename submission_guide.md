@@ -52,6 +52,14 @@ MyTeam_Submission_v2.zip
     └── ...
 ```
 
+## 3 · Send us your submission
+1. Upload your .zip archive (≤ 500 MB) to any cloud‑storage service you prefer—Google Drive, Dropbox, OneDrive, or WeTransfer all work.
+2. Set the link to “Anyone with the link can view”.
+3. Fill out the short Submission Form (takes < 1 min): [https://forms.gle/COMP-Submission-Form](https://docs.google.com/forms/d/e/1FAIpQLSdTkMpQoihTk9BspReTPbb3JLbXYNtc-aF8ovjrUM1rDVuvfA/viewform?usp=header)
+4. You will receive an automatic confirmation e‑mail. We will download the archive, run the evaluation manually, and add your score to the public spreadsheet (updated every Monday & Thursday).
+
+Submission limit — You may submit up to 3 archives per calendar week. Please wait for your previous score before sending the next one.
+
 
 <!--
 ---
