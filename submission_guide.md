@@ -135,6 +135,6 @@ Detailed scoring scripts live in the *starter‑kit/evaluation* folder.
 ---
 
 Need help? Ping **@organisers** in the Discord or open an issue in the GitHub starter kit.
-
+-->
 
 
