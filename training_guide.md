@@ -10,6 +10,9 @@ nav_order: 2
 Follow the numbered sections below to install dependencies, launch training, add your own model, and locate results.
 
 ---
+## 1 · Download Environment
+
+
 
 ## 2 · Install Miniconda <sup>†</sup>
 
