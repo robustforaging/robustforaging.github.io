@@ -40,6 +40,15 @@ This setup enables comparison between biological and artificial agents under ide
 2. **Train your first agent** — Follow the **[Training Guide](training_guide)**.
 3. **Submit your model** — Package your trained models and follow the **[Submission Guide](submission_guide)**.
 
+## Competition Tracks
+
+### Track 1 — Visual Robustness
+> Evaluate how well your trained agent generalises to unseen visual perturbations.  
+> *Metrics:* *Average Success Rate (ASR), Minimum Success Rate (MSR) across all provided and held-out conditons
+
+### Track 2 — Neural Alignment *(optional)*
+> Predict mouse V1 activity from your agent’s internal features.  
+> *Metrics:* **Mean Pearson correlation** between predicted and recorded spikes.
 
 
 ## Competition Tracks
