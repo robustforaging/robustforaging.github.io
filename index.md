@@ -47,10 +47,11 @@ This setup enables comparison between biological and artificial agents under ide
    Evaluate how well your trained agent generalises to unseen visual perturbations.  
    *Metrics:* **Average Success Rate (ASR)**, **Minimum Success Rate (MSR)** across all provided and held-out conditions.
 
-2. **Track 2 — Neural Alignment** *(optional)*  
+2. **Track 2 — Neural Alignment** 
    Predict mouse visual-cortex activity from internal representations of your agent.  
    *Metrics:* **Mean Pearson correlation** between predicted and recorded neural responses.
 
+Please note that the two tracks do not need to be submitted separately. All submissions will be evaluated in both tracks.
 
 ##  Timeline
 
