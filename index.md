@@ -30,9 +30,17 @@ The goal of this competition is to benchmark and improve the robustness of artif
 Train an agent to navigate a naturalistic environment and reach a visually cued target within trialtime.
   - Training scene + one perturbation (fog) are provided, distance increases incrementally.
   - Final evaluation uses held‑out perturbations and starts each episode at max target distance.
-  - 
-The task is adapted from a real neuroscience experiment in which **mice perform the same foraging task**. 
+  - The task is adapted from a real neuroscience experiment in which **mice perform the same foraging task**. 
+
 This setup enables comparison between biological and artificial agents under identical visual conditions.
+
+### Quick Start
+
+1. **Download the environment** — [MouseVsAI_Windows_v0.9.zip](#) (≈ 9 GB)
+2. **Train your first agent**  
+   Follow the **[Training Guide](training_guide.html)**.
+3. **Submit your model**  
+   Package your trained models and follow the **[Submission Guide](submission_guide.html)**.
 
 
 ## Quick Start
