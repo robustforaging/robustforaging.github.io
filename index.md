@@ -5,10 +5,10 @@ title: Home
 
 # Robust Visual Foraging Challenge @ NeurIPS 2025
 
-> **Announcement:**  
-> This is the first public beta. Upcoming v1.0 (July 1, 2025) will add
-> 1. a Python‑only adapter so you can train with any RL library (independent of ml-agents)
-> 2. Headless Linux builds for SLURM/Kubernetes clusters.
+> **Announcement - Public Beta v0.9:**  
+> Upcoming v1.0 (planned – 1 July 2025) will add:
+> 1. Standalone Python API – train with any RL framework (PyTorch, TensorFlow, JAX) without Unity ML-Agents
+> 2. Headless Linux builds optimised for SLURM / Kubernetes clusters
 
 
 Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
@@ -41,13 +41,13 @@ This setup enables comparison between biological and artificial agents under ide
 
 | Mirror | Link | Size |
 |--------|------|------|
-| ☁️ Google Drive | [MouseVsAI_Windows_v0.9.zip](https://drive.google.com/file/d/1S7KtiVVI5LaxVFGQlHjV0A1DzFGyklYo) | 9 GB |
+| Google Drive | [MouseVsAI_Windows_v0.9.zip](https://drive.google.com/file/d/1S7KtiVVI5LaxVFGQlHjV0A1DzFGyklYo) | 6,9 GB |
 
 ---
 
 ### 2 · Train your first agent
 
-Follow the **[Training Guide](/training_instructions)**
+Follow the **[Training Guide](/training_guide)**
 
 ---
 
