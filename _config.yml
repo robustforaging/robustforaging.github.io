@@ -4,7 +4,7 @@ theme: minima
 
 header_pages:
   - training_guide.md
-  - submission.md
-  - tutorial.md
-  - organizers.md
+  - submission_guide.md
   - leaderboard.md
+  - organizers.md
+
