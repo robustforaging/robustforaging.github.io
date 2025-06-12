@@ -52,29 +52,6 @@ This setup enables comparison between biological and artificial agents under ide
    *Metrics:* **Mean Pearson correlation** between predicted and recorded neural responses.
 
 
-
-## Competition Tracks
-
-### Track 1 — Visual Robustness
-> Evaluate how well your trained agent generalises to unseen visual perturbations.  
-> *Metrics:* *Average Success Rate (ASR), Minimum Success Rate (MSR) across all provided and held-out conditons
-
-### Track 2 — Neural Alignment *(optional)*
-> Predict mouse V1 activity from your agent’s internal features.  
-> *Metrics:* **Mean Pearson correlation** between predicted and recorded spikes.
-
-
-## Competition Tracks
-
-### Track 1: Visual Robustness
-  Evaluate how well your trained agent generalizes to unseen visual perturbations.  
-  - **Metrics**: Average Success Rate (ASR), Minimum Success Rate (MSR) across all provided and held-out conditons
-  
-### Track 2: Neural Alignment (optional)
-  Predict mouse visual cortex activity from internal representations of your agent.  
-  - **Metrics**: Mean Pearson correlation between predicted and recorded neural responses
-
-
 ##  Timeline
 
 | Date             | Milestone                        |
@@ -84,7 +61,6 @@ This setup enables comparison between biological and artificial agents under ide
 | Nov 1, 2025      | Final submission deadline        |
 | Nov 15, 2025     | Evaluation + winners announced   |
 | Dec 2025         | Results at NeurIPS 2025          |
-
 
 
 ## Communication
