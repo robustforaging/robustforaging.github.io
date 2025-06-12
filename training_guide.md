@@ -5,14 +5,15 @@ description: "Professional walkthrough for training an agent with the current Wi
 nav_order: 2
 ---
 
-# Training Guide — Windows Beta
+# Training Guide — Beta launch
 
 Follow the numbered sections below to install dependencies, launch training, add your own model, and locate results.
+The current training guide targets the **v0.9 Windows executable** that ships with built-in ML-Agents.  
+A forthcoming v1.0 (July,1 2025) will provide a stand-alone Python API (no ML-Agents) + headless Linux builds for cluster training
 
----
 ## 1 · Download Environment
 
-
+Download environment [MouseVsAI_Windows_v0.9.zip](https://drive.google.com/file/d/1S7KtiVVI5LaxVFGQlHjV0A1DzFGyklYo)
 
 ## 2 · Install Miniconda <sup>†</sup>
 
