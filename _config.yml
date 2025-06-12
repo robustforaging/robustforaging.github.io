@@ -3,7 +3,6 @@ description: "NeurIPS 2025 Competition"
 theme: minima
 
 header_pages:
-  - index.md
   - training_guide.md
   - submission.md
   - tutorial.md
