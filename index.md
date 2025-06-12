@@ -71,19 +71,19 @@ This setup enables comparison between biological and artificial agents under ide
   - **Metrics**: Mean Pearson correlation between predicted and recorded neural responses
 
 
-## Communication
-
-For questions, updates, and discussion, please [Join the Discord](https://discord.gg/65NMfWaX)👉 
-
-You can also reach us via email at [robustforaging@gmail.com](mailto:robustforaging@gmail.com)
-
-
-## 🗓️ Timeline
+##  Timeline
 
 | Date             | Milestone                        |
 |------------------|----------------------------------|
 | June 11, 2025    | Starter kit released             |
-| July 1, 2025     | Competition officially begins     |
+| July 1, 2025     | Competition officially begins    |
 | Nov 1, 2025      | Final submission deadline        |
 | Nov 15, 2025     | Evaluation + winners announced   |
 | Dec 2025         | Results at NeurIPS 2025          |
+
+
+
+## Communication
+
+For questions, updates, and discussion, please [Join the Discord](https://discord.gg/65NMfWaX)
+You can also reach us via email at [robustforaging@gmail.com](mailto:robustforaging@gmail.com)
