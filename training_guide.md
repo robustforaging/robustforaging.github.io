@@ -7,17 +7,7 @@ nav_order: 2
 
 # Training Guide — Windows Beta
 
-This document summarises **exactly** the procedure described in the accompanying *How to Train.pdf*. Follow the numbered sections below to install dependencies, launch training, add your own model, and locate results.
-
----
-
-## 1 · Prerequisite
-
-| Requirement      | Details                                          |
-|------------------|--------------------------------------------------|
-| Operating system | **Windows 10/11 64-bit** (native or in a VM).    |
-| Command-line     | All steps assume the standard **Command Prompt** |
-| Disk space       | **≥ 10 GB** for the env, dependencies, checkpoints |
+Follow the numbered sections below to install dependencies, launch training, add your own model, and locate results.
 
 ---
 
@@ -28,10 +18,11 @@ This document summarises **exactly** the procedure described in the accompanying
 1. Open **cmd.exe**.  
 2. Download the installer:
 
-   ```cmd
+{% highlight cmd %}
    curl -o Miniconda3-latest-Windows-x86_64.exe ^
         https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
-   
+{% endhighlight %}
+
 3.Run a silent install:
 
    ```cmd
