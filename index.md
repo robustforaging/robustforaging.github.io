@@ -34,11 +34,21 @@ Train an agent to navigate a naturalistic environment and reach a visually cued 
 
 This setup enables comparison between biological and artificial agents under identical visual conditions.
 
-## Quick Start
+## Download & Quick Start
+Choose the build for your platform:
 
-1. **Download the environment** — [MouseVsAI_Windows_v0.9.zip](https://drive.google.com/file/d/1S7KtiVVI5LaxVFGQlHjV0A1DzFGyklYo) (≈ 9 GB)
-2. **Train your first agent** — Follow the **[Training Guide](training_guide)**.
-3. **Submit your model** — Package your trained models and follow the **[Submission Guide](submission_guide)**.
+| Platform                    | Instruction       | Download Link                                                               |
+| --------------------------- | ---------------- | --------------------------------------------------------------------------- |
+| **Windows (GUI)**           | [Instruction](https://docs.google.com/document/d/13K5BHU-CeFdxnPgKUj9akWA_bw_Q4DFQ/edit?usp=sharing&ouid=110446495883463201050&rtpof=true&sd=true)      | [Windows v1.0](https://drive.google.com/drive/folders/12oXbrWm1nBfZup3pgCzRlkFjhB-7hD1r?usp=drive_link)         |
+| **macOS (GUI)**             | [Instruction](https://docs.google.com/document/d/1QGGkKXfbF1gw_oYXV1auGjMaMyDUwiDP/edit?usp=sharing&ouid=110446495883463201050&rtpof=true&sd=true)      | [macOS v1.0](https://drive.google.com/drive/folders/1WaLZPkXFRx3afB3OZ2CO50Rk87ec3NEp?usp=sharing)              |
+| **Linux (GUI)**             | [Instruction](https://docs.google.com/document/d/1nXrvHx16Cu2Tw1sbHPbiBPkwyJWWQPg2/edit?usp=sharing&ouid=110446495883463201050&rtpof=true&sd=true)      | [Linux v0.9](ttps://drive.google.com/drive/folders/1SMpbTGzxGUCc4GL60sazBvEk6AJGQOdo?usp=drive_link)            |
+
+
+
+1. **Download the environment**
+2. **Install dependencies**
+3. **Train your first agent** 
+4. **Submit your model** — Package your trained models and follow the **[Submission Guide](submission_guide)**.
 
 
 ## Competition Tracks
