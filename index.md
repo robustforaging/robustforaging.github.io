@@ -76,5 +76,5 @@ Please note that the two tracks do not need to be submitted separately. All subm
 
 ## Communication
 
-For questions, updates, and discussion, please [Join the Discord](https://discord.gg/65NMfWaX)
+For questions, updates, and discussion, please [Join the Discord](https://discord.gg/7mJPh5QMB7)
 You can also reach us via email at [robustforaging@gmail.com](mailto:robustforaging@gmail.com)
