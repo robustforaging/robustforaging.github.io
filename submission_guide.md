@@ -44,6 +44,7 @@ git checkout -b submit-<TeamName>-<ModelName>
 ```
 
 TeamName: your team or handle (no spaces)
+
 ModelName: a short, unique name for this model
 
 ## 3. Add Your ONNX Model(s)
