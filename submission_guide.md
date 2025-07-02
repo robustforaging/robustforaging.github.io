@@ -69,7 +69,7 @@ submissions/MyTeam/ModelB.onnx
 
 Tip: If you’re adding files to a brand-new folder, Git may ignore it. You can add an empty placeholder (.gitkeep) alongside your .onnx files, but as soon as you add your real model files, the folder will no longer be empty and will be tracked.
 
-4. Commit & Push
+## 4. Commit & Push
 
 ```
 git add submissions/<TeamName>/*.onnx
@@ -77,7 +77,7 @@ git commit -m "Submit model(s) for <TeamName>: <ModelName>[, <ModelName2>…]"
 git push -u origin submit-<TeamName>-<ModelName>
 ```
 
-5. Open a Pull Request
+## 5. Open a Pull Request
 In your GitHub fork, you’ll see a banner: Compare & pull request.
 
 Click it, target the upstream repo’s main branch, and fill out the PR form using our template:
@@ -94,7 +94,7 @@ Click it, target the upstream repo’s main branch, and fill out the PR form usi
 Submit the PR. You can update this same PR if you need to add or revise model files—just commit & push to the same branch.
 ```
 
-6. After Your PR Is Merged
+## 6. After Your PR Is Merged
 Your model file(s) become public under submissions/MyTeam/.
 
 Our CI automatically runs evaluate.py on each file and updates the public leaderboard.
