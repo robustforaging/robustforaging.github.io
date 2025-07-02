@@ -43,8 +43,8 @@ bash
 git checkout -b submit-<TeamName>-<ModelName>
 ```
 
-<TeamName>: your team or handle (no spaces)
-<ModelName>: a short, unique name for this model
+TeamName: your team or handle (no spaces)
+ModelName: a short, unique name for this model
 
 ## 3. Add Your ONNX Model(s)
 Inside your repo, under submissions/, create a directory for your team:
