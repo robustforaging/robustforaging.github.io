@@ -12,137 +12,110 @@ Each submission must include:
 Submissions are evaluated centrally by the organizers on a held-out test set with visual perturbations.
 
 ---
+Model Submission Guide
+Use the GitHub-based submission workflow below to upload your ONNX model(s). Once your pull request is merged into main, our automated evaluation script will run and update the public leaderboard.
 
-# Submission Guide — v0.9 Beta
+## 1. Fork & Clone the Submission Repository
 
-> **Scope** — These instructions apply to the Windows `.exe` beta. For the upcoming v1.0 Linux release the packaging format will stay identical, but the runner script will change.
+1. Fork the official repo to your account:
+https://github.com/robustforaging/mouse_vs_ai_submissions → Fork
 
----
-
-## 1 · Submission checklist
-
-|   | Item                 | Notes                                                                       |
-| - | -------------------- | --------------------------------------------------------------------------- |
-|   | Trained model files  | `.pt` or `.onnx`; see §2 for naming convention                              |
-|   | `config.yaml`        | Snapshot of your training hyper‑parameters                                  |
-|   | `metadata.txt`       | Team name, contact e‑mail, short description                                |
-|   | Zip archive ≤ 500 MB | 7‑zip or standard `zip`; no `.rar`                                          |
-
----
-
-## 2 · Folder structure & naming
-
-Your archive **must** unpack into a single top‑level folder named after your run‑id:
+2. Clone your fork locally (choose HTTPS or SSH):
 
 ```
-MyAgent_Normal/                 <‑ top‑level folder
-├── model_head.pt               <‑ weights file (PyTorch example)
-├── config.yaml
-└── metadata.txt
+bash
+# HTTPS (you’ll need a GitHub Personal Access Token in place of your password)
+git clone https://github.com/<YOUR_GITHUB_USERNAME>/mouse_vs_ai_submissions.git  
+
+# — or —  
+
+# SSH (if you have SSH keys set up)
+git clone git@github.com:<YOUR_GITHUB_USERNAME>/mouse_vs_ai_submissions.git
+
+cd mouse_vs_ai_submissions
 ```
 
-* **Multiple networks?** Package each network in its own folder and zip them
-  together:
+## 2. Create a Submission Branch
+Create one feature branch for your submission. If you wish to submit multiple models in one PR, pick a descriptive branch name (e.g. submit-MyTeam-multiple-models).
 
 ```
-MyTeam_Submission_v2.zip
-├── VisNet_Normal/
-│   └── ...
-└── ResNet_Perturb/
-    └── ...
+bash
+git checkout -b submit-<TeamName>-<ModelName>
 ```
 
-## 3 · Send us your submission
-1. Upload your .zip archive (≤ 500 MB) to any cloud‑storage service you prefer—Google Drive, Dropbox, OneDrive, or WeTransfer all work.
-2. Set the link to “Anyone with the link can view”.
-3. Fill out the short Submission Form (takes < 1 min): [https://forms.gle/COMP-Submission-Form](https://docs.google.com/forms/d/e/1FAIpQLSdTkMpQoihTk9BspReTPbb3JLbXYNtc-aF8ovjrUM1rDVuvfA/viewform?usp=header)
-4. You will receive an automatic confirmation e‑mail. We will download the archive, run the evaluation manually, and add your score to the public spreadsheet (updated every Monday & Thursday).
+<TeamName>: your team or handle (no spaces)
+<ModelName>: a short, unique name for this model
 
-Submission limit — You may submit up to 3 archives per calendar week. Please wait for your previous score before sending the next one.
+## 3. Add Your ONNX Model(s)
+Inside your repo, under submissions/, create a directory for your team:
 
-
-<!--
----
-
-## 3 · Create the archive
-
-```cmd
-:: Windows PowerShell example
-Compress-Archive -Path VisNet_Normal,ResNet_Perturb -DestinationPath MyTeam_Submission_v2.zip
+```
+submissions/<TeamName>/
 ```
 
-Verify size ≤ 500 MB and compute a SHA‑256 checksum (recommended):
+Copy your ONNX file(s) there.
 
-```cmd
-CertUtil -hashfile MyTeam_Submission_v2.zip SHA256
+For a single model:
+
+```
+submissions/MyTeam/MyModel.onnx
 ```
 
----
-
-## 4 · Local validation (strongly recommended)
-
-Run the provided `validate_submission.py` script before uploading:
-
-```cmd
-conda activate mouse2
-python tools\validate_submission.py --zip MyTeam_Submission_v2.zip \
-       --env MouseVsAI_Windows_v0.9.exe --episodes 10
+For multiple models in one PR, simply place each under the same folder:
+```
+submissions/MyTeam/ModelA.onnx
+submissions/MyTeam/ModelB.onnx
 ```
 
-The script will:
+Tip: If you’re adding files to a brand-new folder, Git may ignore it. You can add an empty placeholder (.gitkeep) alongside your .onnx files, but as soon as you add your real model files, the folder will no longer be empty and will be tracked.
 
-1. Unpack the zip into a temp folder.
-2. Load each model into the evaluation runner.
-3. Play 10 short episodes to verify file integrity and runtime (< 10 s each).
+4. Commit & Push
 
-If all checks pass, you’ll see `VALIDATION OK`.
+```
+git add submissions/<TeamName>/*.onnx
+git commit -m "Submit model(s) for <TeamName>: <ModelName>[, <ModelName2>…]"
+git push -u origin submit-<TeamName>-<ModelName>
+```
 
----
+5. Open a Pull Request
+In your GitHub fork, you’ll see a banner: Compare & pull request.
 
-## 5 · Upload to the leaderboard
+Click it, target the upstream repo’s main branch, and fill out the PR form using our template:
 
-1. Log in to the [https://mouse-vs-ai.](https://mouse-vs-ai.leaderboard.io)[*leaderboard*](https://mouse-vs-ai.leaderboard.io)[.io](https://mouse-vs-ai.leaderboard.io) portal.
-2. Click **Submit** → **Upload Zip**.
-3. Attach `MyTeam_Submission_v2.zip` and paste the SHA‑256 hash.
-4. Agree to the rules and click **Submit**.
-5. Refresh your team page; status will show **Queued → Running → Scored**.
+```
+## Submission metadata
 
-> **Submission limit** — You may upload up to **3** zip files per week.
-> Only the highest‑ranked model before the final deadline counts for prizes.
+- **Team Name**: MyTeam  
+- **Affiliation**: MyLab / MyCompany  
+- **Model file(s)**: 
+  - `submissions/MyTeam/MyModel.onnx`
+  - (optional) `submissions/MyTeam/ModelB.onnx`
+- **How we ran it** (optional): 
+Submit the PR. You can update this same PR if you need to add or revise model files—just commit & push to the same branch.
+```
 
----
+6. After Your PR Is Merged
+Your model file(s) become public under submissions/MyTeam/.
 
-## 6 · Evaluation protocol
+Our CI automatically runs evaluate.py on each file and updates the public leaderboard.
 
-| Stage                       | Episodes | Perturbations               | Metrics   |
-| --------------------------- | -------- | --------------------------- | --------- |
-| Public leaderboard          | 50       | Same fog levels as training | ASR & MSR |
-| Private leaderboard         | 100      | Held‑out perturbations      | ASR & MSR |
-| (Optional) Neural alignment | 80       | No perturbation             | Pearson r |
+You’ll see your score published in leaderboard.md.
 
-Detailed scoring scripts live in the *starter‑kit/evaluation* folder.
+FAQs
+Can I submit multiple models in one PR?
+Yes—just place each .onnx under submissions/<TeamName>/ and list them in your PR description.
 
----
+What if I need to update my model?
+Push additional commits to the same submit-… branch before your PR is merged.
 
-## 7 · Common errors & fixes
+Will my model be public?
+Yes—submissions are by default visible. If you require confidentiality, please contact the organizers.
 
-| Error message                 | Likely cause                                 | Fix                                                               |
-| ----------------------------- | -------------------------------------------- | ----------------------------------------------------------------- |
-| `Model file not found`        | Wrong path inside archive                    | Keep `model_head.pt` at first level of each run folder            |
-| `RuntimeError: size mismatch` | Wrong network architecture vs. saved weights | Ensure you export with the same class definition used in training |
-| `Timeout after 5 min`         | Model too large or slow                      | Optimise inference (e.g., TorchScript) or contact organisers      |
+Good luck, and happy foraging! 🎉
 
----
 
-## 8 · Licence & rules recap
-
-* By submitting you grant the organisers a non‑exclusive licence to evaluate your model weights **only** for leaderboard purposes.
-* Your code and data remain your intellectual property.
-* Full rules: [rules.md](rules.html).
 
 ---
 
 Need help? Ping **@organisers** in the Discord or open an issue in the GitHub starter kit.
 -->
-
-
