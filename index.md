@@ -11,11 +11,12 @@ title: Home
        muted
        loop
        playsinline        <!-- allows autoplay on iOS -->
-       poster="/figures/poster.jpg"  <!-- fallback thumbnail -->
+       poster="/assets/img/poster.jpg"  <!-- fallback thumbnail -->
        style="width:100%; height:auto; object-fit:cover;">
   <source src="{{ '/figures/example_video.mp4' | relative_url }}" type="video/mp4">
   Your browser doesn’t support the HTML5 video tag.
 </video>
+
 
 Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
 
