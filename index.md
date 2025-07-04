@@ -5,10 +5,12 @@ title: Home
 
 # Robust Visual Foraging Challenge @ NeurIPS 2025
 
+
 <img
-  src="{{ '/figures/mouse-fighting-banner1.png' | relative_url }}"
+  src="/figures/mouse-fighting-banner1.png"
   alt="Robust Visual Foraging Challenge Banner"
-  style="width:100%; height:auto; display:block; margin:0 auto;"
+  width="640"
+  height="320"
 />
 
 Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
