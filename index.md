@@ -7,13 +7,10 @@ title: Home
 
 <!-- HERO VIDEO -->
 <video id="intro-video"
-       autoplay
-       muted
-       loop
-       playsinline        <!-- allows autoplay on iOS -->
-       poster="figures/mouse-running-task-banner1.png"  <!-- fallback thumbnail -->
-       style="width:100%; height:auto; object-fit:cover;">
-  <source src="{{ 'https://github.com/robustforaging/robustforaging.github.io/blob/main/figures/example_video.mp4' | relative_url }}" type="video/mp4">
+       autoplay muted loop playsinline
+       poster="{{ '/figures/mouse-running-task-banner1.png' | relative_url }}"
+       style="width:100%;height:auto;object-fit:cover;">
+  <source src="{{ '/figures/example_video.mp4' | relative_url }}" type="video/mp4">
   Your browser doesn’t support the HTML5 video tag.
 </video>
 
