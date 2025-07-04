@@ -5,7 +5,7 @@ title: Home
 
 # Robust Visual Foraging Challenge @ NeurIPS 2025
 
-<video width="480" height="320" controls="controls">
+<video width="640" height="320" controls="controls">
   <source src="/figures/example_video.mp4" type="video/mp4">
 </video>
 
