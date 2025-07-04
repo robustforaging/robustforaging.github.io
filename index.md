@@ -5,11 +5,7 @@ title: Home
 
 # Robust Visual Foraging Challenge @ NeurIPS 2025
 
-> **Announcement - Public Beta v0.9:**  
-> Upcoming v1.0 (planned – 1 July 2025) will add:
-> 1. Standalone Python API – train with any RL framework (PyTorch, TensorFlow, JAX) without Unity ML-Agents
-> 2. Headless Linux builds optimised for SLURM / Kubernetes clusters
-
+![Mouse foraging task](mouse_video.mp4)
 
 Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
 
