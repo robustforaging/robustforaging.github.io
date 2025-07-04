@@ -5,7 +5,7 @@ title: Home
 
 # Robust Visual Foraging Challenge @ NeurIPS 2025
 
-![Mouse foraging task](mouse_video.mp4)
+![Mouse foraging task](https://github.com/robustforaging/robustforaging.github.io/mouse_video.mp4)
 
 Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
 
