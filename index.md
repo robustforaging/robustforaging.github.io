@@ -7,7 +7,7 @@ title: Home
 
 
 <img
-  src="/figures/mouse-fighting-banner1.png"
+  src="/figures/mouse-fighting-banner2.png"
   alt="Robust Visual Foraging Challenge Banner"
   width="640"
   height="320"
