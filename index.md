@@ -72,8 +72,8 @@ Please note that the two tracks do not need to be submitted separately. All subm
 
 | Date             | Milestone                        |
 |------------------|----------------------------------|
-| June 11, 2025    | Starter kit released             |
-| July 1, 2025     | Competition officially begins    |
+| July 1, 2025     | Starter kit released             |
+| July 15, 2025    | Competition officially begins    |
 | Nov 1, 2025      | Final submission deadline        |
 | Nov 15, 2025     | Evaluation + winners announced   |
 | Dec 2025         | Results at NeurIPS 2025          |
