@@ -1,9 +1,7 @@
 ---
-layout: default
-title: Organizers
+permalink: /organizers/
+title: "Organizers"
 ---
-
-# Organizers
 
 The Robust Visual Foraging Challenge is organized by:
 

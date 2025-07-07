@@ -1,9 +1,9 @@
 ---
-layout: default
-title: Tutorial
+permalink: /tutorial/
+title: "Tutorial"
 ---
 
-# Getting Started
+## Getting Started
 
 1. Clone the starter kit  
 2. Install dependencies  

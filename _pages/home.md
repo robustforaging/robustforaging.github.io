@@ -1,25 +1,54 @@
 ---
-layout: default
-title: Home
+layout: splash
+permalink: /
+hidden: true
+header:
+  overlay_color: "#5e616c"
+  overlay_image: /assets/images/mouse-running-task-raw.png
+  actions:
+    - label: "<i class='fas fa-download'></i> Install now"
+            #url: [download](#download-&-quick-start)
+excerpt: >
+  A competition pitting an ai model against visual tasks a mouse can solve in fog, rain, etc.<br />
+feature_row:
+  - image_path: /assets/images/mouse-fighting_banner2.png
+    alt: "submission"
+    title: "Submission Guide"
+    excerpt: "Pretty much almost everything you need to submit your ai model in this competition."
+    url: "/submission-guide/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - image_path: /assets/images/mouse-fighting-raw.png
+    alt: "training"
+    title: "Training Guide"
+    excerpt: "Hit the gym and get that ai model built like arnold."
+    url: "/training-guide/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - image_path: /assets/images/mouse-running-task-banner2.png
+    alt: "organizers"
+    title: "Amazing Organizers"
+    excerpt: "Meet the lovely people that made this competition possible!"
+    url: "/organizers"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"      
 ---
+
+{% include feature_row %}
+
 
 # Robust Visual Foraging Challenge @ NeurIPS 2025
 
-
-<img
-  src="/figures/mouse-fighting_banner2.png"
-  alt="Robust Visual Foraging Challenge Banner"
-  width="640"
-  height="320"
-/>
 
 Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
 
 Biological agents like mice can robustly perform visually guided tasks in complex environments — even under fog, blur, or visual noise. Can your agent do the same?
 
+<center>
 <video width="640" height="320" controls="controls">
-  <source src="/figures/example_video.mp4" type="video/mp4">
+  <source src="/assets/images/example_video.mp4" type="video/mp4">
 </video>
+</center>
 
 ## Goal
 
