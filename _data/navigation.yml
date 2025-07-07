@@ -1,6 +1,4 @@
 main:
-  - title: "Tutorial"
-    url: /tutorial/
   - title: "Submission Guide"
     url: /submission-guide/
   - title: "Training Guide"
