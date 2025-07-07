@@ -6,8 +6,13 @@ header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/mouse-running-task-raw.png
   actions:
-    - label: "<i class='fas fa-download'></i> Install now"
+    - label: "<i class='fas fa-download'></i> Install now (Windows)"
             #url: [download](#download-&-quick-start)
+    - label: "<i class='fas fa-download'></i> Install now (macOS)"
+            #url: [download](#download-&-quick-start)
+    - label: "<i class='fas fa-download'></i> Install now (Linux)"
+            #url: [download](#download-&-quick-start)
+            
 excerpt: >
   A competition pitting an ai model against visual tasks a mouse can solve in fog, rain, etc.<br />
 feature_row:
