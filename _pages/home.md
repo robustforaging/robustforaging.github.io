@@ -7,11 +7,11 @@ header:
   overlay_image: /assets/images/mouse-running-task-raw.png
   actions:
     - label: "<i class='fas fa-download'></i> Install now (Windows)"
-            #url: [download](#download-&-quick-start)
+      url: "https://github.com/robustforaging/mouse_vs_ai_windows"
     - label: "<i class='fas fa-download'></i> Install now (macOS)"
-            #url: [download](#download-&-quick-start)
+      url: "https://github.com/robustforaging/mouse_vs_ai_macOS"
     - label: "<i class='fas fa-download'></i> Install now (Linux)"
-            #url: [download](#download-&-quick-start)
+      url: "https://github.com/robustforaging/mouse_vs_ai_linux"
             
 excerpt: >
   A competition pitting an ai model against visual tasks a mouse can solve in fog, rain, etc.<br />
