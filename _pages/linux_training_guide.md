@@ -5,81 +5,93 @@ classes: wide
 sidebar:
    nav: "guides"
 ---
+Welcome to **Mouse vs. AI: Robust Visual Foraging Challenge @ NeurIPS 2025**
 
-> The current training guide targets the **v0.9 Windows executable** that ships with built-in ML-Agents.  
-> A forthcoming v1.0 (July,1 2025) will provide a stand-alone Python API (no ML-Agents) + headless Linux builds for cluster training
+This is a training guide for **Linux** (Ubuntu and other distributions). For other operating systems, please check:
+[Windows](/training-guide-win/) and [MacOS](/training-guide-macos/)
 
+# Create conda environment
+Open Terminal and navigate to the directory where you want to download the project.
 
+Clone the repository from GitHub:
+```bash
+git clone https://github.com/robustforaging/mouse_vs_ai_linux.git
+cd mouse_vs_ai_linux
+```
 
-Follow the numbered sections below to install dependencies, launch training, add your own model, and locate results.
+Then, create and activate the conda environment:
+```bash
+conda env create -n mouse2 --file mouse_linux.yml
+conda activate mouse2
+```
 
-## 1 · Download Environment
+# Set executable permissions for Linux binaries
+Make the Linux executable files executable:
+```bash
+# Make the binary executable
+chmod +x ./Builds/RandomTrain/LinuxHeadless.x86_64
 
-Download environment [MouseVsAI_Windows_v0.9.zip](https://drive.google.com/file/d/1S7KtiVVI5LaxVFGQlHjV0A1DzFGyklYo)
+# If you have other build directories, make their executables executable too
+# For example:
+# chmod +x ./Builds/RandomTest/LinuxHeadless.x86_64
+```
 
-## 2 · Install Miniconda <sup>†</sup>
+❗ Important:
+Replace `./Builds/RandomTrain/LinuxHeadless.x86_64` with the actual path to your Linux executable file.
+You need to run this command for each executable you intend to run.
 
-<sup>† Skip this section if you already have Anaconda or Miniconda.</sup>
+# Install additional dependencies (if needed)
+If you encounter any missing dependencies, you might need to install them:
+```bash
+# For Ubuntu/Debian systems
+sudo apt update
+sudo apt install -y libgl1-mesa-glx libglib2.0-0 libxext6 libsm6 libxrender1
 
-   a) Download the installer:
-   {% highlight cmd %}
-      curl -o Miniconda3-latest-Windows-x86_64.exe ^
-           https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
-   {% endhighlight %}
-   
-   b) Silent install
-   {% highlight cmd %}
-      start /wait "" Miniconda3-latest-Windows-x86_64.exe ^
-     /InstallationType=JustMe /AddToPath=1 /RegisterPython=1 /S ^
-     /D=%USERPROFILE%\Miniconda3
-   {% endhighlight %}
-   
-   c) Activate
-   {% highlight cmd %}
-   %USERPROFILE%\Miniconda3\Scripts\activate
-   {% endhighlight %}
+# For systems with missing audio libraries
+sudo apt install -y libasound2-dev
+```
 
-Check installation:
-   {% highlight cmd %}
-   conda --version
-   {% endhighlight %}
+# Modify file path
+Open `train.py` and go to line 134 (where `replace.replace_nature_visual_encoder` is called).
+Update the path to point to the location of `encoders.py` in your conda environment.
 
-   
-## 3· Create and activate the training environment
-   {% highlight cmd %}
-   cd <folder‑with‑exe-and-mouse.yml>
-   conda env create -n mouse2 -f mouse.yml
-   conda activate mouse2
-   {% endhighlight %}
-   
-   One‑time path fix
-   Open train.py and replace the placeholder path to encoders.py with the actual path inside your environment, e.g.
-   C:/<user>/Miniconda3/envs/mouse2/Lib/site-packages/mlagents/trainers/torch/encoders.py
+💡 Tip: The `encoders.py` file is usually located in your conda environment's directory. For example: 
+- Conda: `/home/<username>/miniconda3/envs/mouse2/lib/python3.8/site-packages/mlagents/trainers/torch`
+- Anaconda: `/home/<username>/anaconda3/envs/mouse2/lib/python3.8/site-packages/mlagents/trainers/torch`
 
-## 4· Run the training script
-   {% highlight cmd %}
-   python start.py
-   {% endhighlight %}
+You can find the exact path using:
+```bash
+conda activate mouse2
+python -c "import mlagents.trainers.torch; print(mlagents.trainers.torch.__file__.replace('__init__.py', 'encoders.py'))"
+```
 
-The script prints usage:
-   {% highlight cmd %}
-   Usage: python start.py [train|test] [options]
-     --runs-per-network R
-     --run-id ID
-     --networks N1,N2,N3   (fully_connected, nature_cnn, simple, resnet)
-   {% endhighlight %}
+# Run script
+## Training
+```bash
+python train.py --runs-per-network 1 --env RandomTrain --network neurips,simple,fully_connected,resnet,alexnet
+```
 
-The script prints usage:
-   {% highlight cmd %}
-   python -u start.py train ^
-          --runs-per-network 1 ^
-          --run-id Normal ^
-          --network neurips,simple,fully_connected
-   {% endhighlight %}
+## Evaluating
+```bash
+python evaluate.py --model "/home/<your_username>/path/to/your_model.onnx" --log-name "example.txt" --episodes 10
+```
 
-## 5· Customise the model
-   Add your custom encoder to the Encoders/ directory.
-   Optionally tweak hyper‑parameters in nature.yml (keep vis_encode_type: nature_cnn).
-   Re‑run the command from § 4.
+❗ Important:
+Replace `/home/<your_username>/path/to/your_model.onnx` with the full path to your own ONNX model file on your machine.
 
+# Troubleshooting
+## Display issues
+If you encounter display-related errors, you might need to set up your display environment:
+```bash
+export DISPLAY=:0
+```
 
+## GPU support
+For GPU training (if available), ensure you have the appropriate CUDA drivers installed:
+```bash
+# Check if CUDA is available
+nvidia-smi
+
+# Install PyTorch with CUDA support if needed (after activating the conda environment)
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+```
