@@ -5,7 +5,7 @@ title: "Organizers"
 ---
 <style>
 .organizer-photo {
-  width: 180px;
+  width: 220px;
   height: 180px;
   object-fit: cover;
   border-radius: 80%;
