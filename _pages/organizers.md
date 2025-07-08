@@ -8,11 +8,11 @@ title: "Organizers"
   width: 220px;
   height: 180px;
   object-fit: cover;
-  border-radius: 0%;
+  border-radius: 10%;
   margin-bottom: 0.5rem;
 }
 .organizers-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-around; margin-top: 1.5rem; }
-.organizer-card { width: 420px; text-align: center; font-size: 0.95rem; }
+.organizer-card { width: 360px; text-align: center; font-size: 0.95rem; }
 
 </style>
 <h1 style="text-align: center;">Core Organizers</h1> 
