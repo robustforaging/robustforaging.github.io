@@ -35,7 +35,7 @@ title: "Organizers"
     <strong>Joe Canzano</strong><br>
     UC Santa Barbara<br>
     Ph.D. candidate in Dynamical Neuroscience studying sensory representations in cortex during visual navigation.<br>
-    <em>Organizer | Experimental Lead | Data Provider</em>
+    <em>Organizer | Experimental Lead</em>
   </div>
 </div>
 
@@ -46,7 +46,7 @@ title: "Organizers"
     <strong>Jing Peng</strong><br>
     UC Santa Barbara<br>
     Master’s student in Computer Science and lead software engineer for the competition.<br>
-    <em>Software Developer | Unity Expert | Technical Support</em>
+    <em>Software Developer | Unity Expert</em>
   </div>
 </div>
 
