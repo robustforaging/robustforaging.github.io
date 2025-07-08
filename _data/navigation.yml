@@ -1,8 +1,8 @@
 main:
-  - title: "Submission Guide"
-    url: /submission-guide/
   - title: "Training Guide"
     url: /training-guide-win/
+  - title: "Submission Guide"
+    url: /submission-guide/
   - title: "Leaderboard"
     url: /leaderboard/
   - title: "Organizers"
