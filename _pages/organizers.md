@@ -102,7 +102,3 @@ title: "Organizers"
 </div>
 
 </div>
-
-
-
-For inquiries, contact us at [robustforaging@gmail.com](mailto:robustforaging@gmail.com)
