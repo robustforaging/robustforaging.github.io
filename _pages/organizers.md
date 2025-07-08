@@ -13,6 +13,7 @@ title: "Organizers"
 }
 .organizers-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-around; margin-top: 1.5rem; }
 .organizer-card { width: 360px; text-align: center; font-size: 0.95rem; }
+
 </style>
 
 <div class="organizers-grid">
@@ -22,18 +23,18 @@ title: "Organizers"
   <div class="organizer-info">
     <strong>Marius Schneider</strong><br>
     UC Santa Barbara<br>
-    Postdoctoral researcher in the Bionic Vision Lab using computational models to study how the brain processes visual input.<br>
+    Postdoctoral researcher in the Bionic Vision Lab using computational models to study how the brain extracts visual features to support navigation.<br>
     <em>Lead Organizer | Competition Design</em>
   </div>
 </div>
 
-<!-- Joe -->
+  <!-- Joe -->
 <div class="organizer-card">
   <img src="/assets/team/Joe.png" alt="Joe Canzano" class="organizer-photo">
   <div class="organizer-info">
     <strong>Joe Canzano</strong><br>
     UC Santa Barbara<br>
-    Ph.D. candidate in Dynamical Neuroscience studying sensory representations in cortex during visual navigation. Developed the Unity task and collected behavioral + neural data.<br>
+    Ph.D. candidate in Dynamical Neuroscience studying sensory representations in cortex during visual navigation. .<br>
     <em>Organizer | Experimental Lead | Data Provider</em>
   </div>
 </div>
@@ -44,7 +45,7 @@ title: "Organizers"
   <div class="organizer-info">
     <strong>Jing Peng</strong><br>
     UC Santa Barbara<br>
-    Master’s student in Computer Science and lead software engineer for the competition. Implemented RL baselines and supports Unity integration.<br>
+    Master’s student in Computer Science and lead software engineer for the competition.br>
     <em>Software Developer | Unity Expert | Technical Support</em>
   </div>
 </div>
@@ -55,8 +56,8 @@ title: "Organizers"
   <div class="organizer-info">
     <strong>Yuchen Hou</strong><br>
     UC Santa Barbara<br>
-    Ph.D. student in Computer Science researching how vision and behavior shape neural dynamics using deep learning.<br>
-    <em>ML Researcher | Technical Support | Organizer</em>
+    Ph.D. student in Computer Science investigating how vision and behavior shape neural dynamics using deep learning.<br>
+    <em>Organizer | ML Expert | Technical Support | </em>
   </div>
 </div>
 
