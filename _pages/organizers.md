@@ -15,7 +15,7 @@ title: "Organizers"
 .organizer-card { width: 420px; text-align: center; font-size: 0.95rem; }
 
 </style>
-<h1 style="text-align: center;">Strategic Oversight</h1> 
+<h1 style="text-align: center;">Core Organizers</h1> 
 
 <div class="organizers-grid">
 <!-- Marius -->
