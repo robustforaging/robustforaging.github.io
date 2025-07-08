@@ -12,11 +12,10 @@ title: "Organizers"
   margin-bottom: 0.5rem;
 }
 .organizers-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-around; margin-top: 1.5rem; }
-.organizer-card { width: 280px; text-align: center; font-size: 0.95rem; }
+.organizer-card { width: 360px; text-align: center; font-size: 0.95rem; }
 </style>
 
 <div class="organizers-grid">
-
 <!-- Marius -->
 <div class="organizer-card">
   <img src="/assets/team/Marius.jpeg" alt="Marius Schneider" class="organizer-photo">
@@ -61,7 +60,7 @@ title: "Organizers"
   </div>
 </div>
 
-<!-- Like -->
+<!-- Luke -->
 <div class="organizer-card">
   <img src="/assets/team/luke.jpg" alt="Like Herberlin" class="organizer-photo">
   <div class="organizer-info">
