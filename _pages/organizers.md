@@ -73,8 +73,9 @@ title: "Organizers"
 </div>
 </div>
 
+***
 
-# Strategic Oversight
+<h1 style="text-align: center;">Strategic Oversight</h1> 
 
 <div class="organizers-grid">
 
