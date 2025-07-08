@@ -8,7 +8,7 @@ title: "Organizers"
   width: 220px;
   height: 180px;
   object-fit: cover;
-  border-radius: 80%;
+  border-radius: 95%;
   margin-bottom: 0.5rem;
 }
 .organizers-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-around; margin-top: 1.5rem; }
@@ -34,7 +34,7 @@ title: "Organizers"
   <div class="organizer-info">
     <strong>Joe Canzano</strong><br>
     UC Santa Barbara<br>
-    Ph.D. candidate in Dynamical Neuroscience studying sensory representations in cortex during visual navigation. .<br>
+    Ph.D. candidate in Dynamical Neuroscience studying sensory representations in cortex during visual navigation.<br>
     <em>Organizer | Experimental Lead | Data Provider</em>
   </div>
 </div>
@@ -45,7 +45,7 @@ title: "Organizers"
   <div class="organizer-info">
     <strong>Jing Peng</strong><br>
     UC Santa Barbara<br>
-    Master’s student in Computer Science and lead software engineer for the competition.br>
+    Master’s student in Computer Science and lead software engineer for the competition.<br>
     <em>Software Developer | Unity Expert | Technical Support</em>
   </div>
 </div>
