@@ -8,7 +8,7 @@ title: "Organizers"
   width: 220px;
   height: 180px;
   object-fit: cover;
-  border-radius: 95%;
+  border-radius: 5%;
   margin-bottom: 0.5rem;
 }
 .organizers-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-around; margin-top: 1.5rem; }
