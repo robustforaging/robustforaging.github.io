@@ -66,7 +66,7 @@ title: "Organizers"
 <div class="organizer-card">
   <img src="/assets/team/luke.jpg" alt="Like Herberlin" class="organizer-photo">
   <div class="organizer-info">
-    <strong>Like Herberlin</strong><br>
+    <strong>Luke Herberlin</strong><br>
     UC Santa Barbara<br>
     Undergraduate Computer Science student responsible for web design and the submission platform.<br>
     <em>Web Designer | Platform Developer | Technical Support</em>
