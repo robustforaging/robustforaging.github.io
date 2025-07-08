@@ -1,7 +1,10 @@
 ---
+layout: splash
 permalink: /submission-guide/
 title: "Submission Guide"
 ---
+
+# Submission Guide
 
 Each submission must include:
 - A trained model file (.pt, .ckpt, or .onnx)

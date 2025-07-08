@@ -1,17 +1,107 @@
 ---
+layout: splash
 permalink: /organizers/
 title: "Organizers"
 ---
+<style>
+.organizer-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+.organizers-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-around; margin-top: 1.5rem; }
+.organizer-card { width: 280px; text-align: center; font-size: 0.95rem; }
+</style>
 
-The Robust Visual Foraging Challenge is organized by:
+<div class="organizers-grid">
 
-- **Marius Schneider (Organizer)** is a Postdoc in the Bionic Vision Lab at UC Santa Barbara. In his researches he leverages a combination of large-scale electrophysiological data analysis, machine learning, and biophysically realistic modeling to investigate how the brain extracts and integrates relevant sensory information from complex, dynamic environments to support navigation and behavior. He obtained his PhD in Neurophysics with highest honors from Radboud University Nijmegen, Netherlands in affiliation with the International Max Planck Research School (IMPRS) for Neural Circuits.
-- **Joe S Canzano (Organizer)** is a Dynamical Neuroscience Ph.D. candidate at UC Santa Barbara working with Spencer Smith to study representation and computation in sensory cortex using visual navigation in mice as a model. He brings broad experimental and analytical expertise in systems neuroscience including animal behavior and surgery, behavior rig engineering, optical and electrophysyiological neural recordings and manipulation, and large-scale modeling techniques from machine learning, AI, and computational neuroscience. He earned his M.S. in Medical Science from the University of Florida.
-- **Jing Peng (Software Engineer)** is a Computer Science Master’s student in the Bionic Vision Lab at the Universityof California, Santa Barbara. Her research sits at the intersection of artificial intelligence and neuroscience. She focuses on leveraging reinforcement learning and deep neural networks to model learning behaviors and dissect the neural mechanisms of sensory integration and decision- making, with the broader goal of translating brain-inspired principles into more robust AI systems. She obtained her B.Eng in Software Engineering from Northeastern University (CN).
-- **Yuchen Hou (Organizer)** is a Computer Science Ph.D. student in the Bionic Vision Lab at UC Santa Barbara. Her research lies at the intersection of machine learning and computational neuroscience. She is interested in developing generalizable multimodal deep-learning models for neural activity prediction,
-as well as applying data-driven techniques to better understand brain dynamics. She obtained her B.Sc. in Psychological and Brain Sciences from UC Santa Barbara
-- **Spencer LaVere Smith (Strategic Oversight)** is a Professor at UC Santa Barbara. His lab explores neurophysiology, behavior, population coding, multiphoton imaging, optics, and computation. They are pioneers in large field-of-view multiphoton imaging and measurements and manipulations of neuronal activity across cortical areas with single neuron and single synapse resolution. His awards include a McKnight Technological Innovation Award, the Klingenstein Award, and the Presidential Early Career Award for Scientists and Engineers.
-- **Michael Beyeler (Strategic Oversight)** is an Assistant Professor at UC Santa Barbara, where he directs the Bionic Vision Lab, an interdisciplinary research group at the intersection of machine learning, computer vision, and computational neuroscience. His expertise includes developing biologically inspired deep learning models to predict neural activity and designing robust machine learning algorithms that emulate biological visual processing. His lab currently holds top-performing models on multiple benchmarks, including the highest V1 neural predictivity score on Brain-Score (https://www.brain-score.org/model/vision/1773) and the best-performing model for fovea and optic disc detection in visually impaired populations (https://paperswithcode.com/paper/u-net-with-hierarchical-bottleneck-attention). His contributions have been recognized by prestigious awards including the NIH Director’s New Innovator Award and the Harold J.
-Plous Award
+<!-- Marius -->
+<div class="organizer-card">
+  <img src="/assets/team/Marius.jpeg" alt="Marius Schneider" class="organizer-photo">
+  <div class="organizer-info">
+    <strong>Marius Schneider</strong><br>
+    UC Santa Barbara<br>
+    Postdoctoral researcher in the Bionic Vision Lab using computational models to study how the brain processes visual input.<br>
+    <em>Lead Organizer | Competition Design</em>
+  </div>
+</div>
+
+<!-- Joe -->
+<div class="organizer-card">
+  <img src="/assets/team/Joe.png" alt="Joe Canzano" class="organizer-photo">
+  <div class="organizer-info">
+    <strong>Joe Canzano</strong><br>
+    UC Santa Barbara<br>
+    Ph.D. candidate in Dynamical Neuroscience studying sensory representations in cortex during visual navigation. Developed the Unity task and collected behavioral + neural data.<br>
+    <em>Organizer | Experimental Lead | Data Provider</em>
+  </div>
+</div>
+
+<!-- Jing -->
+<div class="organizer-card">
+  <img src="/assets/team/jing.jpg" alt="Jing Peng" class="organizer-photo">
+  <div class="organizer-info">
+    <strong>Jing Peng</strong><br>
+    UC Santa Barbara<br>
+    Master’s student in Computer Science and lead software engineer for the competition. Implemented RL baselines and supports Unity integration.<br>
+    <em>Software Developer | Unity Expert | Technical Support</em>
+  </div>
+</div>
+
+<!-- Yuchen -->
+<div class="organizer-card">
+  <img src="/assets/team/Yuchen.jpg" alt="Yuchen Hou" class="organizer-photo">
+  <div class="organizer-info">
+    <strong>Yuchen Hou</strong><br>
+    UC Santa Barbara<br>
+    Ph.D. student in Computer Science researching how vision and behavior shape neural dynamics using deep learning.<br>
+    <em>ML Researcher | Technical Support | Organizer</em>
+  </div>
+</div>
+
+<!-- Like -->
+<div class="organizer-card">
+  <img src="/assets/team/luke.jpg" alt="Like Herberlin" class="organizer-photo">
+  <div class="organizer-info">
+    <strong>Like Herberlin</strong><br>
+    UC Santa Barbara<br>
+    Undergraduate Computer Science student responsible for web design and the submission platform.<br>
+    <em>Web Designer | Platform Developer | Technical Support</em>
+  </div>
+</div>
+</div>
+
+
+# Strategic Oversight
+
+<div class="organizers-grid">
+
+<!-- Spencer -->
+<div class="organizer-card">
+  <img src="/assets/team/spencer.jpg" alt="Spencer LaVere Smith" class="organizer-photo">
+  <div class="organizer-info">
+    <strong>Spencer LaVere Smith</strong><br>
+    UC Santa Barbara<br>
+    Professor of Neuroscience specializing in population coding, multiphoton imaging, and systems neurophysiology.<br>
+    <em>Senior Advisor | Outreach</em>
+  </div>
+</div>
+
+<!-- Michael -->
+<div class="organizer-card">
+  <img src="/assets/team/michael.png" alt="Michael Beyeler" class="organizer-photo">
+  <div class="organizer-info">
+    <strong>Michael Beyeler</strong><br>
+    UC Santa Barbara<br>
+    Assistant Professor and director of the Bionic Vision Lab, focusing on biologically inspired machine learning and computational neuroscience.<br>
+    <em>Senior Advisor | Outreach</em>
+  </div>
+</div>
+
+</div>
+
+
 
 For inquiries, contact us at [robustforaging@gmail.com](mailto:robustforaging@gmail.com)

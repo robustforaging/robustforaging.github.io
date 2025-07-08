@@ -2,8 +2,16 @@ main:
   - title: "Submission Guide"
     url: /submission-guide/
   - title: "Training Guide"
-    url: /training-guide/
+    url: /training-guide-win/
   - title: "Leaderboard"
     url: /leaderboard/
   - title: "Organizers"
     url: /organizers/
+
+guides:
+  - title: Windows
+    url: /training-guide-win/
+  - title: Linux
+    url: /training-guide-linux/
+  - title: MacOS
+    url: /training-guide-macos/

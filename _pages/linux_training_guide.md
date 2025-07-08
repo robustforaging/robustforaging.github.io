@@ -1,8 +1,11 @@
 ---
-permalink: /training-guide/
-title: "Training Guide"
-toc: true
+permalink: /training-guide-linux/
+title: "Training Guide for Linux"
+classes: wide
+sidebar:
+   nav: "guides"
 ---
+
 > The current training guide targets the **v0.9 Windows executable** that ships with built-in ML-Agents.  
 > A forthcoming v1.0 (July,1 2025) will provide a stand-alone Python API (no ML-Agents) + headless Linux builds for cluster training
 
