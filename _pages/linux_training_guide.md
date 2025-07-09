@@ -8,7 +8,7 @@ sidebar:
 Welcome to **Mouse vs. AI: Robust Visual Foraging Challenge @ NeurIPS 2025**
 
 This is a training guide for **Linux** (Ubuntu and other distributions). For other operating systems, please check:
-[Windows](/training-guide-win/) and [MacOS](/training-guide-macos/)
+[Windows](/training-guide-win/) and [macOS](/training-guide-macos/)
 
 # Create conda environment
 Open Terminal and navigate to the directory where you want to download the project.
