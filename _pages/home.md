@@ -58,10 +58,10 @@ Biological agents like mice can robustly perform visually guided tasks in comple
   <source src="/assets/images/mouse_pov.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-<video width="640" height="320" controls="controls" autoplay loop muted>
-  <source src="/assets/images/example_video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<!--<video width="640" height="320" controls="controls" autoplay loop muted> -->
+<!--  <source src="/assets/images/example_video.mp4" type="video/mp4"> -->
+<!-- Your browser does not support the video tag. -->
+<!-- </video> -->
 </div>
 </center>
 
