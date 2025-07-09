@@ -4,6 +4,7 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
+  #overlay_image: /assets/images/banner-new.png
   overlay_image: /assets/images/mouse-running-task-raw.png
   actions:
     - label: "<i class='fas fa-download'></i> Install now (Windows)"
@@ -16,15 +17,31 @@ header:
 excerpt: >
   A competition pitting an ai model against visual tasks a mouse can solve in fog, rain, etc.<br />
 ---
+<style>
+  .full-width-element {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the element */
+  }
+</style>
+
 
 Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
 
 Biological agents like mice can robustly perform visually guided tasks in complex environments — even under fog, blur, or visual noise. Can your agent do the same?
 
 <center>
-<video width="640" height="320" controls="controls">
-  <source src="/assets/images/example_video.mp4" type="video/mp4">
+<div class="full-width-element">
+<video width="640" height="320" controls="controls" autoplay loop muted>
+  <source src="/assets/images/mouse_pov.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
+<video width="640" height="320" controls="controls" autoplay loop muted>
+  <source src="/assets/images/example_video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</div>
 </center>
 
 ## Goal
