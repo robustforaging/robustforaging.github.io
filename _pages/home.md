@@ -4,8 +4,7 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  #overlay_image: /assets/images/banner-new.png
-  overlay_image: /assets/images/mouse-running-task-raw.png
+  overlay_image: /assets/images/banner-new.png
   actions:
     - label: "<i class='fas fa-download'></i> Install now (Windows)"
       url: "https://github.com/robustforaging/mouse_vs_ai_windows"
@@ -23,6 +22,28 @@ excerpt: >
     position: relative;
     left: 50%;
     transform: translateX(-50%); /* Centers the element */
+  }
+
+  .page__title {
+    color: #222831 !important;
+    text-shadow: none !important;
+  }
+
+  .page__lead {
+    color: #222831 !important;
+    text-shadow: none !important;
+  }
+
+  .btn--light-outline {
+    color: #222831 !important;
+    border-color: #222831 !important;
+    text-shadow: none !important;
+  }
+
+  .btn--light-outline:hover {
+    color: #ffffff !important;
+    background-color: #222831 !important;
+    border-color: #222831 !important;
   }
 </style>
 
