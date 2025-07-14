@@ -48,6 +48,13 @@ excerpt: >
     background-color: #222831 !important;
     border-color: #222831 !important;
   }
+
+  /* put this right after your existing styles */
+  .competition-diagram,     /* the figure             */
+  p {                       /* regular paragraphs     */
+    margin-top: 2rem;       /* ↑ space above          */
+    margin-bottom: 2rem;    /* ↓ space below          */
+  }
 </style>
 
 
