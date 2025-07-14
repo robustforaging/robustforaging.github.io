@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "New home draft"
+title: "Robust Foraging Competition"
 nav_exclude: true          # keeps it out of the menu (Just-the-Docs, Minimal Mistakes, etc.) :contentReference[oaicite:2]{index=2}
 permalink: /home-draft/    # single, trailing-slash permalink
 robots: noindex,nofollow   # stop search engines indexing it
@@ -51,7 +51,7 @@ excerpt: >
 </style>
 
 
-Welcome to the **Mouse vs AI: Robust Visual Foraging Competition** @  **NeurIPS 2025 Competition Track **.
+Welcome to the Mouse vs AI: Robust Visual Foraging Competition @  **NeurIPS 2025 Competition Track**.
 
 Mice robustly navigate in a range of conditions like fog, maybe more robustly than self-driving cars, which can struggle with out-of-distribution conditions. Build an AI agent that can outcompete a mouse!
 
