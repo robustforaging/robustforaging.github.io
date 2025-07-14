@@ -68,10 +68,14 @@ Mice robustly navigate in a range of conditions like fog, maybe more robustly th
 </div>
 </center>
 
+
+
 In this competition, we have generated a unique data set that includes hours of mice performing a visual navigation task in a detailed virtual reality (VR) environment (in Unity), under a range of perturbations to the visual stimuli (fog, etc.).
 
-1. For Track 1, build an AI agent that interfaces with the same VR game and try to outperform a mouse when faced with various visual perturbations.
-2. For Track 2, we have used state-of-the-art two-photon imaging to measure neural activity with individual neuron resolution across multiple brain areas while mice perform the task.  This data set is the basis for the neural alignment track to assess how well models align with neuronal  representations. Is your AI agent pulling out the same information as a mouse's brain does?
+
+
+**Track 1 — Visual Robustness:** Build an AI agent that interfaces with the same VR game and try to outperform a mouse when faced with various visual perturbations.
+**Track 2 — Neural Alignment:** We have used state-of-the-art two-photon imaging to measure neural activity with individual neuron resolution across multiple brain areas while mice perform the task.  This data set is the basis for the neural alignment track to assess how well models align with neuronal  representations. Is your AI agent pulling out the same information as a mouse's brain does?
 
 
 
