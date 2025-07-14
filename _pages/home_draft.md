@@ -119,8 +119,7 @@ The goal of this competition is to benchmark and improve the robustness of artif
 
 - Evaluate generalization under unseen visual perturbations
 - Compare artificial agent performance to real mouse behavior under identical conditions
-- Provide a biologically grounded benchmark for embodied visual AI systems
-- Offer an neural alignment track to assess how well models align with cortical representations
+- Offer an neural alignment track to assess how well visual encoders trained on a dynamic foraging task sponteously align with cortical representations
 
 
 ## Task Overview
@@ -139,8 +138,6 @@ Choose the build for your platform:
 | **Windows (GUI)**           | [Windows v1.0](https://github.com/robustforaging/mouse_vs_ai_windows)     |
 | **macOS (GUI)**             | [macOS v1.0](https://github.com/robustforaging/mouse_vs_ai_macOS)         |
 | **Linux (GUI)**             | [Linux v1.0](https://github.com/robustforaging/mouse_vs_ai_linux)         |
-
-
 
 
 1. **Download the environment**
