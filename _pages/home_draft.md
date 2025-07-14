@@ -51,7 +51,7 @@ excerpt: >
 </style>
 
 
-Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
+Welcome to the **Mouse vs AI: Robust Visual Foraging Competition** @  **NeurIPS 2025 Competition Track **.
 
 Mice robustly navigate in a range of conditions like fog, maybe more robustly than self-driving cars, which can struggle with out-of-distribution conditions. Build an AI agent that can outcompete a mouse!
 
@@ -68,7 +68,16 @@ Mice robustly navigate in a range of conditions like fog, maybe more robustly th
 </div>
 </center>
 
-In this competition, we have generated a unique data set that includes hours of mice performing a visual navigation task in a detailed virtual reality (VR) environment (in Unity), under a range of perturbations to the visual stimuli (fog, etc.). For Track 1, build an AI agent that interfaces with the same VR game and try to outperform a mouse when faced with various visual perturbations. For Track 2, we have used state-of-the-art two-photon imaging to measure neural activity with individual neuron resolution across multiple brain areas while mice perform the task.  This data set is the basis for the neural alignment track to assess how well models align with neuronal  representations. Is your AI agent pulling out the same information as a mouse's brain does?
+In this competition, we have generated a unique data set that includes hours of mice performing a visual navigation task in a detailed virtual reality (VR) environment (in Unity), under a range of perturbations to the visual stimuli (fog, etc.).
+
+1. For Track 1, build an AI agent that interfaces with the same VR game and try to outperform a mouse when faced with various visual perturbations.
+2. For Track 2, we have used state-of-the-art two-photon imaging to measure neural activity with individual neuron resolution across multiple brain areas while mice perform the task.  This data set is the basis for the neural alignment track to assess how well models align with neuronal  representations. Is your AI agent pulling out the same information as a mouse's brain does?
+
+
+
+
+
+
  
 
 <div class="competition-diagram">
