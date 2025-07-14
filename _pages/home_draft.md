@@ -70,7 +70,7 @@ Mice robustly navigate in a range of conditions like fog, maybe more robustly th
 <center>
 <div class="full-width-element">
 <video width="640" height="320" controls="controls" autoplay loop muted>
-  <source src="/assets/images/tesla_fog.mp4" type="video/mp4">
+  <source src="/assets/images/tesla_fog_cut.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 <video width="640" height="320" controls="controls" autoplay loop muted> -->
