@@ -71,11 +71,9 @@ Mice robustly navigate in a range of conditions like fog, maybe more robustly th
 <video width="640" height="320" controls="controls" autoplay loop muted> -->
   <source src="/assets/images/example_video_mice_blur.mp4" type="video/mp4"> -->
   <Your browser does not support the video tag. -->
-</video> -->
+</video>
 </div>
 </center>
-
-
 </pre>
 
 In this competition, we have generated a unique data set that includes hours of mice performing a visual navigation task in a detailed virtual reality (VR) environment (in Unity), under a range of perturbations to the visual stimuli (fog, etc.).
