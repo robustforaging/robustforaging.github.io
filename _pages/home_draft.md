@@ -102,9 +102,9 @@ In this competition, we have generated a unique data set that includes hours of 
        alt="Overview of the Mouse-vs-AI competition…">
 
   <figcaption class="fig-caption">
-    <strong>Figure&nbsp;1.</strong> Overview of the <em>Mouse&nbsp;vs&nbsp;AI – Robust Visual Foraging Challenge</em>.<br><br>
-    <strong>(Left)</strong> Build an AI agent that plays the same VR foraging task as the mice.<br>
-    <strong>(Center)</strong> <u>Track 1</u> scores behavioural robustness: average and minimum success rate across one seen (fog) and three unseen perturbations.<br>
+    <strong>Figure&nbsp;1.</strong> Overview of the <em>Mouse&nbsp;vs&nbsp;AI – Robust Visual Foraging Challenge</em>.
+    <strong>(Left)</strong> Build an AI agent that plays the same VR foraging task as the mice.
+    <strong>(Center)</strong> <u>Track 1</u> scores behavioural robustness: average and minimum success rate across one seen (fog) and three unseen perturbations.
     <strong>(Right)</strong> <u>Track 2</u> scores neural alignment: how well a linear readout from the agent’s visual-encoder activations predicts mouse V1 + HVA activity.
   </figcaption>
 </figure>
