@@ -1,14 +1,10 @@
 ---
 layout: splash
-title: “New home draft”  # not shown in nav (see next line)
-nav_exclude: true        # <- works for many themes like Just-the-Docs;  
-                         #    in Minima you can instead set  exclude: true  
-                         #    and add an `unless page.exclude` check in header.html :contentReference[oaicite:0]{index=0}
-permalink: /home-draft/  # the secret URL
-robots: noindex,nofollow # keeps it out of Google et al. :contentReference[oaicite:1]{index=1}
-sitemap: false           # keeps it out of jekyll-sitemap.xml :contentReference[oaicite:2]{index=2}
-permalink: /
-hidden: true
+title: "New home draft"
+nav_exclude: true          # keeps it out of the menu (Just-the-Docs, Minimal Mistakes, etc.) :contentReference[oaicite:2]{index=2}
+permalink: /home-draft/    # single, trailing-slash permalink
+robots: noindex,nofollow   # stop search engines indexing it
+sitemap: false             # keep it out of jekyll-sitemap.xml
 header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/banner-new.png
@@ -19,10 +15,10 @@ header:
       url: "https://github.com/robustforaging/mouse_vs_ai_macOS"
     - label: "<i class='fas fa-download'></i> Install now (Linux)"
       url: "https://github.com/robustforaging/mouse_vs_ai_linux"
-            
 excerpt: >
   Can your AI visually navigate better than a mouse?<br />
 ---
+
 <style>
   .full-width-element {
     width: 100vw;
