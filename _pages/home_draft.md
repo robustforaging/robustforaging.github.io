@@ -62,7 +62,7 @@ Mice robustly navigate in a range of conditions like fog, maybe more robustly th
   Your browser does not support the video tag.
 </video>
 <video width="640" height="320" controls="controls" autoplay loop muted> -->
-  <source src="/assets/images/example_video_mice_blurred.mp4" type="video/mp4"> -->
+  <source src="/assets/images/example_video_mice_blur.mp4" type="video/mp4"> -->
   <Your browser does not support the video tag. -->
 </video> -->
 </div>
