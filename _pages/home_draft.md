@@ -55,6 +55,11 @@ excerpt: >
     margin-top: 2rem;       /* ↑ space above          */
     margin-bottom: 2rem;    /* ↓ space below          */
   }
+
+  .mt-2 { margin-top: 1rem;  }
+  .mt-4 { margin-top: 2rem;  }
+  .mb-2 { margin-bottom: 1rem; }
+  .mb-4 { margin-bottom: 2rem; }
 </style>
 
 
@@ -74,7 +79,9 @@ Mice robustly navigate in a range of conditions like fog, maybe more robustly th
 </video>
 </div>
 </center>
-</pre>
+
+    
+##  Competition Task
 
 In this competition, we have generated a unique data set that includes hours of mice performing a visual navigation task in a detailed virtual reality (VR) environment (in Unity), under a range of perturbations to the visual stimuli (fog, etc.).
 <ul>
@@ -93,7 +100,6 @@ In this competition, we have generated a unique data set that includes hours of 
 
 
 
-##  Competition Task
 
 
 <div class="competition-diagram">
