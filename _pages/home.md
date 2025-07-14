@@ -14,7 +14,7 @@ header:
       url: "https://github.com/robustforaging/mouse_vs_ai_linux"
             
 excerpt: >
-  A competition pitting an ai model against visual tasks a mouse can solve in fog, rain, etc.<br />
+  Can your AI visually navigate better than a mouse?<br />
 ---
 <style>
   .full-width-element {
@@ -50,7 +50,7 @@ excerpt: >
 
 Welcome to the official competition page for the **Mouse vs AI: Robust Visual Foraging Challenge**, part of the NeurIPS 2025 Competition Track.
 
-Biological agents like mice can robustly perform visually guided tasks in complex environments — even under fog, blur, or visual noise. Can your agent do the same?
+Mice robustly navigate in a range of conditions like fog, maybe more robustly than self-driving cars, which can struggle with out-of-distribution conditions. Build an AI agent that can outcompete a mouse!
 
 <center>
 <div class="full-width-element">
