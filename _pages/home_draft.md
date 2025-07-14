@@ -76,6 +76,7 @@ Mice robustly navigate in a range of conditions like fog, maybe more robustly th
 </center>
 
 
+</pre>
 
 In this competition, we have generated a unique data set that includes hours of mice performing a visual navigation task in a detailed virtual reality (VR) environment (in Unity), under a range of perturbations to the visual stimuli (fog, etc.).
 <ul>
