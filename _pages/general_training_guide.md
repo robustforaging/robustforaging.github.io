@@ -24,7 +24,7 @@ Mice were trained under normal conditions before their performance under unseen 
        alt="Overview of the Mouse-vs-AI competition…">
 
   <figcaption class="fig-caption">
-    <strong> Overview of the <em>Mouse&nbsp;vs&nbsp;AI – Robust Visual Foraging Challenge Pipeline</em>.
+    <strong> Overview of the Mouse vs. AI – Robust Visual Foraging Challenge Pipeline</strong>.
   </figcaption>
 </figure>
 
