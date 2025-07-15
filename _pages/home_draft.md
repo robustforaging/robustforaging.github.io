@@ -118,7 +118,7 @@ Biological vision, by contrast, is remarkably resilient. Mice trained for only a
 The **Mouse vs AI: Robust Visual Foraging Challenge** turns that gap into a quantitative benchmark. Participants train artificial agents in the Unity environment used for the mouse experiments, with access to two conditions (clean and fog).
 In each 5-second trial the agent receives visual information about the environment through 86 × 155 pixels greyscale images and must reach a randomly placed, visually cued target. During mouse training the target started near the animal and the start distance was increased whenever performance exceeded 70 % success; the provided NormalTrain, FogTrain and RandomTrain builds of the Game implement the same curriculum for agents. A third build, RandomTest, always places the target at the maximum distance, mirroring the final evaluation pipeline witht he two provided conditions. The trained agent—visual encoder plus policy—is the **single submission used for both tracks**.
 
-<blockquote class="track" **markdown="1"**>
+<blockquote class="track" markdown="1">
 <strong>Track 1 — Visual Robustness</strong><br>
  Each submitted agent is evaluated under the two provided conditions and **three held-out perturbations** never seen during training. Performance is summarised by <strong>Average Success Rate (ASR)</strong> and <strong>Minimum Success Rate (MSR)</strong> acrocc all conditions.<br> 
  **Score= 0.5 × ASR + 0.5 × MSR**
