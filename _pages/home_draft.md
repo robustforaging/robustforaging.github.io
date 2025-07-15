@@ -116,22 +116,22 @@ Robust visual perception under real-world conditions remains a major bottleneck 
 Biological vision, by contrast, is remarkably resilient. Mice trained for only a few hours under a clear scene continue to solve the same visually guided foraging task when degradations are introduced, showing only a modest drop in success.
 
 The **Mouse vs AI: Robust Visual Foraging Challenge** turns that gap into a quantitative benchmark. Participants train artificial agents in the Unity environment used for the mouse experiments, with access to two conditions (clean and fog).
-In each 5-second trial the agent receives visual information about the environment through 86 × 155 pixels greyscale images and must reach a randomly placed, visually cued target. During mouse training the target started near the animal and the start distance was increased whenever performance exceeded 70 % success; the provided NormalTrain, FogTrain and RandomTrain builds of the Game implement the same curriculum for agents. A third build, RandomTest, always places the target at the maximum distance, mirroring the final evaluation pipeline witht he two provided conditions. The trained agent—visual encoder plus policy—is the *single submission used for both tracks*.
+In each 5-second trial the agent receives visual information about the environment through 86 × 155 pixels greyscale images and must reach a randomly placed, visually cued target. During mouse training the target started near the animal and the start distance was increased whenever performance exceeded 70 % success; the provided NormalTrain, FogTrain and RandomTrain builds of the Game implement the same curriculum for agents. A third build, RandomTest, always places the target at the maximum distance, mirroring the final evaluation pipeline witht he two provided conditions. The trained agent—visual encoder plus policy—is the **single submission used for both tracks**.
 
 <blockquote class="track">
 <strong>Track 1 — Visual Robustness</strong><br>
  Each submitted agent is evaluated under the two provided conditions and **three held-out perturbations** never seen during training. Performance is summarised by **Average Success Rate (ASR)** and **Minimum Success Rate (MSR)** acrocc all conditions.<br> 
- *Score= 0.5 × ASR + 0.5 × MSR*
+ **Score= 0.5 × ASR + 0.5 × MSR**
 </blockquote>
 
 **Track 1 — Visual Robustness**  
      Each submitted agent is evaluated under the two provided conditions and **three held-out perturbations** never seen during training. Performance is summarised by **Average Success Rate (ASR)** and **Minimum Success Rate (MSR)** acrocc all conditions.<br> 
      *Score= 0.5 × ASR + 0.5 × MSR*
 
-**Track 2 — Neural Alignment** 
-    To test whether robust behaviour coincides with mouse-like visual representations, we replay the mouse’s video through each frozen visual encoder, extract hidden activations, and fit a linear regression that maps those activations to simultaneously recorded spiking activity from mouse V1 and higher visual areas.
-    Unlike previous alignment challenges—where networks are optimised directly for neural activity prediction—we quantify the emergent alignment of encoders trained solely for foraging. During evaluation we perform linear regression on each layer’s hidden activations and score them via the mean Pearson correlation (ρ)           between predicted and recorded neural activity. To avoid an advantage for larger models, the hidden activations are first reduced to 50 dimensions using PCA. The layer with the highest ρ becomes the agent’s final Track 2 score.<br> 
-    *Score= mean Pearson correlation (ρ) between predicted and recorded neural responses.* <br> 
+> **Track 2 — Neural Alignment** 
+>     To test whether robust behaviour coincides with mouse-like visual representations, we replay the mouse’s video through each frozen visual encoder, extract hidden activations, and fit a linear regression that maps those activations to simultaneously recorded spiking activity from mouse V1 and higher visual areas.
+>     Unlike previous alignment challenges—where networks are optimised directly for neural activity prediction—we quantify the emergent alignment of encoders trained solely for foraging. During evaluation we perform linear regression on each layer’s hidden activations and score them via the mean Pearson correlation (ρ)     >       between predicted and recorded neural activity. To avoid an advantage for larger models, the hidden activations are first reduced to 50 dimensions using PCA. The layer with the highest ρ becomes the agent’s final Track 2 score.<br> 
+>     *Score= mean Pearson correlation (ρ) between predicted and recorded neural responses.* <br> 
 
 #### Track 1 — Visual Robustness
   Each submitted agent is evaluated under the two provided conditions and **three held-out perturbations** never seen during training. Performance is summarised by **Average Success Rate (ASR)** and **Minimum Success Rate (MSR)** acrocc all conditions.<br> 
