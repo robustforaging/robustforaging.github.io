@@ -11,7 +11,7 @@ Welcome to **Mouse vs. AI: Robust Visual Foraging Challenge @ NeurIPS 2025**
 This is a general training guide for the Mouse vs. AI NeurIPS 2025 competition.
 
 For platform-specific instructions on how to download the environment and train an agent, please check:
-[Windows](/training-guide-windowsI/), [Linux](/training-guide-linux/) and [macOS](/training-guide-macos/)
+[Windows](/training-guide-windows/), [Linux](/training-guide-linux/) and [macOS](/training-guide-macos/)
 
 
 ## General instructions
