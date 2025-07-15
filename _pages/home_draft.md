@@ -105,7 +105,7 @@ In this competition, we have generated a unique data set that includes hours of 
     <strong>(Right)</strong> <u>Track 2</u> scores neural alignment: how well a linear readout from the agent’s visual-encoder activations predicts mouse V1 + HVA activity.
   </figcaption>
 </figure>
-
+<br> 
   
 
 Robust visual perception under real-world conditions remains a major bottleneck for deep-RL agents: a modest shift in image statistics—fog, glare, strong blur—can collapse performance that was near-perfect during training.
@@ -116,14 +116,14 @@ In each 5-second trial the agent receives information about the environment thro
 %
 
 #### Track 1 — Visual Robustness*:
-  Each submitted agent is evaluated under the two provided conditions and three held-out perturbations never seen during training. Performance is summarised by Average Success Rate (ASR) and Minimum Success Rate (MSR), with the Track 1 score 0.5 × ASR + 0.5 × MSR.
+  Each submitted agent is evaluated under the two provided conditions and three held-out perturbations never seen during training. Performance is summarised by Average Success Rate (ASR) and Minimum Success Rate (MSR), with the Track 1 score 0.5 × ASR + 0.5 × MSR.<br> 
    *Metrics:* **Average Success Rate (ASR)**, **Minimum Success Rate (MSR)** across all provided and held-out conditions; wioth the final score being: Score= 0.5 × ASR + 0.5 × MSR
    *
 
 #### Track 1 — Emergent neural alignment*:
 To test whether robust behaviour coincides with mouse-like visual representations, we replay the mouse’s video through each frozen visual encoder, extract its hidden activations, and fit a linear regression that maps those activations to simultaneously recorded spiking activity from mouse V1 and higher visual areas.        
 Unlike previous alignment challenges—where networks are optimised directly for neural activity prediction, we aim to quantify the emergent alignment of visual encoders trained to extract relevant visual information for foraging behavior instead of training them on neural recordings directly.
-During evaluation we will perform linear regression on each layers hidden activation of the submitted agents visual encoder and score them via the mean Pearson correlation (ρ) between predicted and recorded neural acitivty. To mavoid advances of larger models through higher dimensional linear regression we will reduce the dimensionality of the hidden activity to 50 using PCA. The layer with the highest pearson correlation  (ρ)  between predirted and recorded neural acitvity will be used for the final score of track 2.
+During evaluation we will perform linear regression on each layers hidden activation of the submitted agents visual encoder and score them via the mean Pearson correlation (ρ) between predicted and recorded neural acitivty. To mavoid advances of larger models through higher dimensional linear regression we will reduce the dimensionality of the hidden activity to 50 using PCA. The layer with the highest pearson correlation  (ρ)  between predirted and recorded neural acitvity will be used for the final score of track 2.<br> 
    *Metrics:* **Mean Pearson correlation** between predicted and recorded neural responses.
 
 The overarching goals are therefore (i) to identify architectural and training principles that support *visual robustness*, and (ii) to test whether those principles also yield *mouse-like internal representations*. By grounding evaluation in both behaviour and cortical activity, the challenge unifies reinforcement learning, robust computer vision, and systems neuroscience within a single task.
