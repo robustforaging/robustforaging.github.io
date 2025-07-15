@@ -160,12 +160,3 @@ Choose the build for your platform:
 For questions, updates, and discussion, please [Join the Discord](https://discord.gg/7mJPh5QMB7)
 
 You can also reach us via email at [robustforaging@gmail.com](mailto:robustforaging@gmail.com)
-
-
-
-
-## Organizing Institutions
-
-
-
-
