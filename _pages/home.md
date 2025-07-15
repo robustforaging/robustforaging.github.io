@@ -1,4 +1,4 @@
----
+<img width="1180" height="874" alt="image" src="https://github.com/user-attachments/assets/09d039d4-75c8-4f3c-acb3-05aca974b067" />---
 layout: splash
 title: "Robust Foraging Competition"
 nav_exclude: true          # keeps it out of the menu (Just-the-Docs, Minimal Mistakes, etc.) :contentReference[oaicite:2]{index=2}
@@ -61,6 +61,8 @@ excerpt: >
     margin-left: 1.5rem;    /* keep the indent */
     padding-left: 0;        /* optional: flush text */
   }
+  
+  .math-center { text-align: center; }
   .mt-2 { margin-top: 1rem;  }
   .mt-4 { margin-top: 2rem;  }
   .mb-2 { margin-bottom: 1rem; }
@@ -123,11 +125,13 @@ In each 5-second trial the agent receives visual information about the environme
 <strong>Track 1 — Visual Robustness</strong><br>
  Each submitted agent is evaluated under the two provided conditions and **three held-out perturbations** never seen during training. Performance is summarised by <strong>Average Success Rate (ASR)</strong> and <strong>Minimum Success Rate (MSR)</strong> across all conditions.<br> 
 
+<div class="math-center">
 $$
   \displaystyle 
   \text{Score}_{\text{1}}
     = \frac{\text{ASR} + \text{MSR}}{2}
 $$
+</div>
 </blockquote>
 
 <blockquote class="track" markdown="1">
