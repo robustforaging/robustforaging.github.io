@@ -1,4 +1,4 @@
- ---
+---
 layout: splash
 title: "Robust Foraging Competition"
 nav_exclude: true          # keeps it out of the menu (Just-the-Docs, Minimal Mistakes, etc.) :contentReference[oaicite:2]{index=2}
