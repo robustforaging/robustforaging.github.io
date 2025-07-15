@@ -122,7 +122,11 @@ In each 5-second trial the agent receives visual information about the environme
 <blockquote class="track" markdown="1">
 <strong>Track 1 — Visual Robustness</strong><br>
  Each submitted agent is evaluated under the two provided conditions and **three held-out perturbations** never seen during training. Performance is summarised by <strong>Average Success Rate (ASR)</strong> and <strong>Minimum Success Rate (MSR)</strong> acrocc all conditions.<br> 
- **Score= 0.5 × ASR + 0.5 × MSR**
+\( \displaystyle
+\text{Score}_{\text{Track 1}}
+      = \tfrac{1}{2}\,\text{ASR}
+      + \tfrac{1}{2}\,\text{MSR}
+\)*
 </blockquote>
 
 <blockquote class="track" markdown="1">
