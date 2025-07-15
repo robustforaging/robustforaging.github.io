@@ -129,13 +129,11 @@ In each 5-second trial the agent receives visual information about the environme
 To test whether robust behaviour coincides with mouse-like visual representations, we replay the mouse’s video through each frozen visual encoder, extract hidden activations, and fit a linear regression that maps those activations to simultaneously recorded spiking activity from mouse V1 and higher visual areas.
 Unlike previous alignment challenges—where networks are optimised directly for neural activity prediction—we quantify the emergent alignment of encoders trained solely for foraging. During evaluation we perform linear regression on each layer’s hidden activations and score them via the mean Pearson correlation (ρ) between predicted and recorded neural activity. To avoid an advantage for larger models, the hidden activations are first reduced to 50 dimensions using PCA. The layer with the highest ρ becomes the agent’s final Track 2 score.<br> 
  **Score= mean Pearson correlation (ρ) between predicted and recorded neural responses.**
-
   Score\_Track2 \(= \displaystyle
 \max_{\ell}\Bigl(\frac{1}{N}\sum_{i=1}^{N}\rho^{(\ell)}_i\Bigr)\)
-
 Score\_Track2 \(= \displaystyle \bar{\rho}
               = \frac{1}{N}\sum_{i=1}^{N}\rho_i\)
-
+Score = \bar{ρ} = (1/N) Σ ρ_i
 </blockquote>
 
 The overarching goals are therefore (i) to identify architectural and training principles that support **visual robustness**, and (ii) to test whether those principles also yield **mouse-like internal representations**. By grounding evaluation in both behaviour and cortical activity, the challenge unifies reinforcement learning, robust computer vision, and systems neuroscience within a single task.
