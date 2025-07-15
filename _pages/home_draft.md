@@ -108,13 +108,14 @@ In this competition, we have generated a unique data set that includes hours of 
 
   
 ### Motivation
+Robust visual perception under real-world conditions remains a critical bottleneck for AI agents. Shifts in the distribution of image statistics can collapse performance that was near-perfect in training conditions.  
+Biological vision, by contrast, is strikingly resilient: mice trained for just a few hours under clean conditions keep performing a visually guided foraging task when fog or other degradations are introduced, exhibiting only a modest drop in success.
+This competition turns that gap into a benchmark. Participants are asked to train agents to perforam a naturalstic foraging task in the same environment (Unity) that we trained mice. In Track 1 the performance of the AI agents is then evaluated on *held-out* perturbations that were never encountered during training.
+This will give us the chance to asses which arhcitectures and training stragegies yield to robust visual processing with potentially similar invariance to visual perturbations then biological agents (mice). 
+Whule track 1 evalautes the robustness of ai agents in face of changes in the ikage statistics in track 1 we want to quantify to which degree the visual enconders of these arhctiectures spontenously align with visual cortex acitivty in mice
+Previous competitions on alignment trained neural networks to predict mouse visual cortex activity from replayed visual inputs (& behaviors) to assess the alignment between visual rerpesentations in mice and neural networks [cite Sensorium]. In contrast, our track 2 does not train visual encoders directly to predit neurala mctiviyt, instead we use the visual encoders trained to do the foraging task, freeze there weights, and predict mice V1 & VHA activity through linear regressing hidden actiuvations of the frozen visual encoder. This allows us to quantify how well different arhcitectures and training strageies aimed to transform visual observations in to actions spontelousy align with mice visual cortexs..
 
-The goal of this competition is to benchmark and improve the robustness of artificial agents in biologically inspired visual tasks. Specifically, we aim to:
-
-- Evaluate generalization under unseen visual perturbations
-- Compare artificial agent performance to real mouse behavior under identical conditions
-- Offer an neural alignment track to assess how well visual encoders trained on a dynamic foraging task sponteously align with cortical representations
-
+The two main goals are to (i) discover architectural and training principles that support *visual robustness* and (ii) test whether such principles also yield *mouse-like internal representations*. By grounding evaluation in both behaviour and cortical activity, the challenge unifies reinforcement learning, robust computer vision, and computational neuroscience.
 
 ### Task Overview
 Train an agent to navigate a naturalistic environment and reach a visually cued target within trialtime.
