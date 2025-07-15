@@ -117,23 +117,19 @@ Robust visual perception under real-world conditions remains a major bottleneck 
 Biological vision, by contrast, is remarkably resilient. Mice trained for only a few hours under a clear scene continue to solve the same visually guided foraging task when degradations are introduced, showing only a modest drop in success.
 
 The **Mouse vs AI: Robust Visual Foraging Challenge** turns that gap into a quantitative benchmark. Participants train artificial agents in the Unity environment used for the mouse experiments, with access to two conditions (clean and fog).
-In each 5-second trial the agent receives visual information about the environment through 86 × 155 pixels greyscale images and must reach a randomly placed, visually cued target. During mouse training the target started near the animal and the start distance was increased whenever performance exceeded 70 % success; the provided NormalTrain, FogTrain and RandomTrain builds of the Game implement the same curriculum for agents. A third build, RandomTest, always places the target at the maximum distance, mirroring the final evaluation pipeline witht he two provided conditions. The trained agent—visual encoder plus policy—is the **single submission used for both tracks**.
+In each 5-second trial the agent receives visual information about the environment through 86 × 155 pixels grayscale images and must reach a randomly placed, visually cued target. During mouse training the target started near the animal and the start distance was increased whenever performance exceeded 70 % success; the provided NormalTrain, FogTrain and RandomTrain builds of the Game implement the same curriculum for agents. A third build, RandomTest, always places the target at the maximum distance, mirroring the final evaluation pipeline with the two provided conditions. The trained agent—visual encoder plus policy—is the **single submission used for both tracks**.
 
 <blockquote class="track" markdown="1">
 <strong>Track 1 — Visual Robustness</strong><br>
- Each submitted agent is evaluated under the two provided conditions and **three held-out perturbations** never seen during training. Performance is summarised by <strong>Average Success Rate (ASR)</strong> and <strong>Minimum Success Rate (MSR)</strong> acrocc all conditions.<br> 
-\( \displaystyle
-\text{Score}_{\text{Track 1}}
-      = \tfrac{1}{2}\,\text{ASR}
-      + \tfrac{1}{2}\,\text{MSR}
-\)*
+ Each submitted agent is evaluated under the two provided conditions and **three held-out perturbations** never seen during training. Performance is summarised by <strong>Average Success Rate (ASR)</strong> and <strong>Minimum Success Rate (MSR)</strong> across all conditions.<br> 
+$$\displaystyle \text{Score}_{\text{Track 1}}=\frac12\text{ASR}+\frac12\text{MSR}$
 </blockquote>
 
 <blockquote class="track" markdown="1">
 <strong>Track 2 — Emergent Neural Alignment</strong><br>
 To test whether robust behaviour coincides with mouse-like visual representations, we replay the mouse’s video through each frozen visual encoder, extract hidden activations, and fit a linear regression that maps those activations to simultaneously recorded spiking activity from mouse V1 and higher visual areas.
 Unlike previous alignment challenges—where networks are optimised directly for neural activity prediction—we quantify the emergent alignment of encoders trained solely for foraging. During evaluation we perform linear regression on each layer’s hidden activations and score them via the mean <strong>Pearson correlation (ρ)</strong> between predicted and recorded neural activity across all <strong>N neurons</strong> . To avoid an advantage for larger models, the hidden activations are first reduced to 50 dimensions using PCA. The layer with the highest ρ becomes the agent’s final Track 2 score.<br> 
- **Score= \( \bar{\rho} = \frac{1}{N}\sum_{i=1}^{N}\rho_i \)**
+$$ \text{Score}_{\text{Track 1}}= \( \bar{\rho} = \frac{1}{N}\sum_{i=1}^{N}\rho_i \)$$ 
   Score\_Track2 \(= \displaystyle
 \max_{\ell}\Bigl(\frac{1}{N}\sum_{i=1}^{N}\rho^{(\ell)}_i\Bigr)\)
 Score\_Track2 \(= \displaystyle \bar{\rho}
