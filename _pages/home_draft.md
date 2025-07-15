@@ -3,6 +3,7 @@ layout: splash
 title: "Robust Foraging Competition"
 nav_exclude: true          # keeps it out of the menu (Just-the-Docs, Minimal Mistakes, etc.) :contentReference[oaicite:2]{index=2}
 permalink: /home-draft/    # single, trailing-slash permalink
+mathjax: true          # ← add this line
 robots: noindex,nofollow   # stop search engines indexing it
 sitemap: false             # keep it out of jekyll-sitemap.xml
 header:
