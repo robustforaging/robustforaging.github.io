@@ -55,7 +55,11 @@ excerpt: >
     margin-top: 2rem;       /* ↑ space above          */
     margin-bottom: 2rem;    /* ↓ space below          */
   }
-
+  blockquote.track {
+    border-left: none;      /* removes the bar */
+    margin-left: 1.5rem;    /* keep the indent */
+    padding-left: 0;        /* optional: flush text */
+  }
   .mt-2 { margin-top: 1rem;  }
   .mt-4 { margin-top: 2rem;  }
   .mb-2 { margin-bottom: 1rem; }
@@ -113,6 +117,12 @@ Biological vision, by contrast, is remarkably resilient. Mice trained for only a
 
 The **Mouse vs AI: Robust Visual Foraging Challenge** turns that gap into a quantitative benchmark. Participants train artificial agents in the Unity environment used for the mouse experiments, with access to two conditions (clean and fog).
 In each 5-second trial the agent receives visual information about the environment through 86 × 155 pixels greyscale images and must reach a randomly placed, visually cued target. During mouse training the target started near the animal and the start distance was increased whenever performance exceeded 70 % success; the provided NormalTrain, FogTrain and RandomTrain builds of the Game implement the same curriculum for agents. A third build, RandomTest, always places the target at the maximum distance, mirroring the final evaluation pipeline witht he two provided conditions. The trained agent—visual encoder plus policy—is the *single submission used for both tracks*.
+
+<blockquote class="track">
+<strong>Track 1 — Visual Robustness</strong><br>
+ Each submitted agent is evaluated under the two provided conditions and **three held-out perturbations** never seen during training. Performance is summarised by **Average Success Rate (ASR)** and **Minimum Success Rate (MSR)** acrocc all conditions.<br> 
+ *Score= 0.5 × ASR + 0.5 × MSR*
+</blockquote>
 
 **Track 1 — Visual Robustness**  
      Each submitted agent is evaluated under the two provided conditions and **three held-out perturbations** never seen during training. Performance is summarised by **Average Success Rate (ASR)** and **Minimum Success Rate (MSR)** acrocc all conditions.<br> 
