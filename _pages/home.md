@@ -1,4 +1,4 @@
-<img width="1180" height="874" alt="image" src="https://github.com/user-attachments/assets/09d039d4-75c8-4f3c-acb3-05aca974b067" />---
+---
 layout: splash
 title: "Robust Foraging Competition"
 nav_exclude: true          # keeps it out of the menu (Just-the-Docs, Minimal Mistakes, etc.) :contentReference[oaicite:2]{index=2}
