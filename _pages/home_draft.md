@@ -127,8 +127,8 @@ In each 5-second trial the agent receives visual information about the environme
 <blockquote class="track" markdown="1">
 <strong>Track 2 — Emergent Neural Alignment</strong><br>
 To test whether robust behaviour coincides with mouse-like visual representations, we replay the mouse’s video through each frozen visual encoder, extract hidden activations, and fit a linear regression that maps those activations to simultaneously recorded spiking activity from mouse V1 and higher visual areas.
-Unlike previous alignment challenges—where networks are optimised directly for neural activity prediction—we quantify the emergent alignment of encoders trained solely for foraging. During evaluation we perform linear regression on each layer’s hidden activations and score them via the mean Pearson correlation (ρ) between predicted and recorded neural activity. To avoid an advantage for larger models, the hidden activations are first reduced to 50 dimensions using PCA. The layer with the highest ρ becomes the agent’s final Track 2 score.<br> 
- **Score= mean Pearson correlation (ρ) between predicted and recorded neural responses.**
+Unlike previous alignment challenges—where networks are optimised directly for neural activity prediction—we quantify the emergent alignment of encoders trained solely for foraging. During evaluation we perform linear regression on each layer’s hidden activations and score them via the mean <strong>Pearson correlation (ρ)</strong> between predicted and recorded neural activity across all <strong>N neurons</strong> . To avoid an advantage for larger models, the hidden activations are first reduced to 50 dimensions using PCA. The layer with the highest ρ becomes the agent’s final Track 2 score.<br> 
+ **Score= \( \bar{\rho} = \frac{1}{N}\sum_{i=1}^{N}\rho_i \)**
   Score\_Track2 \(= \displaystyle
 \max_{\ell}\Bigl(\frac{1}{N}\sum_{i=1}^{N}\rho^{(\ell)}_i\Bigr)\)
 Score\_Track2 \(= \displaystyle \bar{\rho}
