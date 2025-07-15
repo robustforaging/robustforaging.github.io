@@ -1,5 +1,5 @@
 ---
-permalink: /general_training_guide/
+permalink: /general-training-guide/
 title: "Training Guide"
 classes: wide
 sidebar:
