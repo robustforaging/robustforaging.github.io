@@ -94,9 +94,6 @@ In this competition, we have generated a unique data set that includes hours of 
     
 ##  Competition Overview
 
-
-
-
 <figure class="competition-diagram">
   <img src="/assets/images/Figure_website.jpg"
        alt="Overview of the Mouse-vs-AI competition…">
@@ -110,7 +107,7 @@ In this competition, we have generated a unique data set that includes hours of 
 </figure>
 
   
-## Goal
+### Motivation
 
 The goal of this competition is to benchmark and improve the robustness of artificial agents in biologically inspired visual tasks. Specifically, we aim to:
 
@@ -119,13 +116,24 @@ The goal of this competition is to benchmark and improve the robustness of artif
 - Offer an neural alignment track to assess how well visual encoders trained on a dynamic foraging task sponteously align with cortical representations
 
 
-## Task Overview
+### Task Overview
 Train an agent to navigate a naturalistic environment and reach a visually cued target within trialtime.
   - Training scene + one perturbation (fog) are provided, distance increases incrementally.
   - Final evaluation uses held‑out perturbations and starts each episode at max target distance.
   - The task is adapted from a real neuroscience experiment in which **mice perform the same foraging task**. 
 
 This setup enables comparison between biological and artificial agents under identical visual conditions.
+
+#### Track 1 — Visual Robustness*
+   Evaluate how well your trained agent generalises to unseen visual perturbations.  
+   *Metrics:* **Average Success Rate (ASR)**, **Minimum Success Rate (MSR)** across all provided and held-out conditions.
+
+#### Track 2 — Neural Alignment
+   Predict mouse visual-cortex activity from internal representations of your agent.  
+   *Metrics:* **Mean Pearson correlation** between predicted and recorded neural responses.
+
+Please note that the two tracks do not need to be submitted separately. All submissions will be evaluated in both tracks.
+
 
 ## Download & Quick Start
 Choose the build for your platform:
@@ -145,15 +153,7 @@ Choose the build for your platform:
 
 ## Competition Tracks
 
-1. **Track 1 — Visual Robustness**  
-   Evaluate how well your trained agent generalises to unseen visual perturbations.  
-   *Metrics:* **Average Success Rate (ASR)**, **Minimum Success Rate (MSR)** across all provided and held-out conditions.
 
-2. **Track 2 — Neural Alignment** 
-   Predict mouse visual-cortex activity from internal representations of your agent.  
-   *Metrics:* **Mean Pearson correlation** between predicted and recorded neural responses.
-
-Please note that the two tracks do not need to be submitted separately. All submissions will be evaluated in both tracks.
 
 ##  Timeline
 
@@ -171,3 +171,12 @@ Please note that the two tracks do not need to be submitted separately. All subm
 For questions, updates, and discussion, please [Join the Discord](https://discord.gg/7mJPh5QMB7)
 
 You can also reach us via email at [robustforaging@gmail.com](mailto:robustforaging@gmail.com)
+
+
+
+
+## Organizing Institutions
+
+
+
+
