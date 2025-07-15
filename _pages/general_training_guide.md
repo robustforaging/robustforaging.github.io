@@ -21,7 +21,7 @@ Mice were trained on the normal condition before there performance under unseen 
 
 
 <figure class="competition-diagram">
-  <img src="/assets/images/Figure_unity.png"
+  <img src="/assets/images/diagram_unity.png"
        alt="Overview of the Mouse-vs-AI competition…">
 
   <figcaption class="fig-caption">
