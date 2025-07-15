@@ -109,25 +109,14 @@ In this competition, we have generated a unique data set that includes hours of 
   
 
 ### Motivation
-Robust visual perception under real-world conditions remains a major bottleneck for AI agents: a modest shift in image statistics can collapse performance that was near-perfect during training.  
-Biological vision, by contrast, is remarkably resilient. Mice trained for only a few hours under an unperturbed scene continue to solve the same visually guided foraging task when degradations such as fog are introduced, showing only a modest drop in success.
-
-This competition transforms that gap into a quantitative benchmark. Participants train artificial agents to perform the **same** naturalistic foraging task, implemented in Unity, that we used for the mouse experiments. We provide two training conditions—a clean scene and a single illustrative perturbation (fog)—and agents may be trained on either or both. The resulting trained agent (visual encoder + policy) is the **sole submission for both tracks**.  
-%
-
+Robust visual perception under real-world conditions remains a major bottleneck for AI agents: a modest shift in image statistics can collapse performance that was near-perfect during training. Biological vision, by contrast, is remarkably resilient. Mice trained for only a few hours under an unperturbed scene continue to solve the same visually guided foraging task when degradations such as fog are introduced, showing only a modest drop in success. This competition transforms that gap into a quantitative benchmark. Participants train artificial agents to perform the **same** naturalistic foraging task, implemented in Unity, that we used for the mouse experiments. We provide two training conditions—a clean scene and a single illustrative perturbation (fog)—and agents may be trained on either or both. The resulting trained agent (visual encoder + policy) is the **sole submission for both tracks**.  
 In **Track 1** we evaluate each submitted agent on the two provided conditions *plus* three held-out visual perturbations never encountered during training. Comparing architectures and training strategies under these unseen conditions reveals which approaches foster visual robustness approaching that of biological agents.  
 While Track 1 focuses on behaviour, **Track 2** asks a complementary question: to what extent do those same visual encoders *spontaneously* align with mouse cortical activity? After training, we freeze each encoder’s weights, pass the mouse’s video through it to obtain hidden activations, and fit a linear regression that maps those activations to the spiking activity recorded from mouse V1 and higher visual areas while the mouse performed the task. Unlike previous alignment challenges—where networks are optimised directly for neural prediction —our encoders have never seen neural data, allowing us to measure *emergent* alignment.
-
 The overarching goals are therefore (i) to identify architectural and training principles that support **visual robustness**, and (ii) to test whether those principles also yield **mouse-like internal representations**. By grounding evaluation in both behaviour and cortical activity, the challenge unifies reinforcement learning, robust computer vision, and systems neuroscience within a single task.
 
 
 ### Task Overview
-Train an agent to navigate a naturalistic environment and reach a visually cued target within trialtime.
-  - Training scene + one perturbation (fog) are provided, distance increases incrementally.
-  - Final evaluation uses held‑out perturbations and starts each episode at max target distance.
-  - The task is adapted from a real neuroscience experiment in which **mice perform the same foraging task**. 
-
-This setup enables comparison between biological and artificial agents under identical visual conditions.
+Train an agent to navigate a naturalistic environment and reach a visually cued target within trialtime (5s).
 
 #### Track 1 — Visual Robustness*
    Evaluate how well your trained agent generalises to unseen visual perturbations.  
@@ -155,11 +144,6 @@ Choose the build for your platform:
 3. **Train your first agent** 
 4. **Submit your model** — Package your trained models and follow the **[Submission Guide](submission_guide)**.
 
-
-## Competition Tracks
-
-
-
 ##  Timeline
 
 | Date             | Milestone                        |
@@ -169,6 +153,7 @@ Choose the build for your platform:
 | Nov 1, 2025      | Final submission deadline        |
 | Nov 15, 2025     | Evaluation + winners announced   |
 | Dec 2025         | Results at NeurIPS 2025          |
+
 
 
 ## Communication
