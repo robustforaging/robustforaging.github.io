@@ -1,4 +1,4 @@
----
+ ---
 layout: splash
 title: "Robust Foraging Competition"
 nav_exclude: true          # keeps it out of the menu (Just-the-Docs, Minimal Mistakes, etc.) :contentReference[oaicite:2]{index=2}
@@ -122,14 +122,14 @@ In each 5-second trial the agent receives visual information about the environme
 <blockquote class="track" markdown="1">
 <strong>Track 1 — Visual Robustness</strong><br>
  Each submitted agent is evaluated under the two provided conditions and **three held-out perturbations** never seen during training. Performance is summarised by <strong>Average Success Rate (ASR)</strong> and <strong>Minimum Success Rate (MSR)</strong> across all conditions.<br> 
-$$\displaystyle \text{Score}_{\text{1}}=\frac12\text{ASR}+\frac12\text{MSR} /frac{ASR + MSR}{2}$$
+$$\displaystyle \text{Score}_{\text{1}}== \frac{\text{ASR} + \text{MSR}}{2}$$
 </blockquote>
 
 <blockquote class="track" markdown="1">
 <strong>Track 2 — Emergent Neural Alignment</strong><br>
 To test whether robust behaviour coincides with mouse-like visual representations, we replay the mouse’s video through each frozen visual encoder, extract hidden activations, and fit a linear regression that maps those activations to simultaneously recorded spiking activity from mouse V1 and higher visual areas.
 Unlike previous alignment challenges—where networks are optimised directly for neural activity prediction—we quantify the emergent alignment of encoders trained solely for foraging. During evaluation we perform linear regression on each layer’s hidden activations and score them via the mean <strong>Pearson correlation (ρ)</strong> between predicted and recorded neural activity across all <strong>N neurons</strong> . To avoid an advantage for larger models, the hidden activations are first reduced to 50 dimensions using PCA. The layer with the highest ρ becomes the agent’s final Track 2 score.<br> 
-$$ \text{Score}_{\text{2}}= \bar{\rho} = \frac{1}{N}\sum_{i=1}^{N}\rho_i$$ 
+$$ \text{Score}_{\text{2}}= \frac{1}{N}\sum_{i=1}^{N}\rho_i$$ 
 </blockquote>
 
 The overarching goals are therefore (i) to identify architectural and training principles that support **visual robustness**, and (ii) to test whether those principles also yield **mouse-like internal representations**. By grounding evaluation in both behaviour and cortical activity, the challenge unifies reinforcement learning, robust computer vision, and systems neuroscience within a single task.
