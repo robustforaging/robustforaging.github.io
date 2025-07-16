@@ -10,6 +10,15 @@ Welcome to **Mouse vs. AI: Robust Visual Foraging Challenge @ NeurIPS 2025**
 This is a training guide for **Linux** (Ubuntu and other distributions). For other operating systems, please check:
 [Windows](/training-guide-win/) and [macOS](/training-guide-macos/)
 
+# Install conda
+Open command prompt
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+Press ```ENTER``` or type ```yes``` when prompted
+
 # Create conda environment
 Open Terminal and navigate to the directory where you want to download the project.
 
@@ -23,6 +32,10 @@ Then, create and activate the conda environment:
 ```bash
 conda env create -n mouse2 --file mouse_linux.yml
 conda activate mouse2
+```
+💡 Troubleshooting: if the CUDA version isn’t compatible with your GPU, please try: 
+```bash
+pip install torch==1.8.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 # Set executable permissions for Linux binaries
@@ -66,18 +79,55 @@ python -c "import mlagents.trainers.torch; print(mlagents.trainers.torch.__file_
 ```
 
 # Run script
+
+
 ## Training
-```bash
-python train.py --runs-per-network 1 --env RandomTrain --network neurips,simple,fully_connected,resnet,alexnet
+```text
+Usage: python train.py [options]
+
+Training options:
+  --runs-per-network R    Number of runs per network (default: 5)
+  --env ID                Run identifier (default: Normal) [defines type of environment]
+  --network N1,N2,N3     Comma-separated list of networks to train
+                         (default choices: ['fully_connected', 
+                         'nature_cnn', 'simple', 'resnet'])
+                          You can specify your own custom networks here as 
+                          well. Just list their names, separated by commas.
 ```
 
+Example command for training:
+
+```bash
+python train.py --runs-per-network 1 --env RandomTrain --network MyNetwork1, MyNetwork2
+```
+- 💡 Troubleshooting: If training only proceeds after pressing ```ENTER```, try running the command with unbuffered output mode:  ```python -u train.py [options]``` 
+- If the issue persists, stop the current training episode and train again
 ## Evaluating
-```bash
-python evaluate.py --model "/home/<your_username>/path/to/your_model.onnx" --log-name "example.txt" --episodes 10
+```text
+Usage: python evaluate.py [options]
+
+Evaluation options:
+  --model      Path to the trained ONNX model file
+  --episodes   Number of episodes to run in inference(default: 50)
+  --env        Build folder name under ./Builds/
+  --log-name   Base name for the output log file
 ```
 
-❗ Important:
-Replace `/home/<your_username>/path/to/your_model.onnx` with the full path to your own ONNX model file on your machine.
+Example command for evaluation:
+```bash
+python evaluate.py --model "/path/to/your_model.onnx" --log-name "example.txt" --episodes 10
+```
+
+# Customize the model
+- To add architecture: 
+  - Add your model (e.g., `MyNetwork1.py`) to the `/mouse_vs_ai_linux/Encoders` directory
+  - To train your custom network, run ```python train.py --network MyNetwork1 [options]```
+- To adjust hyperparamters: 
+  - Edit parameters in `/mouse_vs_ai_linux/Encoders/nature.yaml` file
+  - 📝 Note: Please do not change the name of this file or the parameter `vis_encode_type` in this file. Only modify other configuration values as needed.
+
+After making your changes, run the Python training script as described above.
+
 
 # Troubleshooting
 ## Display issues
