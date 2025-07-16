@@ -67,6 +67,11 @@ excerpt: >
   .mt-4 { margin-top: 2rem;  }
   .mb-2 { margin-bottom: 1rem; }
   .mb-4 { margin-bottom: 2rem; }
+
+  video {
+  max-width: 680px;
+  margin: 0 10px; /* adds 10px margin on left and right */
+  }
 </style>
 
 
@@ -76,13 +81,13 @@ Mice robustly navigate in a range of conditions like fog, maybe more robustly th
 
 <center>
 <div class="full-width-element">
-<video width="640" height="320" controls="controls" autoplay loop muted>
+<video width="45%" height="auto" controls="controls" autoplay loop muted>
   <source src="/assets/images/tesla_fog_cut.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-<video width="640" height="320" controls="controls" autoplay loop muted> -->
-  <source src="/assets/images/example_video_mice_blur.mp4" type="video/mp4"> -->
-  <Your browser does not support the video tag. -->
+<video width="45%" height="auto" controls="controls" autoplay loop muted>
+  <source src="/assets/images/example_video_mice_blur.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
 </div>
 </center>
