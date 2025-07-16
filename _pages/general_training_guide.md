@@ -74,7 +74,15 @@ Moreover, the **RandomTest** build is intended for you to get an idea of how wel
 ## Evaluation
 Once you submit a model, we will evaluate it by testing your agent's performance on trials where the target is placed at the maximum distance on all provided + 3 additional held-out perturbations.
 
-Track 1 will score your agent's performance based on two metrics: the average success rate across  all conditions (ASR) and the minimum success rate (MSR) across all conditions, to capture the worst-case generalization. The final score for track 1 will be calculated as follows: Score_{Track 1} = 0.5*ASR+0.5*MSR
+Track 1 will score your agent's performance based on two metrics: the average success rate across  all conditions (ASR) and the minimum success rate (MSR) across all conditions, to capture the worst-case generalization. The final score for track 1 will be calculated as follows:
+
+<div class="math-center">
+$$
+  \displaystyle 
+  \text{Score}_{\text{1}}
+    = \frac{\text{ASR} + \text{MSR}}{2}
+$$
+</div>
 
 Track 2 will be evaluated based on the ability of a linear regression model to predict neural responses from the agent's visual encoders' hidden activations. We will provide a track two evaluation script and a few minutes of data to allow you to assess your agents' alignment with mouse visual cortex activity.
 The final evaluation is conducted on a held-out test set of stimulus-response pairs and quantified as the mean pearson correlation between predicted and recorded neural activity, averaged across all recorded neurons.
