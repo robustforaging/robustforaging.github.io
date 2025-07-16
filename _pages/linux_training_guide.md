@@ -79,8 +79,6 @@ python -c "import mlagents.trainers.torch; print(mlagents.trainers.torch.__file_
 ```
 
 # Run script
-
-
 ## Training
 ```text
 Usage: python train.py [options]
@@ -102,6 +100,7 @@ python train.py --runs-per-network 1 --env RandomTrain --network MyNetwork1, MyN
 ```
 - 💡 Troubleshooting: If training only proceeds after pressing ```ENTER```, try running the command with unbuffered output mode:  ```python -u train.py [options]``` 
 - If the issue persists, stop the current training episode and train again
+
 ## Evaluating
 ```text
 Usage: python evaluate.py [options]
