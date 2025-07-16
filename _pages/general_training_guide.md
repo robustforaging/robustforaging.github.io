@@ -78,5 +78,6 @@ Track 1 will score your agent's performance based on two metrics: the average su
 
 Track 2 will be evaluated based on the ability of a linear regression model to predict neural responses from the agent's visual encoders' hidden activations. We will provide a track two evaluation script and a few minutes of data to allow you to assess your agents' alignment with mouse visual cortex activity.
 The final evaluation is conducted on a held-out test set of stimulus-response pairs and quantified as the mean pearson correlation between predicted and recorded neural activity, averaged across all recorded neurons.
-Add link yo sumbisison guide:
-##
+
+## Submission
+#### Please check [Submission Guide](/submission-guide/)
