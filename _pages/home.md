@@ -8,7 +8,7 @@ robots: noindex,nofollow   # stop search engines indexing it
 sitemap: false             # keep it out of jekyll-sitemap.xml
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/banner-new.png
+  overlay_image: /assets/images/mouse-fighting-raw3.png
   actions:
     - label: "<i class='fas fa-download'></i> Install now (Windows)"
       url: "https://github.com/robustforaging/mouse_vs_ai_windows"
@@ -28,26 +28,36 @@ excerpt: >
     transform: translateX(-50%); /* Centers the element */
   }
 
+  /* Enhanced styling for better visibility */
   .page__title {
-    color: #222831 !important;
-    text-shadow: none !important;
+    font-size: 3.5rem !important;
+    font-weight: 700 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+    margin-bottom: 1rem !important;
   }
 
   .page__lead {
-    color: #222831 !important;
-    text-shadow: none !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important;
+    margin-bottom: 2rem !important;
   }
 
   .btn--light-outline {
-    color: #222831 !important;
-    border-color: #222831 !important;
-    text-shadow: none !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    padding: 0.8rem 1.5rem !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    border-width: 2px !important;
   }
 
   .btn--light-outline:hover {
     color: #ffffff !important;
     background-color: #222831 !important;
     border-color: #222831 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4) !important;
   }
 
   /* put this right after your existing styles */
@@ -71,6 +81,36 @@ excerpt: >
   video {
   max-width: 680px;
   margin: 0 10px; /* adds 10px margin on left and right */
+  }
+
+  /* Hero background image scaling controls */
+  .page__hero--overlay {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 400px; /* Ensure minimum height for the hero section */
+  }
+
+  /* Add blur effect to background image */
+  .page__hero--overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+    filter: blur(5px);
+    z-index: -1;
+  }
+
+  /* Ensure content appears above the blurred background */
+  .page__hero--overlay .wrapper {
+    position: relative;
+    z-index: 1;
   }
 </style>
 
