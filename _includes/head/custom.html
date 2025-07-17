@@ -37,16 +37,89 @@
   width: auto;
   height: auto;
   cursor: zoom-in;
-  overflow: hidden;
+  overflow: auto;
+  border: 2px solid rgb(151, 151, 151);
+  background: rgba(255, 255, 255, 0.95);
+  box-sizing: border-box;
+}
+
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .image-modal-content img {
+  display: block;
   width: 100%;
   height: 100%;
-  max-width: 95vw;
-  max-height: 95vh;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   cursor: zoom-in;
+}
+
+.image-modal-content.zoomed {
+  cursor: grab;
+}
+
+.image-modal-content.zoomed:active {
+  cursor: grabbing;
+}
+
+.image-modal-content.zoomed img {
+  cursor: grab;
+}
+
+.image-modal-content.zoomed img:active {
+  cursor: grabbing;
+}
+
+.zoom-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10002;
+}
+
+.zoom-btn {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.zoom-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.zoom-reset {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.zoom-reset:hover {
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .image-modal-close {
@@ -81,6 +154,19 @@
   opacity: 0.8;
 }
 
+/* Disable modal on touch devices - use native browser zoom instead */
+@media (pointer: coarse) {
+  .clickable-image {
+    cursor: default !important;
+    pointer-events: none;
+  }
+  
+  .zoom-controls {
+    display: none;
+  }
+}
+
+/* Keep mobile close button styling for edge cases */
 @media (max-width: 768px) {
   .image-modal-close {
     top: 10px;
@@ -88,12 +174,6 @@
     font-size: 30px;
     width: 40px;
     height: 40px;
-  }
-  
-  /* Disable modal on mobile - use native browser zoom instead */
-  .clickable-image {
-    cursor: default !important;
-    pointer-events: none;
   }
 }
 </style>
@@ -107,13 +187,115 @@ document.addEventListener('DOMContentLoaded', function() {
   modal.innerHTML = `
     <div class="image-modal-close">&times;</div>
     <div class="image-modal-content">
-      <img src="" alt="">
+      <div class="image-wrapper">
+        <img src="" alt="">
+      </div>
+    </div>
+    <div class="zoom-controls">
+      <button class="zoom-btn zoom-out" title="Zoom Out">−</button>
+      <button class="zoom-reset" title="Reset Zoom">Reset</button>
+      <button class="zoom-btn zoom-in" title="Zoom In">+</button>
     </div>
   `;
   document.body.appendChild(modal);
 
   const modalImg = modal.querySelector('.image-modal-content img');
+  const modalContent = modal.querySelector('.image-modal-content');
+  const imageWrapper = modal.querySelector('.image-wrapper');
   const closeBtn = modal.querySelector('.image-modal-close');
+  const zoomInBtn = modal.querySelector('.zoom-in');
+  const zoomOutBtn = modal.querySelector('.zoom-out');
+  const zoomResetBtn = modal.querySelector('.zoom-reset');
+  
+  let currentZoom = 1;
+  let isDragging = false;
+  let lastX = 0;
+  let lastY = 0;
+  let justFinishedDragging = false;
+
+
+
+  // Zoom functionality
+  function applyZoom(zoomLevel) {
+    currentZoom = Math.max(0.5, Math.min(5, zoomLevel)); // Limit zoom between 0.5x and 5x
+    
+    if (currentZoom !== 1) {
+      modalContent.classList.add('zoomed');
+      
+      // Get container dimensions
+      const containerWidth = modalContent.clientWidth;
+      const containerHeight = modalContent.clientHeight;
+      
+      // Store current center position before zoom
+      const centerX = modalContent.scrollLeft + containerWidth / 2;
+      const centerY = modalContent.scrollTop + containerHeight / 2;
+      
+      // Set wrapper size to create zoom effect
+      imageWrapper.style.width = `${containerWidth * currentZoom}px`;
+      imageWrapper.style.height = `${containerHeight * currentZoom}px`;
+      
+      // Adjust scroll to keep center in view
+      modalContent.scrollLeft = centerX * currentZoom - containerWidth / 2;
+      modalContent.scrollTop = centerY * currentZoom - containerHeight / 2;
+      
+    } else {
+      modalContent.classList.remove('zoomed');
+      imageWrapper.style.width = '100%';
+      imageWrapper.style.height = '100%';
+      modalContent.scrollLeft = 0;
+      modalContent.scrollTop = 0;
+    }
+  }
+
+  function resetZoom() {
+    applyZoom(1);
+  }
+
+  // Zoom controls
+  zoomInBtn.addEventListener('click', () => applyZoom(currentZoom * 1.2));
+  zoomOutBtn.addEventListener('click', () => applyZoom(currentZoom / 1.2));
+  zoomResetBtn.addEventListener('click', resetZoom);
+
+  // Mouse wheel zoom
+  modalContent.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    const zoomFactor = e.deltaY > 0 ? 0.9 : 1.1;
+    applyZoom(currentZoom * zoomFactor);
+  });
+
+  // Drag to pan when zoomed
+  modalContent.addEventListener('mousedown', function(e) {
+    if (currentZoom > 1) {
+      isDragging = true;
+      lastX = e.clientX;
+      lastY = e.clientY;
+      e.preventDefault();
+    }
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (isDragging && currentZoom > 1) {
+      const deltaX = e.clientX - lastX;
+      const deltaY = e.clientY - lastY;
+      
+      modalContent.scrollLeft -= deltaX;
+      modalContent.scrollTop -= deltaY;
+      
+      lastX = e.clientX;
+      lastY = e.clientY;
+    }
+  });
+
+  document.addEventListener('mouseup', function() {
+    if (isDragging) {
+      justFinishedDragging = true;
+      // Clear the flag after a short delay
+      setTimeout(() => {
+        justFinishedDragging = false;
+      }, 100);
+    }
+    isDragging = false;
+  });
 
   // Add click listeners to all images with clickable-image class
   document.querySelectorAll('.clickable-image').forEach(img => {
@@ -139,6 +321,16 @@ document.addEventListener('DOMContentLoaded', function() {
       
       modal.style.display = 'block';
       document.body.style.overflow = 'hidden'; // Prevent scrolling
+      
+      // Reset zoom when image loads
+      modalImg.onload = function() {
+        resetZoom();
+      };
+      
+      // If image is already loaded (cached), reset immediately
+      if (modalImg.complete) {
+        resetZoom();
+      }
     });
   });
 
@@ -147,31 +339,33 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.style.display = 'none';
     document.body.style.overflow = 'auto'; // Re-enable scrolling
     // Reset modal content size and clear reference
-    const modalContent = modal.querySelector('.image-modal-content');
     modalContent.style.width = '';
     modalContent.style.height = '';
+    resetZoom();
     currentOriginalImage = null;
   });
 
-  // Prevent events on modal content from bubbling
-  modal.querySelector('.image-modal-content').addEventListener('click', function(e) {
-    e.stopPropagation();
+  // Prevent events on modal content from bubbling (except when dragging)
+  modalContent.addEventListener('click', function(e) {
+    if (!isDragging) {
+      e.stopPropagation();
+    }
   });
 
-  // Prevent wheel events (zoom) from going to background
-  modal.addEventListener('wheel', function(e) {
+  // Prevent zoom controls from closing modal
+  modal.querySelector('.zoom-controls').addEventListener('click', function(e) {
     e.stopPropagation();
   });
 
   // Close modal when clicking outside the image
   modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
+    if (e.target === modal && !justFinishedDragging) {
       modal.style.display = 'none';
       document.body.style.overflow = 'auto'; // Re-enable scrolling
       // Reset modal content size and clear reference
-      const modalContent = modal.querySelector('.image-modal-content');
       modalContent.style.width = '';
       modalContent.style.height = '';
+      resetZoom();
       currentOriginalImage = null;
     }
   });
@@ -182,9 +376,9 @@ document.addEventListener('DOMContentLoaded', function() {
       modal.style.display = 'none';
       document.body.style.overflow = 'auto'; // Re-enable scrolling
       // Reset modal content size and clear reference
-      const modalContent = modal.querySelector('.image-modal-content');
       modalContent.style.width = '';
       modalContent.style.height = '';
+      resetZoom();
       currentOriginalImage = null;
     }
   });
@@ -192,20 +386,22 @@ document.addEventListener('DOMContentLoaded', function() {
   // Store original image element for resize calculations
   let currentOriginalImage = null;
 
-  // Handle window resize while modal is open
+    // Handle window resize while modal is open
   window.addEventListener('resize', function() {
     if (modal.style.display === 'block' && currentOriginalImage) {
-      const modalContent = modal.querySelector('.image-modal-content');
       const originalRect = currentOriginalImage.getBoundingClientRect();
       
       // Recalculate optimal size for new viewport
       const newOptimalWidth = Math.min(originalRect.width * 1.5, window.innerWidth * 0.95);
       const newOptimalHeight = Math.min(originalRect.height * 1.5, window.innerHeight * 0.95);
       
-             modalContent.style.width = newOptimalWidth + 'px';
-       modalContent.style.height = newOptimalHeight + 'px';
-          }
-   });
+      modalContent.style.width = newOptimalWidth + 'px';
+      modalContent.style.height = newOptimalHeight + 'px';
+      
+      // Reapply current zoom level with new container dimensions
+      applyZoom(currentZoom);
+    }
+  });
  });
  </script>
 

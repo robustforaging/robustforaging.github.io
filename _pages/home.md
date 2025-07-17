@@ -148,7 +148,8 @@ In this competition, we have generated a unique data set that includes hours of 
 
 <figure class="competition-diagram">
   <img src="/assets/images/Figure_website.jpg"
-       alt="Overview of the Mouse-vs-AI competition…">
+       alt="Overview of the Mouse-vs-AI competition…"
+       class="clickable-image">
 
   <figcaption class="fig-caption">
     <strong>Figure&nbsp;1.</strong> Overview of the <em>Mouse&nbsp;vs&nbsp;AI – Robust Visual Foraging Challenge</em>.
