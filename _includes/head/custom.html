@@ -38,18 +38,6 @@
   height: auto;
   cursor: zoom-in;
   overflow: hidden;
-  /* Enable touch behaviors on mobile */
-  touch-action: pan-x pan-y pinch-zoom;
-}
-
-/* Mobile-specific overrides */
-@media (max-width: 768px) {
-  .image-modal-content {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    max-width: 98vw;
-    max-height: 98vh;
-  }
 }
 
 .image-modal-content img {
@@ -102,15 +90,10 @@
     height: 40px;
   }
   
-  .image-modal-content img {
-    /* Allow pinch zoom on mobile */
-    touch-action: pinch-zoom;
-    max-width: none;
-    max-height: none;
-    width: auto;
-    height: auto;
-    min-width: 100%;
-    min-height: 100%;
+  /* Disable modal on mobile - use native browser zoom instead */
+  .clickable-image {
+    cursor: default !important;
+    pointer-events: none;
   }
 }
 </style>
@@ -221,30 +204,8 @@ document.addEventListener('DOMContentLoaded', function() {
       
              modalContent.style.width = newOptimalWidth + 'px';
        modalContent.style.height = newOptimalHeight + 'px';
-     }
+          }
    });
-
-   // Mobile touch optimization
-   if ('ontouchstart' in window) {
-     // Prevent double-tap zoom on modal background (but allow on image)
-     modal.addEventListener('touchend', function(e) {
-       if (e.target === modal) {
-         e.preventDefault();
-       }
-     });
-     
-     // Optimize for mobile - adjust sizing for touch devices
-     document.querySelectorAll('.clickable-image').forEach(img => {
-       img.addEventListener('touchstart', function() {
-         // Add a small delay to prevent accidental taps
-         this.style.opacity = '0.7';
-       });
-       
-       img.addEventListener('touchend', function() {
-         this.style.opacity = '';
-       });
-     });
-   }
  });
  </script>
 
