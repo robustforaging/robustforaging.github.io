@@ -13,4 +13,239 @@
 <script id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+<!-- Image Modal/Lightbox CSS -->
+<style>
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+}
+
+.image-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 95vw;
+  max-height: 95vh;
+  width: auto;
+  height: auto;
+  cursor: zoom-in;
+  overflow: hidden;
+  /* Enable touch behaviors on mobile */
+  touch-action: pan-x pan-y pinch-zoom;
+}
+
+/* Mobile-specific overrides */
+@media (max-width: 768px) {
+  .image-modal-content {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 98vw;
+    max-height: 98vh;
+  }
+}
+
+.image-modal-content img {
+  width: 100%;
+  height: 100%;
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.image-modal-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.clickable-image {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.clickable-image:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .image-modal-close {
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .image-modal-content img {
+    /* Allow pinch zoom on mobile */
+    touch-action: pinch-zoom;
+    max-width: none;
+    max-height: none;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+</style>
+
+<!-- Image Modal/Lightbox JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Create modal HTML
+  const modal = document.createElement('div');
+  modal.className = 'image-modal';
+  modal.innerHTML = `
+    <div class="image-modal-close">&times;</div>
+    <div class="image-modal-content">
+      <img src="" alt="">
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const modalImg = modal.querySelector('.image-modal-content img');
+  const closeBtn = modal.querySelector('.image-modal-close');
+
+  // Add click listeners to all images with clickable-image class
+  document.querySelectorAll('.clickable-image').forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.preventDefault();
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+      
+      // Store reference to original image for resize calculations
+      currentOriginalImage = this;
+      
+      // Calculate optimal modal size based on viewport and original image
+      const originalRect = this.getBoundingClientRect();
+      const modalContent = modal.querySelector('.image-modal-content');
+      
+      // Ensure modal image is at least 1.5x larger than original, but fits viewport
+      const minWidth = Math.min(originalRect.width * 1.5, window.innerWidth * 0.95);
+      const minHeight = Math.min(originalRect.height * 1.5, window.innerHeight * 0.95);
+      
+      // Apply dynamic sizing
+      modalContent.style.width = minWidth + 'px';
+      modalContent.style.height = minHeight + 'px';
+      
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+  });
+
+  // Close modal when clicking the close button
+  closeBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+    // Reset modal content size and clear reference
+    const modalContent = modal.querySelector('.image-modal-content');
+    modalContent.style.width = '';
+    modalContent.style.height = '';
+    currentOriginalImage = null;
+  });
+
+  // Prevent events on modal content from bubbling
+  modal.querySelector('.image-modal-content').addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+  // Prevent wheel events (zoom) from going to background
+  modal.addEventListener('wheel', function(e) {
+    e.stopPropagation();
+  });
+
+  // Close modal when clicking outside the image
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Re-enable scrolling
+      // Reset modal content size and clear reference
+      const modalContent = modal.querySelector('.image-modal-content');
+      modalContent.style.width = '';
+      modalContent.style.height = '';
+      currentOriginalImage = null;
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Re-enable scrolling
+      // Reset modal content size and clear reference
+      const modalContent = modal.querySelector('.image-modal-content');
+      modalContent.style.width = '';
+      modalContent.style.height = '';
+      currentOriginalImage = null;
+    }
+  });
+
+  // Store original image element for resize calculations
+  let currentOriginalImage = null;
+
+  // Handle window resize while modal is open
+  window.addEventListener('resize', function() {
+    if (modal.style.display === 'block' && currentOriginalImage) {
+      const modalContent = modal.querySelector('.image-modal-content');
+      const originalRect = currentOriginalImage.getBoundingClientRect();
+      
+      // Recalculate optimal size for new viewport
+      const newOptimalWidth = Math.min(originalRect.width * 1.5, window.innerWidth * 0.95);
+      const newOptimalHeight = Math.min(originalRect.height * 1.5, window.innerHeight * 0.95);
+      
+             modalContent.style.width = newOptimalWidth + 'px';
+       modalContent.style.height = newOptimalHeight + 'px';
+     }
+   });
+
+   // Mobile touch optimization
+   if ('ontouchstart' in window) {
+     // Prevent double-tap zoom on modal background (but allow on image)
+     modal.addEventListener('touchend', function(e) {
+       if (e.target === modal) {
+         e.preventDefault();
+       }
+     });
+     
+     // Optimize for mobile - adjust sizing for touch devices
+     document.querySelectorAll('.clickable-image').forEach(img => {
+       img.addEventListener('touchstart', function() {
+         // Add a small delay to prevent accidental taps
+         this.style.opacity = '0.7';
+       });
+       
+       img.addEventListener('touchend', function() {
+         this.style.opacity = '';
+       });
+     });
+   }
+ });
+ </script>
+
 <!-- end custom head snippets -->

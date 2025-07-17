@@ -18,10 +18,10 @@ For platform-specific instructions on how to download the environment and train 
 The task for virtual and biological agents is to reach a randomly placed target within a time window of 5 seconds. At the beginning of the training, the target was placed close to the mice, and the target distance was increased incrementally when the agents achieved a 70% success rate.
 Mice were trained under normal conditions before their performance under unseen visual perturbations was tested. 
 
-
 <figure class="competition-diagram">
   <img src="/assets/images/diagram_unity.png"
-       alt="Overview of the Mouse-vs-AI competition…">
+       alt="Overview of the Mouse-vs-AI competition…"
+       class="clickable-image">
 
   <figcaption class="fig-caption">
     <strong> Overview of the Mouse vs. AI – Robust Visual Foraging Challenge Pipeline</strong>.
