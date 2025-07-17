@@ -9,6 +9,8 @@ main:
     url: /organizers/
 
 guides:
+  - title: General
+    url: /general-training-guide/
   - title: Windows
     url: /training-guide-win/
   - title: Linux
