@@ -34,6 +34,7 @@ conda env create -n mouse -f mouse.yml
 conda activate mouse
 ``` 
 
+You may need to install pandas separately: ```pip install pandas```
 
 # Modify file path
 Open ```train.py``` and go to line 134 (where ```replace.replace_nature_visual_encoder``` is called).
