@@ -8,20 +8,14 @@ title: "Submission Guide"
 
 Welcome to the submission page for the **Mouse vs AI: Robust Visual Foraging Challenge** at NeurIPS 2025.
 
-**Submit via Codabench:**  
-[https://www.codabench.org/competitions/9453/](https://www.codabench.org/competitions/9453/)  
+**Submit via Codabench:** [https://www.codabench.org/competitions/9453/](https://www.codabench.org/competitions/9453/)  
 You may submit up to **5 models per team per day**.
 
----
-
-## Final Evaluation Requirements
-
-**Note:** Submitting a model is sufficient to appear on the leaderboard.  
-However, to be considered for inclusion in the NeurIPS workshop and the post-competition summary paper, **top-performing teams must also provide a minimal training pipeline**. This can be submitted after the leaderboard deadline, but is required for final recognition and transparency.
+**Note:** Submitting a model is sufficient to appear on the leaderboard. However, to be considered for inclusion in the NeurIPS workshop and the post-competition summary paper, **top-performing teams must also provide a training pipeline**. This can be submitted after the leaderboard deadline, but is required for final recognition and transparency.
 
 ---
 
-## 1. Prepare Your Submission
+#### 1. Prepare Your Submission
 
 - **Required**: Include your trained model in `.onnx` format.
 - **Optional but required for workshop inclusion**: Submit a minimal training pipeline to allow retraining of your model (this can also be submitted retrospectively).
@@ -31,7 +25,7 @@ However, to be considered for inclusion in the NeurIPS workshop and the post-com
 
 ---
 
-## 2. Submit Your Model
+#### 2. Submit Your Model
 
 1. Log in to your Codabench account.
 2. Navigate to the "My Submissions" tab.
@@ -39,7 +33,7 @@ However, to be considered for inclusion in the NeurIPS workshop and the post-com
 
 ---
 
-## 3. Evaluation and Leaderboard
+#### 3. Evaluation and Leaderboard
 
 - Your model will be automatically evaluated on our standardized test environments.
 - Results will be posted on the public leaderboard after evaluation completes.
