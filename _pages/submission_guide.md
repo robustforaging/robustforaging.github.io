@@ -48,7 +48,7 @@ You may submit up to **5 models per team per day**.
 - Public datasets, pretrained models, and open-source libraries may be used for training.
 - All submissions must run entirely offline, without internet access.
 - No training is performed during evaluation—**inference only**.
-- Submissions must be compatible with the interface provided in the [starter kit](https://github.com/robustforaging/starter-kit).
+- Submissions must be compatible with the interface provided in the [starter kit](https://robustforaging.github.io/general-training-guide/).
 - Metadata (e.g., configuration files or logs) can be included for reproducibility, but are not required.
 - Final evaluation and ranking will be performed on hidden test conditions.
 - Top teams will be invited to contribute short reports for the NeurIPS workshop and summary publication.
