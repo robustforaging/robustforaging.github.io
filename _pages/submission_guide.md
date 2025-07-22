@@ -10,7 +10,7 @@ Welcome to the submission page for the **Mouse vs AI: Robust Visual Foraging Cha
 
 **Submit via Codabench:** [https://www.codabench.org/competitions/9453/](https://www.codabench.org/competitions/9453/)  
 
-**Note:** Submitting a model is sufficient to appear on the leaderboard. However, to be considered for inclusion in the NeurIPS workshop and the post-competition summary paper, **top-performing teams must also provide a training pipeline**. This can be submitted after the leaderboard deadline, but is required for final recognition and transparency.
+**Note:** Submitting a model is sufficient to appear on the leaderboard. However, to be considered for inclusion in the NeurIPS workshop and the post-competition summary paper, **top-performing teams must also provide a training pipeline**. This can be submitted after the leaderboard deadline, but is required for final recognition.
 
 ---
 
