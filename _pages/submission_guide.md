@@ -23,15 +23,11 @@ You may submit up to **5 models per team per day**.
   [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdIvZk0fZhpO0u-bqwRpFUFcg61gMQ8Bqtq3tG3qbds2WfEWA/viewform).
 - Combine all files into a single `.zip` archive before submitting.
 
----
-
 #### 2. Submit Your Model
 
 1. Log in to your Codabench account.
 2. Navigate to the "My Submissions" tab.
 3. Click "Upload Submission", select your `.zip` file, and fill in the required fields.
-
----
 
 #### 3. Evaluation and Leaderboard
 
@@ -39,7 +35,6 @@ You may submit up to **5 models per team per day**.
 - Results will be posted on the public leaderboard after evaluation completes.
 - Final scores will be based on performance on a **private held-out test set** evaluated by the organizers.
 
----
 
 ## Competition Rules
 
