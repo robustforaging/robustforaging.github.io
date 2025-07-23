@@ -22,6 +22,8 @@ title: "Leaderboard"
     <tr>
       <th>Rank</th>
       <th>Submission Name</th>
+      <th>Overall Rate</th>
+      <th>Min Rate</th>
       <th>Score</th>
     </tr>
   </thead>
@@ -49,6 +51,8 @@ fetch('/assets/data/leaderboard.csv')
 
     data.forEach((row, index) => {
       const name = row[0];
+      const overall = parseFloat(row[1]).toFixed(4);
+      const minRate = parseFloat(row[2]).toFixed(4);
       const score = parseFloat(row[row.length - 1]).toFixed(4);
       const rank = index + 1;
 
@@ -56,7 +60,9 @@ fetch('/assets/data/leaderboard.csv')
         <tr>
           <td>${rank}</td>
           <td>${name}</td>
-          <td>${score}</td>
+          <td>${overall}</td>
+          <td>${minRate}</td>
+          <td><strong>${score}</strong></td>
         </tr>`;
     });
   });
