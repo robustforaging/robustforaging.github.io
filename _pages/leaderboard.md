@@ -18,7 +18,7 @@ title: "Leaderboard"
 
 <center>
   <h2>Track 1 Leaderboard</h2>
-  <table id="leaderboard" style="width:90%; margin:0 auto;">
+  <table id="leaderboard"; margin:0 auto;">
     <thead>
       <tr>
         <th>Rank</th>
