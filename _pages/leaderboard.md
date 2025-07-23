@@ -17,8 +17,9 @@ title: "Leaderboard"
 </pre>
 
 <center>
-<table id="leaderboard">
-  <thead>
+  <h2>Track 1 Leaderboard</h2>
+  <table id="leaderboard" style="width:90%;">
+    <thead>
     <tr>
       <th>Rank</th>
       <th>Submission Name</th>
