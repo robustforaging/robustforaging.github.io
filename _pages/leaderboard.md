@@ -16,11 +16,13 @@ title: "Leaderboard"
 
 </pre>
 
-<center>
-  <h2>Track 1 Leaderboard</h2>
-  <table id="leaderboard"; margin:0 auto;">
+<div style="max-width: 900px; margin: 0 auto;">
+
+  <h2 style="text-align: center;">Track 1 Leaderboard</h2>
+
+  <table id="leaderboard" style="width: 100%; margin: 0 auto; border-collapse: collapse;">
     <thead>
-      <tr>
+      <tr style="background: #ddd;">
         <th>Rank</th>
         <th>Submission Name</th>
         <th>ASR</th>
@@ -31,56 +33,39 @@ title: "Leaderboard"
     <tbody></tbody>
   </table>
 
-  <div style="width:90%; margin:1em auto; text-align:left;">
+  <div style="margin: 1.5em 0; text-align: left;">
     <strong>Legend:</strong>
     <ul>
       <li><strong>ASR</strong>: average success rate across all submissions</li>
       <li><strong>MSR</strong>: minimum success rate across all conditions</li>
       <li><strong>Score</strong> = (ASR + MSR) / 2</li>
     </ul>
-    <p style="text-align:center; font-style:italic;">
+    <p style="text-align: center; font-style: italic;">
       Note: Track 2 leaderboard will be added soon.
     </p>
   </div>
-</center>
 
-
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 <script>
 fetch('/assets/data/leaderboard.csv')
-  .then(response => response.text())
+  .then(r => r.text())
   .then(csv => {
-    const parsed = Papa.parse(csv, { header: false }).data;
-
-    // Remove the header row
-    const data = parsed.filter(row =>
-      row.length > 1 &&
-      row[0] !== 'submission' &&
-      row[row.length - 1] !== 'score'
-    );
-
-    // Sort descending by score (last column)
-    data.sort((a, b) =>
-      parseFloat(b[b.length - 1]) - parseFloat(a[a.length - 1])
-    );
-
-    const tableBody = document.querySelector('#leaderboard tbody');
-    tableBody.innerHTML = ''; // Clear existing
-
-    data.forEach((row, index) => {
-      const name   = row[0];
-      const asr    = parseFloat(row[1]).toFixed(4);
-      const msr    = parseFloat(row[2]).toFixed(4);
-      const score  = parseFloat(row[row.length - 1]).toFixed(4);
-      const rank   = index + 1;
-
-      tableBody.innerHTML += `
+    const rows = Papa.parse(csv, { header: false }).data
+      .filter(r => r.length>1 && r[0] !== 'submission' && r[r.length-1] !== 'score')
+      .sort((a,b) => parseFloat(b[b.length-1]) - parseFloat(a[a.length-1]));
+    const tbody = document.querySelector('#leaderboard tbody');
+    tbody.innerHTML = '';
+    rows.forEach((r,i) => {
+      const [name, asrVal, msrVal] = r;
+      const score = parseFloat(r[r.length-1]).toFixed(4);
+      tbody.innerHTML += `
         <tr>
-          <td>${rank}</td>
+          <td>${i+1}</td>
           <td>${name}</td>
-          <td>${asr}</td>
-          <td>${msr}</td>
+          <td>${parseFloat(asrVal).toFixed(4)}</td>
+          <td>${parseFloat(msrVal).toFixed(4)}</td>
           <td><strong>${score}</strong></td>
         </tr>`;
     });
