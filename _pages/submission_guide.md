@@ -18,8 +18,7 @@ Welcome to the submission page for the **Mouse vs AI: Robust Visual Foraging Cha
 
 - **Required**: Include your trained model in `.onnx` format.
 - **Optional but required for workshop inclusion**: Submit a minimal training pipeline to allow retraining of your model (this can also be submitted retrospectively).
-- **Optional**: Add a short model description (`.txt` or `.pdf`) outlining your architecture, training procedure, and any notable design choices. You may also submit this description later using this  
-  [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdIvZk0fZhpO0u-bqwRpFUFcg61gMQ8Bqtq3tG3qbds2WfEWA/viewform).
+- **Optional**: Add a short model description (`.txt` or `.pdf`) outlining your architecture, training procedure, and any notable design choices. You may also submit this description later using this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdIvZk0fZhpO0u-bqwRpFUFcg61gMQ8Bqtq3tG3qbds2WfEWA/viewform).
 - Combine all files into a single `.zip` archive before submitting.
 
 #### 2. Submit Your Model
@@ -31,7 +30,7 @@ Welcome to the submission page for the **Mouse vs AI: Robust Visual Foraging Cha
 #### 3. Evaluation and Leaderboard
 
 - Your model will be automatically evaluated on our standardized test environments.
-- Results will be posted on the public leaderboard after evaluation completes.
+- Results will be posted on the public [leaderboard](https://robustforaging.github.io/leaderboard/) after evaluation completes.
 - Final scores will be based on performance on a **private held-out test set** evaluated by the organizers.
 
 
