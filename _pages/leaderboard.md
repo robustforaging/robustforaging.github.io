@@ -22,13 +22,20 @@ title: "Leaderboard"
     <tr>
       <th>Rank</th>
       <th>Submission Name</th>
-      <th>Overall Rate</th>
-      <th>Min Rate</th>
+      <th>ASR</th>
+      <th>MSR</th>
       <th>Score</th>
     </tr>
   </thead>
   <tbody></tbody>
 </table>
+
+**Legend**  
+- **ASR**: average success rate across all submissions  
+- **MSR**: minimum success rate across all conditions  
+- **Score** = (ASR + MSR) / 2
+
+  
 </center> 
 
 
