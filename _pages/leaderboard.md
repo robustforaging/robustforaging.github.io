@@ -30,13 +30,13 @@ title: "Leaderboard"
   </thead>
   <tbody></tbody>
 </table>
-
-**Legend**  
-- **ASR**: average success rate across all submissions  
-- **MSR**: minimum success rate across all conditions  
-- **Score** = (ASR + MSR) / 2
-
   
+  **Legend**  
+  - **ASR**: average success rate across all submissions  
+  - **MSR**: minimum success rate across all conditions  
+  - **Score** = (ASR + MSR) / 2  
+
+  <p><em>Note: Track 2 leaderboard will be added soon.</em></p>
 </center> 
 
 
