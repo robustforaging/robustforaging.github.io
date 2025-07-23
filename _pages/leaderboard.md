@@ -18,26 +18,31 @@ title: "Leaderboard"
 
 <center>
   <h2>Track 1 Leaderboard</h2>
-  <table id="leaderboard" style="width:90%;">
+  <table id="leaderboard" style="width:90%; margin:0 auto;">
     <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Submission Name</th>
-      <th>ASR</th>
-      <th>MSR</th>
-      <th>Score</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-  
-  **Legend**  
-  - **ASR**: average success rate across all submissions  
-  - **MSR**: minimum success rate across all conditions  
-  - **Score** = (ASR + MSR) / 2  
+      <tr>
+        <th>Rank</th>
+        <th>Submission Name</th>
+        <th>ASR</th>
+        <th>MSR</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
-  <p><em>Note: Track 2 leaderboard will be added soon.</em></p>
-</center> 
+  <div style="width:90%; margin:1em auto; text-align:left;">
+    <strong>Legend:</strong>
+    <ul>
+      <li><strong>ASR</strong>: average success rate across all submissions</li>
+      <li><strong>MSR</strong>: minimum success rate across all conditions</li>
+      <li><strong>Score</strong> = (ASR + MSR) / 2</li>
+    </ul>
+    <p style="text-align:center; font-style:italic;">
+      Note: Track 2 leaderboard will be added soon.
+    </p>
+  </div>
+</center>
 
 
 
@@ -49,27 +54,33 @@ fetch('/assets/data/leaderboard.csv')
     const parsed = Papa.parse(csv, { header: false }).data;
 
     // Remove the header row
-    const data = parsed.filter(row => row.length > 1 && row[0] !== 'submission' && row[row.length - 1] !== 'score');
+    const data = parsed.filter(row =>
+      row.length > 1 &&
+      row[0] !== 'submission' &&
+      row[row.length - 1] !== 'score'
+    );
 
     // Sort descending by score (last column)
-    data.sort((a, b) => parseFloat(b[b.length - 1]) - parseFloat(a[a.length - 1]));
+    data.sort((a, b) =>
+      parseFloat(b[b.length - 1]) - parseFloat(a[a.length - 1])
+    );
 
     const tableBody = document.querySelector('#leaderboard tbody');
     tableBody.innerHTML = ''; // Clear existing
 
     data.forEach((row, index) => {
-      const name = row[0];
-      const overall = parseFloat(row[1]).toFixed(4);
-      const minRate = parseFloat(row[2]).toFixed(4);
-      const score = parseFloat(row[row.length - 1]).toFixed(4);
-      const rank = index + 1;
+      const name   = row[0];
+      const asr    = parseFloat(row[1]).toFixed(4);
+      const msr    = parseFloat(row[2]).toFixed(4);
+      const score  = parseFloat(row[row.length - 1]).toFixed(4);
+      const rank   = index + 1;
 
       tableBody.innerHTML += `
         <tr>
           <td>${rank}</td>
           <td>${name}</td>
-          <td>${overall}</td>
-          <td>${minRate}</td>
+          <td>${asr}</td>
+          <td>${msr}</td>
           <td><strong>${score}</strong></td>
         </tr>`;
     });
