@@ -21,13 +21,6 @@ excerpt: >
 ---
 
 <style>
-  .full-width-element {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%); /* Centers the element */
-  }
-
   /* Enhanced styling for better visibility */
   .page__title {
     font-size: 3.5rem !important;
