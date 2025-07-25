@@ -4,4 +4,3 @@ submission,overall_rate,min_rate,worst_type,score
 SuperMice_natureCNN,0.26,0.23,1,0.245
 SuperMice2_ResNet,0.74,0.49,2,0.615
 SuperMice3_simpleCNN,0.802,0.45,1,0.626
-yuchen_test_model,0.084,0.03,4,0.057
