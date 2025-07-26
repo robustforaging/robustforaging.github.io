@@ -2,6 +2,7 @@ submission,overall_rate,min_rate,worst_type,score
 332237_chisboiz111,0.006,0.0,0,0.003
 336155_all_awareness,0.87,0.45,1,0.66
 337833_pajucg2,0.49,0.26,0,0.375
+339313_pajucg2,0.116,0.0,2,0.058
 SuperMice_natureCNN,0.26,0.23,1,0.245
 SuperMice2_ResNet,0.74,0.49,2,0.615
 SuperMice3_simpleCNN,0.802,0.45,1,0.626
