@@ -9,6 +9,7 @@ submission,overall_rate,min_rate,worst_type,score
 345048_chisboiz111,0.172,0.1,2,0.136
 350156_kx2141,0.0,0.0,0,0.0
 352406_aaravg42,0.494,0.21,2,0.352
+352920_aaravg42,0.53,0.32,3,0.425
 SuperMice_natureCNN,0.26,0.23,1,0.245
 SuperMice2_ResNet,0.74,0.49,2,0.615
 SuperMice3_simpleCNN,0.802,0.45,1,0.626
