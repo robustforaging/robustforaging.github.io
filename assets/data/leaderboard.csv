@@ -70,6 +70,7 @@ submission,overall_rate,min_rate,worst_type,score
 358220_retrievers,0.914,0.84,1,0.877
 358328_sazeglio,0.812,0.45,0,0.631
 358360_sazeglio,0.856,0.55,3,0.703
+358403_retrievers,0.858,0.69,3,0.774
 SuperMice_natureCNN,0.26,0.23,1,0.245
 SuperMice2_ResNet,0.74,0.49,2,0.615
 SuperMice3_simpleCNN,0.802,0.45,1,0.626
