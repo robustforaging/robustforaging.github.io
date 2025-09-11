@@ -116,6 +116,7 @@ submission,overall_rate,min_rate,worst_type,score
 368643_loser1,0.8096,0.51,4,0.6598
 368751_chisboiz111,0.732,0.35,3,0.541
 368663_sazeglio,0.028,0.0,1,0.014
+368878_pingsheng-li,0.822,0.65,2,0.736
 SuperMice_natureCNN,0.26,0.23,1,0.245
 SuperMice2_ResNet,0.74,0.49,2,0.615
 SuperMice3_simpleCNN,0.802,0.45,1,0.626
