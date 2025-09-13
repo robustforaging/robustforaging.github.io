@@ -127,6 +127,7 @@ submission,overall_rate,min_rate,worst_type,score
 369130_chisboiz111,0.944,0.85,2,0.897
 369208_retrievers,0.956,0.88,4,0.918
 369338_retrievers,0.946,0.89,2,0.918
+369580_chisboiz111,0.614,0.02,4,0.317
 SuperMice_natureCNN,0.26,0.23,1,0.245
 SuperMice2_ResNet,0.74,0.49,2,0.615
 SuperMice3_simpleCNN,0.802,0.45,1,0.626
