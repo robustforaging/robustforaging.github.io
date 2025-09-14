@@ -141,6 +141,8 @@ submission,overall_rate,min_rate,worst_type,score
 370228_chisboiz111,0.898,0.79,2,0.844
 370263_chisboiz111,0.942,0.84,4,0.891
 370264_chisboiz111,0.94,0.87,0,0.905
+370717_chisboiz111,0.932,0.84,1,0.886
+370718_chisboiz111,0.936,0.87,4,0.903
 SuperMice_natureCNN,0.26,0.23,1,0.245
 SuperMice2_ResNet,0.74,0.49,2,0.615
 SuperMice3_simpleCNN,0.802,0.45,1,0.626
