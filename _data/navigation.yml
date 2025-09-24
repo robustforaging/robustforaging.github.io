@@ -7,6 +7,8 @@ main:
     url: /leaderboard/
   - title: "Organizers"
     url: /organizers/
+  - title: "Whitepaper"
+    url: https://arxiv.org/abs/2509.14446
 
 guides:
   - title: General
