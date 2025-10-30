@@ -110,7 +110,9 @@ excerpt: >
 
 Welcome to the Mouse vs AI: Robust Visual Foraging Competition @  **NeurIPS 2025 Competition Track**.
 
- [Whitepaper](https://arxiv.org/abs/2509.14446)  
+**Announcement**:
+- Our whitepaper is online on Arxiv: [Whitepaper](https://arxiv.org/abs/2509.14446)
+- The competition deadline has been extended to Nov 15, 11:59 pm (anywhere on Earth).
 
 Mice robustly navigate in a range of conditions like fog, maybe more robustly than self-driving cars, which can struggle with out-of-distribution conditions. Build an AI agent that can outcompete a mouse!
 
@@ -210,8 +212,8 @@ Choose the build for your platform:
 |------------------|----------------------------------|
 | July 1, 2025     | Starter kit released             |
 | July 15, 2025    | Competition officially begins    |
-| Nov 1, 2025      | Final submission deadline        |
-| Nov 15, 2025     | Evaluation + winners announced   |
+| Nov 15, 2025     | Final submission deadline        |
+| Nov 22, 2025     | Evaluation + winners announced   |
 | Dec 2025         | Results at NeurIPS 2025          |
 
 
