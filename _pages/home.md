@@ -21,7 +21,6 @@ excerpt: >
 ---
 
 <style>
-  /* Enhanced styling for better visibility */
   .page__title {
     font-size: 3.5rem !important;
     font-weight: 700 !important;
@@ -53,7 +52,6 @@ excerpt: >
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4) !important;
   }
 
-  /* put this right after your existing styles */
   .competition-diagram,     /* the figure             */
   p {                       /* regular paragraphs     */
     margin-top: 2rem;       /* ↑ space above          */

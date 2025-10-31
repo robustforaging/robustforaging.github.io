@@ -58,19 +58,6 @@ title: "Leaderboard"
 }
 </style>
 
-<center>
-<img
-  src="/assets/images/mouse-fighting_banner2.png"
-  alt="Robust Visual Foraging Challenge Banner"
-  width="640"
-  height="320"
-/>
-</center>
-
-<pre>
-
-</pre>
-
 <h2 style="text-align: center;">Track 1 Leaderboard</h2>
 
 <table id="leaderboard">

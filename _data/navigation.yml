@@ -1,12 +1,12 @@
 main:
-  - title: "Training Guide"
-    url: /general-training-guide/
-  - title: "Submission Guide"
-    url: /submission-guide/
   - title: "Leaderboard"
     url: /leaderboard/
   - title: "Organizers"
     url: /organizers/
+  - title: "Submission Guide"
+    url: /submission-guide/
+  - title: "Training Guide"
+    url: /general-training-guide/
   - title: "Whitepaper"
     url: https://arxiv.org/abs/2509.14446
 
