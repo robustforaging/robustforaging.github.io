@@ -88,7 +88,7 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
 <div class="speaker-grid">
 <!-- Fabian -->
 <div class="speaker-card">
-  <img src="/assets/images/fabian-sinz.png" alt="Fabian Sinz" class="speaker-photo">
+  <a href="https://sinzlab.org/people/fabian_sinz.html"> <img src="/assets/images/fabian-sinz.png" alt="Fabian Sinz" class="speaker-photo"> </a>
   <div class="speaker-info">
     <strong>Fabian Sinz</strong><br>
     University of Tübingen<br>
@@ -98,7 +98,7 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
 
   <!-- Nina -->
 <div class="speaker-card">
-  <img src="/assets/images/miolane.png" alt="Nina Miolane" class="speaker-photo">
+  <a href="https://www.ninamiolane.com/"> <img src="/assets/images/miolane.png" alt="Nina Miolane" class="speaker-photo"> </a>
   <div class="speaker-info">
     <strong>Nina Miolane</strong><br>
     UC Santa Barbara<br>
@@ -108,7 +108,7 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
 
 <!-- Cris -->
 <div class="speaker-card">
-  <img src="/assets/images/cris_niell.png" alt="Cris Niell" class="speaker-photo">
+  <a href="https://nielllab.uoregon.edu/people/"> <img src="/assets/images/cris_niell.png" alt="Cris Niell" class="speaker-photo"> </a>
   <div class="speaker-info">
     <strong>Cris Niell</strong><br>
     University of Oregon<br>
