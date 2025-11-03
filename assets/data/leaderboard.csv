@@ -208,6 +208,7 @@ submission,overall_rate,min_rate,worst_type,score
 406439_alluding123,0.794,0.32,0,0.557
 407981_drumplstiltskin,0.512,0.27,4,0.391
 411514_retrievers,0.954,0.87,3,0.912
+412192_retrievers,0.846,0.61,3,0.728
 SuperMice_natureCNN,0.26,0.23,1,0.245
 SuperMice2_ResNet,0.74,0.49,2,0.615
 SuperMice3_simpleCNN,0.802,0.45,1,0.626
