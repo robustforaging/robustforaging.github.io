@@ -142,12 +142,12 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
     <tr>
       <td>11:30 - 12:00</td>
       <td>Keynote Talk 1</td>
-      <td>Fabian Sinz: Foundation models for mouse vision</td>
+      <td>Nina Miolane: Geometric approaches to neural activity prediction</td>
     </tr>
     <tr>
       <td>12:00 - 12:30</td>
       <td>Keynote Talk 2</td>
-      <td>Nina Miolane: Geometric approaches to neural activity prediction</td>
+      <td>Fabian Sinz: Foundation models for mouse vision</td>
     </tr>
     <tr>
       <td>12:30 - 12:45</td>
