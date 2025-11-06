@@ -1,4 +1,6 @@
 main:
+  - title: "Workshop"
+    url: /workshop/
   - title: "Leaderboard"
     url: /leaderboard/
   - title: "Organizers"
