@@ -225,6 +225,7 @@ submission,overall_rate,min_rate,worst_type,score
 418210_loser1,0.924,0.82,1,0.872
 418252_loser1,0.906,0.75,3,0.828
 418307_retrievers,0.92,0.76,1,0.84
+418612_alluding123,0.818,0.37,2,0.594
 SuperMice_natureCNN,0.26,0.23,1,0.245
 SuperMice2_ResNet,0.74,0.49,2,0.615
 SuperMice3_simpleCNN,0.802,0.45,1,0.626
