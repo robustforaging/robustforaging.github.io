@@ -56,7 +56,60 @@ title: "Leaderboard"
 #leaderboard td:nth-child(5) {
   width: 16.67%;
 }
+
+#leaderboard_best {
+  display: table !important;
+  overflow-x: visible !important;
+
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+#leaderboard_best th,
+#leaderboard_best td {
+  padding: 12px 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+#leaderboard_best th {
+  background: #ddd;
+  font-weight: bold;
+}
+
+#leaderboard_best tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#leaderboard_best tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* Column widths for best leaderboard */
+#leaderboard_best th:nth-child(1),
+#leaderboard_best td:nth-child(1) {
+  width: 10%;
+}
+
+#leaderboard_best th:nth-child(2),
+#leaderboard_best td:nth-child(2) {
+  width: 40%;
+  text-align: left;
+}
+
+#leaderboard_best th:nth-child(3),
+#leaderboard_best td:nth-child(3),
+#leaderboard_best th:nth-child(4),
+#leaderboard_best td:nth-child(4),
+#leaderboard_best th:nth-child(5),
+#leaderboard_best td:nth-child(5) {
+  width: 16.67%;
+}
+
 </style>
+
 
 
 <h2 style="text-align: center;">🏆 Track 1 Team Leaderboard</h2>
@@ -132,7 +185,7 @@ fetch('/assets/data/leaderboard_best.csv')
 
 
 <script>
-fetch('/assets/data/leaderboard.csv')
+fetch('/assets/data/leaderboard_merged.csv')
   .then(r => r.text())
   .then(csv => {
     const rows = Papa.parse(csv, { header: false }).data
