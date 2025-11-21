@@ -58,6 +58,51 @@ title: "Leaderboard"
 }
 </style>
 
+
+<h2 style="text-align: center;">🏆 Track 1 Team Leaderboard</h2>
+
+<table id="leaderboard_best">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Team Name</th>
+      <th>ASR</th>
+      <th>MSR</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<hr style="margin: 3em 0;">
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+<script>
+fetch('/assets/data/leaderboard_best.csv')
+  .then(r => r.text())
+  .then(csv => {
+    const rows = Papa.parse(csv, { header: false }).data
+      .filter(r => r.length>1 && r[0] !== 'submission' && r[r.length-1] !== 'score')
+      .sort((a,b) => parseFloat(b[b.length-1]) - parseFloat(a[a.length-1]));
+      const tbody = document.querySelector('#leaderboard_best tbody');
+      tbody.innerHTML = '';
+      rows.forEach((r,i) => {
+        const [name, asrVal, msrVal] = r;
+        const score = parseFloat(r[r.length-1]).toFixed(4);
+        tbody.innerHTML += `
+          <tr>
+            <td>${i+1}</td>
+            <td>${name}</td>
+            <td>${parseFloat(asrVal).toFixed(4)}</td>
+            <td>${parseFloat(msrVal).toFixed(4)}</td>
+            <td><strong>${score}</strong></td>
+          </tr>`;
+      });
+    });
+</script>
+
+
 <h2 style="text-align: center;">Track 1 Leaderboard</h2>
 
 <table id="leaderboard">
@@ -86,7 +131,6 @@ title: "Leaderboard"
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 <script>
 fetch('/assets/data/leaderboard.csv')
   .then(r => r.text())
