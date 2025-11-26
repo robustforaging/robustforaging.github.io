@@ -132,28 +132,54 @@ title: "Leaderboard"
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
 <script>
+function computeRanks(rows) {
+  const ranks = [];
+  let currentRank = 1;
+
+  for (let i = 0; i < rows.length; i++) {
+    if (i > 0) {
+      const prevScore = parseFloat(rows[i-1][rows[i-1].length-1]);
+      const currScore = parseFloat(rows[i][rows[i].length-1]);
+
+      if (currScore !== prevScore) {
+        currentRank = i + 1;   // competition ranking
+      }
+    }
+    ranks.push(currentRank);
+  }
+  return ranks;
+}
+</script>
+
+<script>
 fetch('/assets/data/leaderboard_best.csv')
   .then(r => r.text())
   .then(csv => {
     const rows = Papa.parse(csv, { header: false }).data
-      .filter(r => r.length>1 && r[0] !== 'submission' && r[r.length-1] !== 'score')
-      .sort((a,b) => parseFloat(b[b.length-1]) - parseFloat(a[a.length-1]));
-      const tbody = document.querySelector('#leaderboard_best tbody');
-      tbody.innerHTML = '';
-      rows.forEach((r,i) => {
-        const [name, asrVal, msrVal] = r;
-        const score = parseFloat(r[r.length-1]).toFixed(4);
-        tbody.innerHTML += `
-          <tr>
-            <td>${i+1}</td>
-            <td>${name}</td>
-            <td>${parseFloat(asrVal).toFixed(4)}</td>
-            <td>${parseFloat(msrVal).toFixed(4)}</td>
-            <td><strong>${score}</strong></td>
-          </tr>`;
-      });
+      .filter(r => r.length > 1 && r[0] !== 'submission' && r[r.length - 1] !== 'score')
+      .sort((a, b) => parseFloat(b[b.length - 1]) - parseFloat(a[a.length - 1]));
+
+    const ranks = computeRanks(rows);
+
+    const tbody = document.querySelector('#leaderboard_best tbody');
+    tbody.innerHTML = '';
+
+    rows.forEach((r, i) => {
+      const [name, asrVal, msrVal] = r;
+      const score = parseFloat(r[r.length - 1]).toFixed(4);
+
+      tbody.innerHTML += `
+        <tr>
+          <td>${ranks[i]}</td>
+          <td>${name}</td>
+          <td>${parseFloat(asrVal).toFixed(4)}</td>
+          <td>${parseFloat(msrVal).toFixed(4)}</td>
+          <td><strong>${score}</strong></td>
+        </tr>`;
     });
+  });
 </script>
+
 
 
 <h2 style="text-align: center;">Track 1 Leaderboard</h2>
@@ -189,16 +215,22 @@ fetch('/assets/data/leaderboard_merged.csv')
   .then(r => r.text())
   .then(csv => {
     const rows = Papa.parse(csv, { header: false }).data
-      .filter(r => r.length>1 && r[0] !== 'submission' && r[r.length-1] !== 'score')
-      .sort((a,b) => parseFloat(b[b.length-1]) - parseFloat(a[a.length-1]));
+      .filter(r => r.length > 1 && r[0] !== 'submission' && r[r.length - 1] !== 'score')
+      .sort((a, b) => parseFloat(b[b.length - 1]) - parseFloat(a[a.length - 1]));
+
+    // --- NEW: compute tied ranks ---
+    const ranks = computeRanks(rows);
+
     const tbody = document.querySelector('#leaderboard tbody');
     tbody.innerHTML = '';
-    rows.forEach((r,i) => {
+
+    rows.forEach((r, i) => {
       const [name, asrVal, msrVal] = r;
-      const score = parseFloat(r[r.length-1]).toFixed(4);
+      const score = parseFloat(r[r.length - 1]).toFixed(4);
+
       tbody.innerHTML += `
         <tr>
-          <td>${i+1}</td>
+          <td>${ranks[i]}</td>  
           <td>${name}</td>
           <td>${parseFloat(asrVal).toFixed(4)}</td>
           <td>${parseFloat(msrVal).toFixed(4)}</td>
