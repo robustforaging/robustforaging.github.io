@@ -91,8 +91,8 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
   <a href="https://sinzlab.org/people/fabian_sinz.html"> <img src="/assets/images/fabian-sinz.png" alt="Fabian Sinz" class="speaker-photo"> </a>
   <div class="speaker-info">
     <strong>Fabian Sinz</strong><br>
-    University of Tübingen<br>
-    <em>Foundation models for mouse vision</em>
+    University of Göttingen<br>
+    <em>Towards foundation models of mouse vision</em>
   </div>
 </div>
 
@@ -147,7 +147,7 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
     <tr>
       <td>12:00 - 12:30</td>
       <td>Keynote Talk 2</td>
-      <td>Fabian Sinz: Foundation models for mouse vision</td>
+      <td>Fabian Sinz: Towards foundation models of mouse vision</td>
     </tr>
     <tr>
       <td>12:30 - 12:45</td>
