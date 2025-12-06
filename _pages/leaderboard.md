@@ -156,6 +156,55 @@ title: "Leaderboard"
 }
   
   
+
+#leaderboard_track2_all {
+  display: table !important;
+  overflow-x: visible !important;
+
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+#leaderboard_track2_all th,
+#leaderboard_track2_all td {
+  padding: 12px 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+#leaderboard_track2_all th {
+  background: #ddd;
+  font-weight: bold;
+}
+
+#leaderboard_track2_all tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#leaderboard_track2_all tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* Column widths */
+#leaderboard_track2_all th:nth-child(1),
+#leaderboard_track2_all td:nth-child(1) {
+  width: 15%;
+}
+
+#leaderboard_track2_all th:nth-child(2),
+#leaderboard_track2_all td:nth-child(2) {
+  width: 55%;
+  text-align: left;
+}
+
+#leaderboard_track2_all th:nth-child(3),
+#leaderboard_track2_all td:nth-child(3) {
+  width: 30%;
+}
+
+
 </style>
 
 
@@ -331,4 +380,53 @@ fetch('/assets/data/leaderboard_merged.csv')
         </tr>`;
     });
   });
+</script>
+
+
+
+<h2 style="text-align: center;">Track 2 — All Models</h2>
+
+<table id="leaderboard_track2_all">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Model Name</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<hr style="margin: 3em 0;">
+
+<script>
+fetch('/assets/data/Track2_scores_all.csv')
+  .then(r => r.text())
+  .then(csv => {
+    const parsed = Papa.parse(csv, { header: true, skipEmptyLines: true }).data;
+
+    // Build the rows from the CSV (model, score)
+    const rows = parsed
+      .filter(r => r.model && r.score !== undefined && r.score !== "")
+      .sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
+
+    // Use computeRanks on the score column
+    const rankRows = rows.map(r => [r.model, r.score]);
+    const ranks = computeRanks(rankRows);
+
+    // Fill the table
+    const tbody = document.querySelector('#leaderboard_track2_all tbody');
+    tbody.innerHTML = '';
+
+    rows.forEach((r, i) => {
+      const score = parseFloat(r.score).toFixed(4);
+      tbody.innerHTML += `
+        <tr>
+          <td>${ranks[i]}</td>
+          <td>${r.model}</td>
+          <td><strong>${score}</strong></td>
+        </tr>`;
+    });
+  })
+  .catch(err => console.error("Track2 ALL Models Load Error:", err));
 </script>
