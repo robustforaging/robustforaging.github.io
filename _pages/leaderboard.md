@@ -246,31 +246,34 @@ fetch('/assets/data/leaderboard_best.csv')
 <hr style="margin: 3em 0;">
 
 <script>
-fetch('/assets/data/track2_scores_best.csv')
+fetch('assets/data/track2_scores_best.csv')
   .then(r => r.text())
   .then(csv => {
-    const rows = Papa.parse(csv, { header: false }).data
-      .filter(r => r.length > 1 && r[0] !== 'owner' && r[1] !== 'score_C_0005')
-      .sort((a, b) => parseFloat(b[1]) - parseFloat(a[1]));
+    const parsed = Papa.parse(csv, { header: true }).data;
 
-    const ranks = computeRanks(rows);
+    const rows = parsed
+      .filter(r => r.team && r.score)
+      .sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
+
+    const ranks = computeRanks(rows.map(r => [r.team, r.score]));
 
     const tbody = document.querySelector('#leaderboard_track2 tbody');
     tbody.innerHTML = '';
 
     rows.forEach((r, i) => {
-      const [team, scoreVal] = r;
-      const score = parseFloat(scoreVal).toFixed(4);
-
+      const score = parseFloat(r.score).toFixed(4);
       tbody.innerHTML += `
         <tr>
           <td>${ranks[i]}</td>
-          <td>${team}</td>
+          <td>${r.team}</td>
           <td><strong>${score}</strong></td>
         </tr>`;
     });
   });
 </script>
+
+
+
 
 
 
