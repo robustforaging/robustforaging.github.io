@@ -108,6 +108,52 @@ title: "Leaderboard"
   width: 16.67%;
 }
 
+#leaderboard_track2 {
+  display: table !important;
+  overflow-x: visible !important;
+
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+#leaderboard_track2 th,
+#leaderboard_track2 td {
+  padding: 12px 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+#leaderboard_track2 th {
+  background: #ddd;
+  font-weight: bold;
+}
+
+#leaderboard_track2 tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#leaderboard_track2 tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* Column widths */
+#leaderboard_track2 th:nth-child(1),
+#leaderboard_track2 td:nth-child(1) {
+  width: 15%;
+}
+
+#leaderboard_track2 th:nth-child(2),
+#leaderboard_track2 td:nth-child(2) {
+  width: 55%;
+  text-align: left;
+}
+
+#leaderboard_track2 th:nth-child(3),
+#leaderboard_track2 td:nth-child(3) {
+  width: 30%;
+}
 </style>
 
 
@@ -128,6 +174,8 @@ title: "Leaderboard"
 </table>
 
 <hr style="margin: 3em 0;">
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
@@ -204,10 +252,51 @@ fetch('/assets/data/leaderboard_best.csv')
     <li><strong>MSR</strong>: minimum success rate across all conditions</li>
     <li><strong>Score</strong> = (ASR + MSR) / 2</li>
   </ul>
-  <p style="text-align: center; font-style: italic;">
-    Note: Track 2 leaderboard will be added soon.
-  </p>
 </div>
+
+
+
+<h2 style="text-align: center;">🏅 Track 2 Team Leaderboard</h2>
+
+<table id="leaderboard_track2">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Team Name</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<hr style="margin: 3em 0;">
+
+<script>
+fetch('/assets/data/track2_scores_best.csv')
+  .then(r => r.text())
+  .then(csv => {
+    const rows = Papa.parse(csv, { header: false }).data
+      .filter(r => r.length > 1 && r[0] !== 'owner' && r[1] !== 'score_C_0005')
+      .sort((a, b) => parseFloat(b[1]) - parseFloat(a[1]));
+
+    const ranks = computeRanks(rows);
+
+    const tbody = document.querySelector('#leaderboard_track2 tbody');
+    tbody.innerHTML = '';
+
+    rows.forEach((r, i) => {
+      const [team, scoreVal] = r;
+      const score = parseFloat(scoreVal).toFixed(4);
+
+      tbody.innerHTML += `
+        <tr>
+          <td>${ranks[i]}</td>
+          <td>${team}</td>
+          <td><strong>${score}</strong></td>
+        </tr>`;
+    });
+  });
+</script>
 
 
 <script>
