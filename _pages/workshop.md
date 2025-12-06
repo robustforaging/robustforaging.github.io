@@ -77,11 +77,11 @@ This NeurIPS workshop brings together researchers from reinforcement learning, c
 
 ## Logistics
 
-Due to visa issues and travel constraints, the workshop will be held entirely on Zoom. A meeting link will be shared with all registered NeurIPS attendees shortly before the event.
+Due to visa issues and travel constraints, the workshop will be held primarily on [Zoom](https://ucsb.zoom.us/j/85923415439?pwd=9w6Sv7S1jIfshio6AXFubMs0Z2gJUj.1), but livestreamed in Upper Level Ballroom 6CF.
 
 For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or email us at [robustforaging@gmail.com](mailto:robustforaging@gmail.com).
 
-*Please note: this is an official NeurIPS 2025 event, so conference registration is required to attend.*
+*Please note: This is an official NeurIPS 2025 event, so conference registration is required to attend.*
 
 ## Keynote Speakers
 
@@ -92,7 +92,7 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
   <div class="speaker-info">
     <strong>Fabian Sinz</strong><br>
     University of Göttingen<br>
-    <em>Towards foundation models of mouse vision</em>
+    <em>Towards Foundation Models of Mouse Vision</em>
   </div>
 </div>
 
@@ -102,7 +102,7 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
   <div class="speaker-info">
     <strong>Nina Miolane</strong><br>
     UC Santa Barbara<br>
-    <em>Geometric approaches to neural activity prediction</em>
+    <em>The Algebra of Spatial Navigation</em>
   </div>
 </div>
 
@@ -112,7 +112,7 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
   <div class="speaker-info">
     <strong>Cris Niell</strong><br>
     University of Oregon<br>
-    <em>Visual processing in freely moving mice</em>
+    <em>Visual Processing in Freely Moving Mice</em>
   </div>
 </div>
 
@@ -130,50 +130,49 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
   </thead>
   <tbody>
     <tr>
-      <td>11:00 - 11:05</td>
-      <td>Opening Remarks</td>
-      <td>Michael Beyeler</td>
-    </tr>
-    <tr>
-      <td>11:05 - 11:30</td>
+      <td>11:00 - 11:30</td>
       <td>Mouse vs AI Challenge</td>
-      <td>The Competition: Goal, Tracks, Evaluation (Marius Schneider)<br>The Mouse: Task, setup performance (Joe Canzano)<br>The AI: leaderboard, model analysis (Yuchen Hou)</td>
+      <td>The Competition: Goal, Tracks, Evaluation (Michael Beyeler)<br>The Mouse: Task & Setup (Joe Canzano)<br>The AI: Winners, Model Analysis (Yuchen Hou)</td>
     </tr>
     <tr>
       <td>11:30 - 12:00</td>
-      <td>Keynote Talk 1</td>
-      <td>Nina Miolane: Geometric approaches to neural activity prediction</td>
+      <td>Keynote Talk</td>
+      <td>Nina Miolane: The Algebra of Spatial Navigation - A Group Theoretic Perspective on Path Integration and the Emergence of Grid Cells</td>
     </tr>
     <tr>
       <td>12:00 - 12:30</td>
-      <td>Keynote Talk 2</td>
-      <td>Fabian Sinz: Towards foundation models of mouse vision</td>
+      <td>Keynote Talk</td>
+      <td>Fabian Sinz: Towards Foundation Models of Mouse Vision</td>
     </tr>
     <tr>
       <td>12:30 - 12:45</td>
-      <td>Competition Talk</td>
-      <td>3rd Place</td>
+      <td>Team HCMUS_TheFangs</td>
+      <td>Phạm Phú Hòa (Ho Chi Minh City University of Science)</td>
     </tr>
     <tr>
       <td>12:45 - 1:00</td>
-      <td>Competition Talk</td>
-      <td>2nd Place</td>
+      <td>Team sazeglio</td>
+      <td>Simone Azeglio (Sorbonne University & École Normale Supérieure)</td>
     </tr>
     <tr>
       <td>1:00 - 1:30</td>
-      <td>Keynote Talk 3</td>
-      <td>Cris Niell: Freely moving mice</td>
+      <td>Keynote Talk</td>
+      <td>Cris Niell: Visual Processing in Freely Moving Mice</td>
     </tr>
     <tr>
-      <td>1:30 - 1:45</td>
-      <td>Competition Talk</td>
-      <td>1st Place</td>
+      <td>1:30 - 1:40</td>
+      <td>Team alluding123</td>
+      <td>Anjali Deepu (Indian Institute of Technology Kharagpur)</td>
     </tr>
     <tr>
-      <td>1:45 - 1:50</td>
+      <td>1:40 - 1:50</td>
+      <td>Team pingsheng-li</td>
+      <td>Pingsheng Li (McGill University)</td>
+    </tr>
+    <tr>
+      <td>1:50 - 1:55</td>
       <td>Closing Remarks</td>
       <td>Michael Beyeler</td>
     </tr>
   </tbody>
 </table>
-
