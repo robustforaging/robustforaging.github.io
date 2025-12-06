@@ -385,7 +385,7 @@ fetch('/assets/data/leaderboard_merged.csv')
 
 <h2 style="text-align: center;">Track 2 Leaderboard</h2>
 
-<table id="leaderboard_track2">
+<table id="leaderboard_track2_all">
   <thead>
     <tr>
       <th>Rank</th>
@@ -410,7 +410,7 @@ fetch('/assets/data/Track2_scores_all.csv')
 
     const ranks = computeRanks(rows.map(r => [r.model, r.score]));
 
-    const tbody = document.querySelector('#leaderboard_track2 tbody');
+    const tbody = document.querySelector('#leaderboard_track2_all tbody');
     tbody.innerHTML = '';
 
     rows.forEach((r, i) => {
