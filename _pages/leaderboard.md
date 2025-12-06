@@ -384,7 +384,7 @@ fetch('/assets/data/leaderboard_merged.csv')
 
 
 
-<h2 style="text-align: center;">Track 2 — All Models</h2>
+<h2 style="text-align: center;">Track 2 Leaderboard</h2>
 
 <table id="leaderboard_track2_all">
   <thead>
