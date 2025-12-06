@@ -246,7 +246,7 @@ fetch('/assets/data/leaderboard_best.csv')
 <hr style="margin: 3em 0;">
 
 <script>
-fetch('assets/data/track2_scores_best.csv')
+fetch('assets/data/Track2_scores_best.csv')
   .then(r => r.text())
   .then(csv => {
     const parsed = Papa.parse(csv, { header: true }).data;
