@@ -112,7 +112,7 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
   <div class="speaker-info">
     <strong>Cris Niell</strong><br>
     University of Oregon<br>
-    <em>Visual Processing in Freely Moving Mice</em>
+    <em>Neural Coding for Active Vision in Freely Moving Mice</em>
   </div>
 </div>
 
@@ -157,7 +157,7 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
     <tr>
       <td>1:00 - 1:30</td>
       <td>Keynote Talk</td>
-      <td>Cris Niell: Visual Processing in Freely Moving Mice</td>
+      <td>Cris Niell: Neural Coding for Active Vision in Freely Moving Mice</td>
     </tr>
     <tr>
       <td>1:30 - 1:40</td>
