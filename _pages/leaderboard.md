@@ -230,32 +230,6 @@ fetch('/assets/data/leaderboard_best.csv')
 
 
 
-<h2 style="text-align: center;">Track 1 Leaderboard</h2>
-
-<table id="leaderboard">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Submission Name</th>
-      <th>ASR</th>
-      <th>MSR</th>
-      <th>Score</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<div style="margin: 1.5em 0; text-align: left;">
-  <strong>Legend:</strong>
-  <ul>
-    <li><strong>ASR</strong>: average success rate across all submissions</li>
-    <li><strong>MSR</strong>: minimum success rate across all conditions</li>
-    <li><strong>Score</strong> = (ASR + MSR) / 2</li>
-  </ul>
-</div>
-
-
-
 <h2 style="text-align: center;">🏅 Track 2 Team Leaderboard</h2>
 
 <table id="leaderboard_track2">
@@ -298,6 +272,31 @@ fetch('/assets/data/track2_scores_best.csv')
   });
 </script>
 
+
+
+<h2 style="text-align: center;">Track 1 Leaderboard</h2>
+
+<table id="leaderboard">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Submission Name</th>
+      <th>ASR</th>
+      <th>MSR</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<div style="margin: 1.5em 0; text-align: left;">
+  <strong>Legend:</strong>
+  <ul>
+    <li><strong>ASR</strong>: average success rate across all submissions</li>
+    <li><strong>MSR</strong>: minimum success rate across all conditions</li>
+    <li><strong>Score</strong> = (ASR + MSR) / 2</li>
+  </ul>
+</div>
 
 <script>
 fetch('/assets/data/leaderboard_merged.csv')
