@@ -155,54 +155,7 @@ title: "Leaderboard"
   width: 30%;
 }
   
-
-#leaderboard_track2_all {
-  display: table !important;
-  overflow-x: visible !important;
-
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  margin: 0 auto;
-}
-
-#leaderboard_track2_all th,
-#leaderboard_track2_all td {
-  padding: 12px 8px;
-  text-align: center;
-  border: 1px solid #ccc;
-}
-
-#leaderboard_track2_all th {
-  background: #ddd;
-  font-weight: bold;
-}
-
-#leaderboard_track2_all tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-#leaderboard_track2_all tbody tr:hover {
-  background-color: #f0f0f0;
-}
-
-/* Column widths */
-#leaderboard_track2_all th:nth-child(1),
-#leaderboard_track2_all td:nth-child(1) {
-  width: 15%;
-}
-
-#leaderboard_track2_all th:nth-child(2),
-#leaderboard_track2_all td:nth-child(2) {
-  width: 55%;
-  text-align: left;
-}
-
-#leaderboard_track2_all th:nth-child(3),
-#leaderboard_track2_all td:nth-child(3) {
-  width: 30%;
-}
-
+  
 </style>
 
 
@@ -374,51 +327,6 @@ fetch('/assets/data/leaderboard_merged.csv')
           <td>${name}</td>
           <td>${parseFloat(asrVal).toFixed(4)}</td>
           <td>${parseFloat(msrVal).toFixed(4)}</td>
-          <td><strong>${score}</strong></td>
-        </tr>`;
-    });
-  });
-</script>
-
-
-
-
-<h2 style="text-align: center;">Track 2 Leaderboard</h2>
-
-<table id="leaderboard_track2_all">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Model Name</th>
-      <th>Score</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<hr style="margin: 3em 0;">
-
-<script>
-fetch('/assets/data/Track2_scores_all.csv')
-  .then(r => r.text())
-  .then(csv => {
-    const parsed = Papa.parse(csv, { header: true }).data;
-
-    const rows = parsed
-      .filter(r => r.model && r.score)
-      .sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
-
-    const ranks = computeRanks(rows.map(r => [r.model, r.score]));
-
-    const tbody = document.querySelector('#leaderboard_track2_all tbody');
-    tbody.innerHTML = '';
-
-    rows.forEach((r, i) => {
-      const score = parseFloat(r.score).toFixed(4);
-      tbody.innerHTML += `
-        <tr>
-          <td>${ranks[i]}</td>
-          <td>${r.model}</td>
           <td><strong>${score}</strong></td>
         </tr>`;
     });
