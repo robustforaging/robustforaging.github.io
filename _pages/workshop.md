@@ -132,7 +132,7 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
     <tr>
       <td>11:00 - 11:30</td>
       <td>Mouse vs AI Challenge</td>
-      <td>The Competition: Goal, Tracks, Evaluation (Michael Beyeler)<br>The Mouse: Task & Setup (Joe Canzano)<br>The AI: Winners, Model Analysis (Yuchen Hou)</td>
+      <td>The Competition: Goal, Tracks, Evaluation (Marius Schneider)<br>The Mouse: Task & Setup (Joe Canzano)<br>The AI: Winners, Model Analysis (Yuchen Hou)</td>
     </tr>
     <tr>
       <td>11:30 - 12:00</td>
@@ -172,7 +172,7 @@ For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or
     <tr>
       <td>1:50 - 1:55</td>
       <td>Closing Remarks</td>
-      <td>Michael Beyeler</td>
+      <td>Marius Schneider</td>
     </tr>
   </tbody>
 </table>
