@@ -109,7 +109,7 @@ excerpt: >
 Welcome to the Mouse vs AI: Robust Visual Foraging Competition @ **NeurIPS 2025 Competition Track**.
 
 **Announcements**:
-- Join us on [Zoom](https://ucsb.zoom.us/j/85923415439?pwd=9w6Sv7S1jIfshio6AXFubMs0Z2gJUj.1) or Upper Level Ballroom 6CF for the [NeurIPS 2025 Workshop](https://neurips.cc/virtual/2025/loc/san-diego/competition/127735) (Sun, Dec 7, 11am-2pm PST)
+- Join us on [Zoom](https://us06web.zoom.us/j/86019711482?pwd=X7TQwIN7maEZVUmy8DcbWyYW6zQ9kf.1#success) or Upper Level Ballroom 6CF for the [NeurIPS 2025 Workshop](https://neurips.cc/virtual/2025/loc/san-diego/competition/127735) (Sun, Dec 7, 11am-2pm PST)
 - Congratulations to our inaugural winners: **Team HCMUS_TheFangs** (Ho Chi Minh City University of Science)!
 - Learn more about our competitions by reading our [whitepaper](https://arxiv.org/abs/2509.14446)
 
