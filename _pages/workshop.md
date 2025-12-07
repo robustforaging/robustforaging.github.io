@@ -77,7 +77,7 @@ This NeurIPS workshop brings together researchers from reinforcement learning, c
 
 ## Logistics
 
-Due to visa issues and travel constraints, the workshop will be held primarily on [Zoom](https://ucsb.zoom.us/j/85923415439?pwd=9w6Sv7S1jIfshio6AXFubMs0Z2gJUj.1), but livestreamed in Upper Level Ballroom 6CF.
+Due to visa issues and travel constraints, the workshop will be held primarily on [Zoom](https://us06web.zoom.us/j/86019711482?pwd=X7TQwIN7maEZVUmy8DcbWyYW6zQ9kf.1#success), but livestreamed in Upper Level Ballroom 6CF.
 
 For updates and discussion, join our [Discord](https://discord.gg/7mJPh5QMB7) or email us at [robustforaging@gmail.com](mailto:robustforaging@gmail.com).
 
