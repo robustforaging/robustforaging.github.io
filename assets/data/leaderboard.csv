@@ -243,6 +243,7 @@ submission,overall_rate,min_rate,worst_type,score
 425136_drumplstiltskin,0.752,0.48,0,0.616
 451998_niki21,0.732,0.15,2,0.441
 451999_niki21,0.72,0.14,2,0.43
+452012_aariz11858,0.73,0.15,0,0.44
 SuperMice_natureCNN,0.26,0.23,1,0.245
 SuperMice2_ResNet,0.74,0.49,2,0.615
 SuperMice3_simpleCNN,0.802,0.45,1,0.626
