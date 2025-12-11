@@ -245,6 +245,7 @@ submission,overall_rate,min_rate,worst_type,score
 451999_niki21,0.72,0.14,2,0.43
 452012_aariz11858,0.73,0.15,0,0.44
 452142_aariz11858,0.812,0.57,1,0.691
+452825_aariz11858,0.596,0.0,2,0.298
 SuperMice_natureCNN,0.26,0.23,1,0.245
 SuperMice2_ResNet,0.74,0.49,2,0.615
 SuperMice3_simpleCNN,0.802,0.45,1,0.626
