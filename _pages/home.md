@@ -120,15 +120,15 @@ excerpt: >
   }
 </style>
 
+Welcome to the Mouse vs AI: Robust Visual Foraging Competition @ **NeurIPS 2025 Competition Track**.
 
-
+**Full Data & Code Release**:
 <div class="top-resource-buttons">
-  <a class="btn btn--primary" href="REPLACE_WITH_TRACK2_NEURAL_DATA_URL">Track 2 Neural Data</a>
-  <a class="btn btn--primary" href="REPLACE_WITH_TRACK2_EVALUATION_REPO_URL">Track 2 Evaluation Code</a>
-  <a class="btn btn--primary" href="REPLACE_WITH_FULL_UNITY_PROJECT_URL">Full Unity Project</a>
+  <a class="btn btn--primary" href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2F65MG03">Track 2 Neural Data</a>
+  <a class="btn btn--primary" href="https://github.com/SchneiderMarius/mouse-vs-ai-benchmark">Track 2 Evaluation Code</a>
+  <a class="btn btn--primary" href="https://github.com/SchneiderMarius/mouse-vs-ai-unity">Full Unity Project</a>
 </div>
 
-Welcome to the Mouse vs AI: Robust Visual Foraging Competition @ **NeurIPS 2025 Competition Track**.
 
 **Announcements**:
 - Join us on [Zoom](https://us06web.zoom.us/j/86019711482?pwd=X7TQwIN7maEZVUmy8DcbWyYW6zQ9kf.1#success) or Upper Level Ballroom 6CF for the [NeurIPS 2025 Workshop](https://neurips.cc/virtual/2025/loc/san-diego/competition/127735) (Sun, Dec 7, 11am-2pm PST)
