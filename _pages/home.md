@@ -75,36 +75,18 @@ excerpt: >
   }
 
 
-  /* Resource cards for public data, evaluation code, and editable Unity project */
-  .resource-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1rem;
-    margin: 1.5rem 0 2.5rem 0;
+  /* Top resource buttons */
+  .top-resource-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0 1.75rem 0;
   }
 
-  .resource-card {
-    border: 1px solid #d6d6d6;
-    border-radius: 8px;
-    padding: 1rem 1.1rem;
-    background: #ffffff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  }
-
-  .resource-card h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.05rem;
-  }
-
-  .resource-card p {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+  .top-resource-buttons .btn {
     font-size: 0.95rem;
-  }
-
-  .resource-card .btn {
-    margin-top: 0.25rem;
+    font-weight: 700;
+    padding: 0.7rem 1rem;
   }
 
   /* Hero background image scaling controls */
@@ -139,40 +121,22 @@ excerpt: >
 </style>
 
 
+
+<div class="top-resource-buttons">
+  <a class="btn btn--primary" href="REPLACE_WITH_TRACK2_NEURAL_DATA_URL">Track 2 Neural Data</a>
+  <a class="btn btn--primary" href="REPLACE_WITH_TRACK2_EVALUATION_REPO_URL">Track 2 Evaluation Code</a>
+  <a class="btn btn--primary" href="REPLACE_WITH_FULL_UNITY_PROJECT_URL">Full Unity Project</a>
+</div>
+
 Welcome to the Mouse vs AI: Robust Visual Foraging Competition @ **NeurIPS 2025 Competition Track**.
 
 **Announcements**:
 - Join us on [Zoom](https://us06web.zoom.us/j/86019711482?pwd=X7TQwIN7maEZVUmy8DcbWyYW6zQ9kf.1#success) or Upper Level Ballroom 6CF for the [NeurIPS 2025 Workshop](https://neurips.cc/virtual/2025/loc/san-diego/competition/127735) (Sun, Dec 7, 11am-2pm PST)
 - Congratulations to our inaugural winners: **Team HCMUS_TheFangs** (Ho Chi Minh City University of Science)!
 - Learn more about our competitions by reading our [whitepaper](https://arxiv.org/abs/2509.14446)
-- New public resources are available for Track 2 neural alignment and for modifying the full Unity environment.
 
 Mice robustly navigate in a range of conditions like fog, maybe more robustly than self-driving cars, which can struggle with out-of-distribution conditions. Build an AI agent that can outcompete a mouse!
 
-
-## Public Resources
-
-The original platform-specific builds remain available through the install buttons above and the download table below. We now also provide three additional resources for users who want to reproduce the Track 2 neural alignment benchmark or modify the Unity task.
-
-<div class="resource-links">
-  <div class="resource-card">
-    <h3>Track 2 Neural Data</h3>
-    <p>Mouse visual input, neural activity, and behavioral data used for the neural alignment benchmark.</p>
-    <a class="btn btn--primary" href="https://dataverse.harvard.edu/previewurl.xhtml?token=26e79441-e736-4805-ba7f-a7d00dbd3bb7">Open neural data</a>
-  </div>
-
-  <div class="resource-card">
-    <h3>Track 2 Evaluation Code</h3>
-    <p>Code for extracting model activations, fitting the linear neural readout, and computing Track 2 scores.</p>
-    <a class="btn btn--primary" href="https://github.com/SchneiderMarius/mouse-vs-ai-benchmark">Open evaluation repo</a>
-  </div>
-
-  <div class="resource-card">
-    <h3>Full Unity Project</h3>
-    <p>Editable Unity project with all assets for users who want to modify the task or create new perturbations.</p>
-    <a class="btn btn--primary" href="https://github.com/SchneiderMarius/mouse-vs-ai-unity">Open Unity project</a>
-  </div>
-</div>
 
 
 <center>
@@ -258,15 +222,6 @@ Choose the build for your platform:
 | **Windows (GUI)**           | [Windows v1.0](https://github.com/robustforaging/mouse_vs_ai_windows)     |
 | **macOS (GUI)**             | [macOS v1.0](https://github.com/robustforaging/mouse_vs_ai_macOS)         |
 | **Linux (GUI)**             | [Linux v1.0](https://github.com/robustforaging/mouse_vs_ai_linux)         |
-
-Additional resources:
-
-| Resource                    | Link                                                                      |
-| --------------------------- | ------------------------------------------------------------------------- |
-| **Track 2 Neural Data**     | [Open neural data](REPLACE_WITH_TRACK2_NEURAL_DATA_URL)                   |
-| **Track 2 Evaluation Code** | [Open evaluation repo](REPLACE_WITH_TRACK2_EVALUATION_REPO_URL)           |
-| **Full Unity Project**      | [Open Unity project](REPLACE_WITH_FULL_UNITY_PROJECT_URL)                 |
-
 
 1. **Download the environment**
 2. **Install dependencies**
