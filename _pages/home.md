@@ -124,9 +124,9 @@ Welcome to the Mouse vs AI: Robust Visual Foraging Competition @ **NeurIPS 2025 
 
 **Full Data & Code Release**:
 <div class="top-resource-buttons">
-  <a class="btn btn--primary" href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2F65MG03">Track 2 Neural Data</a>
+  <a class="btn btn--primary" href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2F65MG03&version=DRAFT">Track 2 Neural Data</a>
   <a class="btn btn--primary" href="https://github.com/SchneiderMarius/mouse-vs-ai-benchmark">Track 2 Evaluation Code</a>
-  <a class="btn btn--primary" href="https://github.com/SchneiderMarius/mouse-vs-ai-unity">Full Unity Project</a>
+  <a class="btn btn--primary" href="https://github.com/SchneiderMarius/mouse-vs-ai-foraging-unity">Full Unity Project</a>
 </div>
 
 
